@@ -408,6 +408,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
+  jh_debug:
+    dependency: "direct main"
+    description:
+      name: jh_debug
+      sha256: "630ddc463f24e9260ea0f5fa6f3a7cd96eca15fe49cac421b068c7a51044d31f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
   js:
     dependency: transitive
     description:

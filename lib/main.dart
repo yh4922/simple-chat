@@ -3,14 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:simple_chat/states/locale/locale.dart';
 import 'package:simple_chat/i18n/generated/l10n.dart';
+import 'package:jh_debug/jh_debug.dart';
 import 'router/router.dart';
 
 void main() {
-  runApp(
+  jhDebugMain(
     // 使用ProviderScope包裹MyApp
-    ProviderScope(
-      child: MyApp(), // 使用MyApp作为子组件
+    appChild: ProviderScope(
+      // 使用MyApp作为子组件
+      child: MyApp(),
     ),
+    debugMode: DebugMode.inConsole,
+    errorCallback: (error) {
+      // 错误处理
+    },
   );
 }
 
