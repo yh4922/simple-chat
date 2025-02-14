@@ -43,9 +43,6 @@ class HomePage extends ConsumerWidget {
             ElevatedButton(
               child: Text('切换语言'),
               onPressed: () {
-                // 获取当前语言环境
-                Locale myLocale = Localizations.localeOf(context);
-
                 // 切换语言
                 if (Localizations.localeOf(context).languageCode == 'zh') {
                   LocaleData.change(ref, Locale("en"));

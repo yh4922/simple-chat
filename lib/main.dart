@@ -51,6 +51,7 @@ class MyApp extends ConsumerWidget {
       localeListResolutionCallback: (List<Locale>? locales, Iterable<Locale> supportedLocales) {
         // print('locales:$locales');
         // print('supportLocales:$supportedLocales');
+        return null;
       },
       supportedLocales: [
         Locale('zh'), // Chinese
