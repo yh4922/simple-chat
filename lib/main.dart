@@ -2,6 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:simple_chat/states/locale/locale.dart';
+import 'package:simple_chat/states/theme/theme.dart';
 import 'package:simple_chat/i18n/generated/l10n.dart';
 import 'package:jh_debug/jh_debug.dart';
 import 'router/router.dart';
@@ -30,8 +31,11 @@ class MyApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     // 语言
     final appLocale = LocaleData.value(ref);
+    final appTheme = ThemeStore.value(ref);
 
     return MaterialApp.router(
+      // 使用主题
+      theme: appTheme,
       // 使用路由
       routerConfig: rootRouter.config(),
       // 导入国际化

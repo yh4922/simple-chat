@@ -1,27 +1,27 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'locale.dart';
+part of 'theme.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$localeDataHash() => r'd36ac9481e8ab2b8969040cd95d0f950d78c6929';
+String _$themeStoreHash() => r'70f1b7a66837deb88012bac15fcbaeaec147d717';
 
-/// See also [LocaleData].
-@ProviderFor(LocaleData)
-final localeDataProvider =
-    AutoDisposeNotifierProvider<LocaleData, Locale>.internal(
-      LocaleData.new,
-      name: r'localeDataProvider',
+/// See also [ThemeStore].
+@ProviderFor(ThemeStore)
+final themeStoreProvider =
+    AutoDisposeNotifierProvider<ThemeStore, ThemeData>.internal(
+      ThemeStore.new,
+      name: r'themeStoreProvider',
       debugGetCreateSourceHash:
           const bool.fromEnvironment('dart.vm.product')
               ? null
-              : _$localeDataHash,
+              : _$themeStoreHash,
       dependencies: null,
       allTransitiveDependencies: null,
     );
 
-typedef _$LocaleData = AutoDisposeNotifier<Locale>;
+typedef _$ThemeStore = AutoDisposeNotifier<ThemeData>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

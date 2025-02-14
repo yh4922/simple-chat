@@ -8,6 +8,7 @@ part 'locale.g.dart';
 class LocaleData extends _$LocaleData {
   @override
   Locale build() {
+    /// TODO: 后续可能需要从本地缓存获取历史值
     return Locale('en');
   }
 
