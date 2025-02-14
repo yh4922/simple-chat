@@ -1,0 +1,6 @@
+{
+  "@@locale": "en",
+  "title": "Welcome",
+  "message": "Hello, {name}!",
+  "appname": "Simple Chat"
+}

@@ -1,0 +1,6 @@
+{
+  "@@locale": "zh",
+  "title": "欢迎",
+  "message": "你好, {name}!",
+  "appname": "简单聊天"
+}
