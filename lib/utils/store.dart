@@ -25,7 +25,4 @@ class Store {
     themeName = prefs.getString("themeName") ?? "bluegrey";
     theme = ThemeMaps[themeName] ?? ThemeMaps["bluegrey"]!;
   }
-
-  // 是否提前读取主题缓存
-  static bool preRead = false;
 }
