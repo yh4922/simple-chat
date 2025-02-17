@@ -195,7 +195,7 @@ class HomePage extends ConsumerWidget {
                         color: Theme.of(context).colorScheme.surfaceContainerLow,
                         border: Border.all(color: Colors.black),
                       ),
-                      child: Text("surfaceContainerLow"),
+                      child: Text("1"),
                     ),
                     Container(
                       width: 100,
@@ -205,7 +205,7 @@ class HomePage extends ConsumerWidget {
                         color: Theme.of(context).colorScheme.surfaceContainerLowest,
                         border: Border.all(color: Colors.black),
                       ),
-                      child: Text("surfaceContainerLowest"),
+                      child: Text("2"),
                     ),
                     Container(
                       width: 100,

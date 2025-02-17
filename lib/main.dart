@@ -5,11 +5,28 @@ import 'package:simple_chat/states/brightness/brightness.dart';
 import 'package:simple_chat/states/locale/locale.dart';
 import 'package:simple_chat/states/theme/theme.dart';
 import 'package:simple_chat/i18n/generated/l10n.dart';
+import 'package:window_manager/window_manager.dart';
 import 'package:jh_debug/jh_debug.dart';
 import 'package:simple_chat/utils/store.dart';
 import 'router/router.dart';
 
 void main() async {
+  // 初始化
+  WidgetsFlutterBinding.ensureInitialized();
+  await windowManager.ensureInitialized();
+
+  WindowOptions windowOptions = WindowOptions(
+    size: Size(1200, 700),
+    center: true,
+    backgroundColor: Colors.transparent,
+    skipTaskbar: false,
+    titleBarStyle: TitleBarStyle.hidden,
+  );
+  windowManager.waitUntilReadyToShow(windowOptions, () async {
+    await windowManager.show();
+    await windowManager.focus();
+  });
+
   // 初始缓存
   await Store.init();
 

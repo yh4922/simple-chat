@@ -16,7 +16,7 @@ class _DefaultLayoutState extends State<DefaultLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.surfaceBright,
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: Row(
         children: [
           LeftSide(),
