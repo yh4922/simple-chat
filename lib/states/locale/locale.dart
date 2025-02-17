@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/src/consumer.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:simple_chat/utils/store.dart';
 
 part 'locale.g.dart';
 
@@ -8,8 +9,7 @@ part 'locale.g.dart';
 class LocaleData extends _$LocaleData {
   @override
   Locale build() {
-    /// TODO: 后续可能需要从本地缓存获取历史值
-    return Locale('en');
+    return Store.locale;
   }
 
   /// 更新状态
@@ -23,7 +23,11 @@ class LocaleData extends _$LocaleData {
   }
 
   /// 设置值
-  static void change(WidgetRef ref, Locale newLocale) {
+  static void change(WidgetRef ref, String localeName) {
+    // 保存到缓存 并设置语言
+    Store.localeName = localeName;
+    Store.prefs.setString("localeName", localeName);
+    Locale newLocale = Locale(localeName);
     ref.read(localeDataProvider.notifier).update(newLocale);
   }
 }

@@ -41,6 +41,7 @@ dependencies:
     sdk: flutter
   intl: any
   jh_debug: ^2.0.1
+  shared_preferences: ^2.5.2
 
 dev_dependencies:
   flutter_test:

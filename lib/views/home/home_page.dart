@@ -3,7 +3,9 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:simple_chat/states/example/example.dart';
 import 'package:simple_chat/states/locale/locale.dart';
+import 'package:simple_chat/states/theme/theme.dart';
 import 'package:simple_chat/i18n/generated/l10n.dart';
+import 'package:simple_chat/theme/index_theme.dart';
 import 'package:jh_debug/jh_debug.dart';
 
 /// 继承 ConsumerWidget
@@ -61,14 +63,44 @@ class HomePage extends ConsumerWidget {
             ),
             ElevatedButton(
               child: Text('切换语言'),
-              onPressed: () {
+              onPressed: () async {
                 // 切换语言
                 if (Localizations.localeOf(context).languageCode == 'zh') {
-                  LocaleData.change(ref, Locale("en"));
+                  LocaleData.change(ref, "en");
                 } else {
-                  LocaleData.change(ref, Locale("zh"));
+                  LocaleData.change(ref, "zh");
                 }
               },
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              // 主题列表
+              children: [
+                // 蓝色
+                GestureDetector(
+                  child: Container(width: 50, height: 50, color: ThemeMaps["bluegrey"]!.colorScheme.primary),
+                  onTap: () {
+                    // 切换主题
+                    ThemeStore.change(ref, "bluegrey");
+                  },
+                ),
+                // 浅蓝色
+                GestureDetector(
+                  child: Container(width: 50, height: 50, color: ThemeMaps["lightblue"]!.colorScheme.primary),
+                  onTap: () {
+                    // 切换主题
+                    ThemeStore.change(ref, "lightblue");
+                  },
+                ),
+                // 粉色
+                GestureDetector(
+                  child: Container(width: 50, height: 50, color: ThemeMaps["pink"]!.colorScheme.primary),
+                  onTap: () {
+                    // 切换主题
+                    ThemeStore.change(ref, "pink");
+                  },
+                ),
+              ],
             ),
           ],
         ),

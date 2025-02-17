@@ -5,9 +5,14 @@ import 'package:simple_chat/states/locale/locale.dart';
 import 'package:simple_chat/states/theme/theme.dart';
 import 'package:simple_chat/i18n/generated/l10n.dart';
 import 'package:jh_debug/jh_debug.dart';
+import 'package:simple_chat/theme/index_theme.dart' show ThemeMaps;
+import 'package:simple_chat/utils/store.dart';
 import 'router/router.dart';
 
-void main() {
+void main() async {
+  // 初始缓存
+  await Store.init();
+
   jhDebugMain(
     // 使用ProviderScope包裹MyApp
     appChild: ProviderScope(
@@ -32,6 +37,17 @@ class MyApp extends ConsumerWidget {
     // 语言
     final appLocale = LocaleData.value(ref);
     final appTheme = ThemeStore.value(ref);
+
+    // // 设置缓存中的主题和字体
+    // if (!Store.preRead) {
+    //   print("设置缓存中的主题和字体");
+    //   // LocaleData.change(ref, Locale(Store.localeName));
+    //   LocaleData.change(ref, Locale('en'));
+    //   ThemeStore.change(ref, ThemeMaps[Store.themeName] ?? ThemeMaps["bluegrey"]!);
+    //   Store.preRead = true;
+    // }
+
+    // print("MyApp 加载");
 
     return MaterialApp.router(
       // 使用主题
