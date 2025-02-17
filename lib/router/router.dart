@@ -19,7 +19,18 @@ class AppRouter extends RootStackRouter {
   List<AutoRoute> get routes {
     return [
       // 首页路由
-      AutoRoute(path: "/", page: HomeRoute.page),
+      AutoRoute(
+        // 默认
+        path: "/",
+        page: DefaultLayout.page,
+        children: [
+          AutoRoute(
+            // 首页
+            path: '',
+            page: HomeRoute.page,
+          ),
+        ],
+      ),
     ];
   }
 }

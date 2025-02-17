@@ -12,7 +12,11 @@ class Store {
 
   // 主题标识
   static String themeName = "bluegrey";
-  static ThemeData theme = ThemeMaps["bluegrey"]!;
+  static ThemeDatas theme = ThemeDatas.findByName('bluegrey');
+
+  // 明暗标识
+  static String brightnessName = "light";
+  static ThemeMode brightness = ThemeMode.light;
 
   // 初始化
   static Future<void> init() async {
@@ -22,7 +26,17 @@ class Store {
     localeName = prefs.getString("localeName") ?? "en";
     locale = Locale(localeName);
     // 获取主题标识
+    ThemeDatas.themeList = themeList;
     themeName = prefs.getString("themeName") ?? "bluegrey";
-    theme = ThemeMaps[themeName] ?? ThemeMaps["bluegrey"]!;
+    theme = ThemeDatas.findByName(themeName);
+    // 获取明暗标识
+    brightnessName = prefs.getString("brightnessName") ?? "light";
+    if (brightnessName == "light") {
+      brightness = ThemeMode.light;
+    } else if (brightnessName == "dark") {
+      brightness = ThemeMode.dark;
+    } else {
+      brightness = ThemeMode.system;
+    }
   }
 }

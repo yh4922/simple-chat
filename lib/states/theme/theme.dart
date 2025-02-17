@@ -9,17 +9,17 @@ part 'theme.g.dart';
 @riverpod
 class ThemeStore extends _$ThemeStore {
   @override
-  ThemeData build() {
+  ThemeDatas build() {
     return Store.theme;
   }
 
   /// 更新状态
-  void update(ThemeData newTheme) {
+  void update(ThemeDatas newTheme) {
     state = newTheme;
   }
 
   /// 获取值
-  static ThemeData value(WidgetRef ref) {
+  static ThemeDatas value(WidgetRef ref) {
     return ref.watch(themeStoreProvider);
   }
 
@@ -27,7 +27,7 @@ class ThemeStore extends _$ThemeStore {
   static void change(WidgetRef ref, String themeName) {
     Store.themeName = themeName;
     Store.prefs.setString("themeName", themeName);
-    ThemeData newTheme = ThemeMaps[themeName]!;
+    ThemeDatas newTheme = ThemeDatas.findByName(themeName);
     ref.read(themeStoreProvider.notifier).update(newTheme);
   }
 }

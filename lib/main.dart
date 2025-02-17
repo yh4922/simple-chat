@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:simple_chat/states/brightness/brightness.dart';
 import 'package:simple_chat/states/locale/locale.dart';
 import 'package:simple_chat/states/theme/theme.dart';
 import 'package:simple_chat/i18n/generated/l10n.dart';
@@ -36,10 +37,13 @@ class MyApp extends ConsumerWidget {
     // 语言
     final appLocale = LocaleData.value(ref);
     final appTheme = ThemeStore.value(ref);
+    final appBrightness = BrightnessStore.value(ref);
 
     return MaterialApp.router(
       // 使用主题
-      theme: appTheme,
+      theme: appTheme.light,
+      darkTheme: appTheme.dark,
+      themeMode: appBrightness,
       // 使用路由
       routerConfig: rootRouter.config(),
       // 导入国际化
