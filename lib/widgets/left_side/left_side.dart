@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:window_manager/window_manager.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:simple_chat/widgets/iconfont/iconfont.dart';
 
 class LeftSide extends ConsumerWidget {
   const LeftSide({super.key});
@@ -43,7 +44,7 @@ class LeftSide extends ConsumerWidget {
             ),
           ),
           SizedBox(height: 20),
-          // 主题
+          // 聊天页面
           GestureDetector(
             child: Container(
               width: 40,
@@ -53,13 +54,13 @@ class LeftSide extends ConsumerWidget {
                 // color: Theme.of(context).colorScheme.surfaceContainerHighest,
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Icon(Icons.brightness_4, color: Theme.of(context).colorScheme.onPrimaryContainer),
+              child: Icon(Iconfont.xinxi, color: Theme.of(context).colorScheme.onPrimaryContainer),
             ),
             onTap: () {
               // TODO: 打开主题设置
             },
           ),
-          // 设置
+          // 设置页面
           GestureDetector(
             child: Container(
               width: 40,
@@ -72,6 +73,21 @@ class LeftSide extends ConsumerWidget {
               // TODO: 打开设置
             },
           ),
+          Expanded(child: SizedBox()),
+          // 设置页面
+          GestureDetector(
+            child: Container(
+              width: 40,
+              height: 40,
+              margin: EdgeInsets.only(top: 20),
+              decoration: BoxDecoration(color: Theme.of(context).colorScheme.primaryContainer, borderRadius: BorderRadius.circular(10)),
+              child: Icon(Icons.message, color: Theme.of(context).colorScheme.onPrimaryContainer),
+            ),
+            onTap: () {
+              // TODO: 打开设置
+            },
+          ),
+          SizedBox(height: 10),
         ],
       ),
     );

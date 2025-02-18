@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
@@ -10,38 +11,50 @@ import 'package:window_manager/window_manager.dart';
 import 'package:jh_debug/jh_debug.dart';
 import 'package:simple_chat/utils/store.dart';
 import 'router/router.dart';
+import 'package:flutter/rendering.dart';
 
 void main() async {
-  // 初始化窗口管理
-  WidgetsFlutterBinding.ensureInitialized();
-  if (!kIsWeb) {
-    await windowManager.ensureInitialized();
+  // 设置 Zone 错误为致命错误（可选）
+  BindingBase.debugZoneErrorsAreFatal = true;
 
-    WindowOptions windowOptions = WindowOptions(
-      size: Size(1200, 700),
-      center: true,
-      backgroundColor: Colors.transparent,
-      skipTaskbar: false,
-      titleBarStyle: TitleBarStyle.hidden,
-    );
-    windowManager.waitUntilReadyToShow(windowOptions, () async {
-      await windowManager.show();
-      await windowManager.focus();
-    });
-  }
+  // 确保在同一个 zone 中初始化
+  runZonedGuarded(
+    () async {
+      WidgetsFlutterBinding.ensureInitialized();
 
-  // 初始缓存
-  await Store.init();
+      if (!kIsWeb) {
+        await windowManager.ensureInitialized();
+        windowManager.hide();
 
-  jhDebugMain(
-    // 使用ProviderScope包裹MyApp
-    appChild: ProviderScope(
-      // 使用MyApp作为子组件
-      child: MyApp(),
-    ),
-    debugMode: DebugMode.inConsole,
-    errorCallback: (error) {
-      // 错误处理
+        WindowOptions windowOptions = WindowOptions(
+          size: Size(1200, 700),
+          center: true,
+          backgroundColor: Colors.transparent,
+          skipTaskbar: false,
+          titleBarStyle: TitleBarStyle.hidden,
+        );
+        windowManager.waitUntilReadyToShow(windowOptions, () async {
+          await windowManager.show();
+          await windowManager.focus();
+        });
+      }
+
+      // 初始缓存
+      await Store.init();
+
+      // jhDebugMain(
+      //   appChild: ProviderScope(child: MyApp()),
+      //   debugMode: DebugMode.inConsole,
+      //   errorCallback: (error) {
+      //     // 错误处理
+      //   },
+      // );
+      runApp(ProviderScope(child: MyApp()));
+    },
+    (error, stack) {
+      // 处理未捕获的异常
+      print('未捕获的错误: $error');
+      print('堆栈跟踪: $stack');
     },
   );
 }

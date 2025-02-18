@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:simple_chat/states/brightness/brightness.dart';
-import 'package:simple_chat/states/example/example.dart';
-import 'package:simple_chat/states/locale/locale.dart';
+// import 'package:simple_chat/states/example/example.dart';
 import 'package:simple_chat/states/theme/theme.dart';
-import 'package:simple_chat/i18n/generated/l10n.dart';
+// import 'package:simple_chat/i18n/generated/l10n.dart';
 import 'package:simple_chat/theme/index_theme.dart';
 import 'package:jh_debug/jh_debug.dart';
+import 'package:simple_chat/router/router.gr.dart';
 
 /// 继承 ConsumerWidget
 @RoutePage()
@@ -17,8 +17,8 @@ class HomePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     /// 通过ExampleDataRef.value获取值
-    final String exampleData = ExampleDataRef.value(ref);
-    final loc = S.of(context);
+    // final String exampleData = ExampleDataRef.value(ref);
+    // final loc = S.of(context);
 
     // 初始化，建议在initState阶段执行一次即可
     jhDebug.init(
@@ -68,6 +68,13 @@ class HomePage extends ConsumerWidget {
                           )
                           .toList(),
                 ),
+              ),
+              // ElevatedButton(onPressed: () {}, child: Text("返回")),
+              ElevatedButton(
+                onPressed: () {
+                  context.router.navigate(const DemoRoute());
+                },
+                child: Text("跳转"),
               ),
               Expanded(
                 child: Row(
