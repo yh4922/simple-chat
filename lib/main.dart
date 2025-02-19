@@ -8,10 +8,9 @@ import 'package:simple_chat/states/locale/locale.dart';
 import 'package:simple_chat/states/theme/theme.dart';
 import 'package:simple_chat/i18n/generated/l10n.dart';
 import 'package:window_manager/window_manager.dart';
-import 'package:jh_debug/jh_debug.dart';
+// import 'package:jh_debug/jh_debug.dart';
 import 'package:simple_chat/utils/store.dart';
 import 'router/router.dart';
-import 'package:flutter/rendering.dart';
 
 void main() async {
   // 设置 Zone 错误为致命错误（可选）
@@ -22,7 +21,12 @@ void main() async {
     () async {
       WidgetsFlutterBinding.ensureInitialized();
 
-      if (!kIsWeb) {
+      bool isDesktop =
+          defaultTargetPlatform == TargetPlatform.windows ||
+          defaultTargetPlatform == TargetPlatform.macOS ||
+          defaultTargetPlatform == TargetPlatform.linux;
+
+      if (!kIsWeb && isDesktop) {
         await windowManager.ensureInitialized();
         windowManager.hide();
 
@@ -32,8 +36,10 @@ void main() async {
           backgroundColor: Colors.transparent,
           skipTaskbar: false,
           titleBarStyle: TitleBarStyle.hidden,
+          windowButtonVisibility: true,
         );
         windowManager.waitUntilReadyToShow(windowOptions, () async {
+          await windowManager.setAsFrameless();
           await windowManager.show();
           await windowManager.focus();
         });
@@ -50,13 +56,29 @@ void main() async {
       //   },
       // );
       runApp(ProviderScope(child: MyApp()));
+      // runApp(ProviderScope(child: DemoApp()));
     },
     (error, stack) {
       // 处理未捕获的异常
-      print('未捕获的错误: $error');
-      print('堆栈跟踪: $stack');
+      // print('未捕获的错误: $error');
+      // print('堆栈跟踪: $stack');
     },
   );
+}
+
+class DemoApp extends StatelessWidget {
+  const DemoApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: Scaffold(
+        //
+        backgroundColor: Colors.transparent,
+        body: DragToMoveArea(child: Center(child: Text('Hello World'))),
+      ),
+    );
+  }
 }
 
 class MyApp extends ConsumerWidget {
@@ -67,6 +89,8 @@ class MyApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // 全局ref绑定到router上 方便路由修改时同步状态
+    AppRouter.ref = ref;
     // 语言
     final appLocale = LocaleData.value(ref);
     final appTheme = ThemeStore.value(ref);
@@ -108,6 +132,7 @@ class MyApp extends ConsumerWidget {
         Locale('zh'), // Chinese
         Locale('en'), // English
       ],
+      debugShowCheckedModeBanner: false,
     );
   }
 }

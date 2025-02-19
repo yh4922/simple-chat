@@ -2,5 +2,10 @@
   "@@locale": "en",
   "title": "Welcome",
   "message": "Hello, {name}!",
-  "appname": "Simple Chat"
+  "appname": "Simple Chat",
+  "chat": "Chat",
+  "demo": "Demo",
+  "github": "GitHub",
+  "settings": "Settings",
+  "theme": "Theme"
 }

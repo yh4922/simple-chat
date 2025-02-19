@@ -25,7 +25,12 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appname": MessageLookupByLibrary.simpleMessage("简单聊天"),
+    "chat": MessageLookupByLibrary.simpleMessage("对话"),
+    "demo": MessageLookupByLibrary.simpleMessage("演示"),
+    "github": MessageLookupByLibrary.simpleMessage("GitHub"),
     "message": m0,
+    "settings": MessageLookupByLibrary.simpleMessage("设置"),
+    "theme": MessageLookupByLibrary.simpleMessage("主题"),
     "title": MessageLookupByLibrary.simpleMessage("欢迎"),
   };
 }

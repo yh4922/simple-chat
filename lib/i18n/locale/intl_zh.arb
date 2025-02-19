@@ -2,5 +2,10 @@
   "@@locale": "zh",
   "title": "欢迎",
   "message": "你好, {name}!",
-  "appname": "简单聊天"
+  "appname": "简单聊天",
+  "chat": "对话",
+  "demo": "演示",
+  "github": "GitHub",
+  "settings": "设置",
+  "theme": "主题"
 }

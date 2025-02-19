@@ -36,4 +36,14 @@ class BrightnessStore extends _$BrightnessStore {
     }
     ref.read(brightnessStoreProvider.notifier).update(newMode);
   }
+
+  /// 切换
+  static void toggle(WidgetRef ref) {
+    ThemeMode current = ref.read(brightnessStoreProvider);
+    if (current == ThemeMode.light) {
+      change(ref, "dark");
+    } else if (current == ThemeMode.dark) {
+      change(ref, "light");
+    }
+  }
 }
