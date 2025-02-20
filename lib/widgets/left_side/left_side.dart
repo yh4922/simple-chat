@@ -74,7 +74,7 @@ class LeftSide extends ConsumerWidget {
     var liftSide = Container(
       width: 62,
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.surfaceContainerLowest,
+        color: Theme.of(context).colorScheme.surfaceContainerLowest.withAlpha(150),
         border: Border(right: BorderSide(color: Theme.of(context).colorScheme.outlineVariant)),
       ),
       child: Column(

@@ -21,12 +21,15 @@ void main() async {
     () async {
       WidgetsFlutterBinding.ensureInitialized();
 
-      bool isDesktop =
+      // 判断是否桌面端
+      Store.isDesktop =
           defaultTargetPlatform == TargetPlatform.windows ||
           defaultTargetPlatform == TargetPlatform.macOS ||
           defaultTargetPlatform == TargetPlatform.linux;
 
-      if (!kIsWeb && isDesktop) {
+      // print('Store.isDesktop: ${Store.isDesktop}');
+      // 桌面端初始化
+      if (!kIsWeb && Store.isDesktop) {
         await windowManager.ensureInitialized();
         windowManager.hide();
 
@@ -56,6 +59,7 @@ void main() async {
       //   },
       // );
       runApp(ProviderScope(child: MyApp()));
+      // print('Store.isDesktop: ${Store.isDesktop}');
       // runApp(ProviderScope(child: DemoApp()));
     },
     (error, stack) {

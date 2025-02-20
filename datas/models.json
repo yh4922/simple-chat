@@ -1,0 +1,4352 @@
+{
+    "object": "list",
+    "data": [
+        {
+            "id": "o3-mini",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "o3-mini-2025-01-31",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "o1",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "o1-2024-12-17",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "o1-preview",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "o1-preview-2024-09-12",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "o1-mini",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "o1-mini-2024-09-12",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4o-mini-audio-preview",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4o-mini-audio-preview-2024-12-17",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4o-audio-preview",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4o-audio-preview-2024-10-01",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4o-audio-preview-2024-12-17",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-3.5-turbo",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-3.5-turbo-16k",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-3.5-turbo-1106",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-3.5-turbo-0125",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4o",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4o-2024-05-13",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4o-2024-08-06",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4o-2024-11-20",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "chatgpt-4o-latest",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4o-mini",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4o-mini-2024-07-18",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4-1106-preview",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4-0125-preview",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4-turbo-preview",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4-vision-preview",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4-turbo",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4-turbo-2024-04-09",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4-0613",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "ark-deepseek-r1-250120",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "ark-deepseek-v3-241226",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "doubao-vision-lite-32k-241015",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "doubao-vision-pro-32k-241028",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "doubao-pro-256k-241115",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "doubao-pro-32k-241215",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "doubao-pro-128k-240628",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "doubao-pro-4k-240515",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "doubao-pro-4k-character-240728",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "doubao-lite-32k-240828",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "doubao-lite-32k-character-241015",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "doubao-lite-4k-240328",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "doubao-lite-4k-character-240828",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "doubao-lite-128k-240828",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "moonshot-v1-128k-v1",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "moonshot-v1-32k-v1",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "moonshot-v1-8k-v1",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "doubao-embedding-large-text-240915",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "doubao-embedding-text-240715",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "gpt-4o-realtime-preview",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/realtime"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4o-realtime-preview-2024-10-01",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/realtime"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4o-realtime-preview-2024-12-17",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/realtime"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4o-mini-realtime-preview",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/realtime"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-4o-mini-realtime-preview-2024-12-17",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/realtime"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "command-r",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "command-r-03-2024",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "command-r-08-2024",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "command-r-plus",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "command-r-plus-04-2024",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "command-r-plus-08-2024",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "command-r7b-12-2024",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "command-r-online",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "command-r-plus-online",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "deepseek-chat",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "deepseek-reasoner",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "deepseek-coder",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "glm-3-turbo",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "glm-4",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "glm-4-plus",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "glm-4-airx",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "glm-4-air",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "glm-4-long",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "glm-4-flashx",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "glm-4-flash",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "glm-4v-plus",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "glm-4v",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "gpt-3.5-turbo-instruct",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "gpt-3.5-turbo-instruct-0914",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "davinci-002",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "babbage-002",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/completions"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "text-embedding-ada-002",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "text-embedding-3-small",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "text-embedding-3-large",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "dall-e",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "dall-e-2",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "dall-e-3",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "nd-imagine-v3",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "NAI",
+            "api_routes": [
+                "/api/v1/ai/draw/nd/imagine"
+            ],
+            "provider": "NAI"
+        },
+        {
+            "id": "azure-tts-1",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "whisper-1",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "tts-1",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/audio/speech"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "tts-1-hd",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/audio/speech"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "tts-1-1106",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/audio/speech"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "tts-1-hd-1106",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OpenAI",
+            "api_routes": [
+                "/v1/audio/speech"
+            ],
+            "provider": "OpenAI"
+        },
+        {
+            "id": "text-moderation-latest",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "text-moderation-stable",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "midjourney",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "MidJourney",
+            "api_routes": [
+                "/api/v1/ai/draw/mj/imagine",
+                "/api/v1/ai/draw/mj/action",
+                "/api/v1/ai/draw/mj/blend",
+                "/api/v1/ai/draw/mj/describe",
+                "/api/v1/ai/draw/mj/query",
+                "/api/v1/ai/draw/mj/query-mj-tasks"
+            ],
+            "provider": "MidJourney"
+        },
+        {
+            "id": "claude-2",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/complete"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-2.0",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/complete"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-2.1",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/complete"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-3-opus",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/messages",
+                "/v1/chat/completions"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-3-opus-latest",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/messages",
+                "/v1/chat/completions"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-3-opus-20240229",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/messages",
+                "/v1/chat/completions"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-3-sonnet",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/messages",
+                "/v1/chat/completions"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-3-sonnet-latest",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/messages",
+                "/v1/chat/completions"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-3-sonnet-20240229",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/messages",
+                "/v1/chat/completions"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-3-5-sonnet",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/messages",
+                "/v1/chat/completions"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-3-5-sonnet-latest",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/messages",
+                "/v1/chat/completions"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-3-5-sonnet-20240620",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/messages",
+                "/v1/chat/completions"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-3-5-sonnet-20241022",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/messages",
+                "/v1/chat/completions"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-3-haiku",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/messages",
+                "/v1/chat/completions"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-3-haiku-latest",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/messages",
+                "/v1/chat/completions"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-3-haiku-20240307",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/messages",
+                "/v1/chat/completions"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-3-5-haiku",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/messages",
+                "/v1/chat/completions"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-3-5-haiku-latest",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/messages",
+                "/v1/chat/completions"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-3-5-haiku-20241022",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Anthropic",
+            "api_routes": [
+                "/v1/messages",
+                "/v1/chat/completions"
+            ],
+            "provider": "Anthropic"
+        },
+        {
+            "id": "claude-3-opus-patch",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "claude-3-sonnet-patch",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "claude-3-haiku-patch",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "mistral-large-latest",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "open-mistral-nemo",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "palm-2-chat-bison",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "palm-2-chat-bison-32k",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "groq-mixtral-8x7b-32768",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "gemini-2.0-flash",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "gemini-2.0-flash-001",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "gemini-2.0-flash-lite-preview-02-05",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "gemini-2.0-flash-thinking-exp-01-21",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "gemini-2.0-pro-exp-02-05",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "gemini-pro",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "gemini-pro-vision",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "gemini-1.5-pro-latest",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "gemini-1.5-pro",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "gemini-1.5-pro-001",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "gemini-1.5-pro-002",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "gemini-1.5-pro-exp-0801",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "gemini-1.5-flash-latest",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "gemini-1.5-flash-001",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "gemini-1.5-flash-002",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "gemini-1.5-pro-exp-0827",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "gemini-1.5-flash-exp-0827",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "gemini-1.5-flash-8b",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "gemini-1.5-flash-8b-exp-0924",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Google AI",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "Google AI"
+        },
+        {
+            "id": "google-search-v1",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "bing-search-v7",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "serper-search-v1",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "gpt-3.5-turbo-online-with-gs",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "gpt-4-online-with-gs",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "gpt-4-1106-preview-online-with-gs",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "chat-completions-with-gs",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "gpt-4o-web-rev",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "o1-rev",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "o1-pro-rev",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "o3-mini-rev",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "TA/deepseek-ai/DeepSeek-R1",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/deepseek-ai/DeepSeek-V3",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/Qwen/Qwen2.5-7B-Instruct-Turbo",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/codellama/CodeLlama-7b-Instruct-hf",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/meta-llama/Llama-2-7b-chat-hf",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/meta-llama/Llama-3-8b-chat-hf",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/mistralai/Mistral-7B-Instruct-v0.1",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/mistralai/Mistral-7B-Instruct-v0.2",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/google/gemma-7b-it",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/WizardLM/WizardLM-13B-V1.2",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/meta-llama/Llama-2-13b-chat-hf",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/google/gemma-2-9b-it",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/Qwen/QwQ-32B-Preview",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/zero-one-ai/Yi-34B-Chat",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/deepseek-ai/deepseek-coder-33b-instruct",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/codellama/CodeLlama-34b-Instruct-hf",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/google/gemma-2-27b-it",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/Qwen/Qwen2.5-72B-Instruct-Turbo",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/deepseek-ai/deepseek-llm-67b-chat",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/codellama/CodeLlama-70b-Instruct-hf",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/meta-llama/Llama-2-70b-chat-hf",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/meta-llama/Llama-3-70b-chat-hf",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/mistralai/Mixtral-8x7B-Instruct-v0.1",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "TA/mistralai/Mixtral-8x22B-Instruct-v0.1",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Together AI",
+            "api_routes": [
+                "/v1/chat/completions",
+                "/v1/completions"
+            ],
+            "provider": "Together AI"
+        },
+        {
+            "id": "flux-schnell",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Flux",
+            "api_routes": [
+                "/api/v1/ai/draw/flux/schnell"
+            ],
+            "provider": "Flux"
+        },
+        {
+            "id": "flux-pro",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Flux",
+            "api_routes": [
+                "/api/v1/ai/draw/flux/pro"
+            ],
+            "provider": "Flux"
+        },
+        {
+            "id": "flux-dev",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "Flux",
+            "api_routes": [
+                "/api/v1/ai/draw/flux/dev"
+            ],
+            "provider": "Flux"
+        },
+        {
+            "id": "flux-1.1-pro",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "flux-1.1-pro-ultra",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "yi-lightning",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "yi-vision-v2",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "ohmygpt/deepseek-r1-32b",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OhMyGPT",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OhMyGPT"
+        },
+        {
+            "id": "ohmygpt/deepseek-r1-1.5b",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "OhMyGPT",
+            "api_routes": [
+                "/v1/chat/completions"
+            ],
+            "provider": "OhMyGPT"
+        },
+        {
+            "id": "grok-beta",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        },
+        {
+            "id": "file-v1",
+            "object": "model",
+            "created": 1740032115946,
+            "owned_by": "other",
+            "api_routes": [
+                "/other"
+            ],
+            "provider": "other"
+        }
+    ],
+    "metadata": {
+        "pricingData": [
+            {
+                "modelName": "gpt-4o-realtime-preview",
+                "version": "latest",
+                "commonName": "gpt-4o-realtime-preview",
+                "provider": "OpenAI",
+                "description": "gpt-4o-realtime-previewis a LLM provided byOpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 200000,
+                    "input": [
+                        "text",
+                        "audio"
+                    ],
+                    "output": [
+                        "text",
+                        "audio"
+                    ],
+                    "maxOutput": 100000
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 5,
+                        "unit": "MTokens"
+                    },
+                    "cached_input_text": {
+                        "price": 2.5,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 20,
+                        "unit": "MTokens"
+                    },
+                    "input_audio": {
+                        "price": 100,
+                        "unit": "MTokens"
+                    },
+                    "cached_input_audio": {
+                        "price": 20,
+                        "unit": "MTokens"
+                    },
+                    "output_audio": {
+                        "price": 200,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "o3-mini",
+                "version": "latest",
+                "commonName": "o3-mini",
+                "provider": "OpenAI",
+                "description": "o3-mini is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 200000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 100000
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 1.1,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 4.4,
+                        "unit": "MTokens"
+                    },
+                    "cached_input_text": {
+                        "price": 0.55,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 0.55,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 2.2,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "o3-mini-2025-01-31",
+                "version": "2025-01-31",
+                "commonName": "o3-mini",
+                "provider": "OpenAI",
+                "description": "o3-mini is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 200000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 100000
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 1.1,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 4.4,
+                        "unit": "MTokens"
+                    },
+                    "cached_input_text": {
+                        "price": 0.55,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 0.55,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 2.2,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "o1",
+                "version": "latest",
+                "commonName": "o1",
+                "provider": "OpenAI",
+                "description": "o1 is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 200000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 100000
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 15,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 60,
+                        "unit": "MTokens"
+                    },
+                    "cached_input_text": {
+                        "price": 7.5,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 7.5,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 30,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "o1-2024-12-17",
+                "version": "2024-12-17",
+                "commonName": "o1",
+                "provider": "OpenAI",
+                "description": "o1 is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 200000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 100000
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 15,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 60,
+                        "unit": "MTokens"
+                    },
+                    "cached_input_text": {
+                        "price": 7.5,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 7.5,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 30,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4o-mini",
+                "version": "latest",
+                "commonName": "gpt-4o-mini",
+                "provider": "OpenAI",
+                "description": "gpt-4o-mini is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.15,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 0.6,
+                        "unit": "MTokens"
+                    },
+                    "cached_input_text": {
+                        "price": 0.075,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 0.075,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 0.3,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4o-mini-2024-07-18",
+                "version": "2024-07-18",
+                "commonName": "gpt-4o-mini",
+                "provider": "OpenAI",
+                "description": "gpt-4o-mini is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.15,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 0.6,
+                        "unit": "MTokens"
+                    },
+                    "cached_input_text": {
+                        "price": 0.075,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 0.075,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 0.3,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "chatgpt-4o-latest",
+                "version": "latest",
+                "commonName": "chatgpt-4o-latest",
+                "provider": "OpenAI",
+                "description": "chatgpt-4o-latest is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 5,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 15,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4o-2024-05-13",
+                "version": "2024-05-13",
+                "commonName": "gpt-4o",
+                "provider": "OpenAI",
+                "description": "gpt-4o is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 5,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 15,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 2.5,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 7.5,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4o",
+                "version": "latest",
+                "commonName": "GPT-4 Omni",
+                "provider": "OpenAI",
+                "description": "GPT-4o (“o” for “omni”) is our versatile, high-intelligence flagship model. It accepts both text and image inputs, and produces text outputs (including Structured Outputs). Learn how to use GPT-4o in our text generation guide.",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 2.5,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 10,
+                        "unit": "MTokens"
+                    },
+                    "cached_input_text": {
+                        "price": 1.25,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 1.25,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 5,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4o-2024-08-06",
+                "version": "2024-08-06",
+                "commonName": "gpt-4o",
+                "provider": "OpenAI",
+                "description": "gpt-4o is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 2.5,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 10,
+                        "unit": "MTokens"
+                    },
+                    "cached_input_text": {
+                        "price": 1.25,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 1.25,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 5,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4o-2024-11-20",
+                "version": "2024-11-20",
+                "commonName": "gpt-4o",
+                "provider": "OpenAI",
+                "description": "gpt-4o is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 2.5,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 10,
+                        "unit": "MTokens"
+                    },
+                    "cached_input_text": {
+                        "price": 1.25,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 1.25,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 5,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4",
+                "version": "latest",
+                "commonName": "gpt-4",
+                "provider": "OpenAI",
+                "description": "gpt-4 is a LLM provided by OpenAI",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 8192,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 8192
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 30,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 60,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 15,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 30,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4-0613",
+                "version": "latest",
+                "commonName": "gpt-4-0613",
+                "provider": "OpenAI",
+                "description": "gpt-4-0613 is a LLM provided by OpenAI",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 8192,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 8192
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 30,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 60,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 15,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 30,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4-turbo",
+                "version": "latest",
+                "commonName": "gpt-4-turbo",
+                "provider": "OpenAI",
+                "description": "gpt-4-turbo is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 4096
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 10,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 30,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 5,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 15,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4-0125-preview",
+                "version": "latest",
+                "commonName": "gpt-4-0125-preview",
+                "provider": "OpenAI",
+                "description": "gpt-4-0125-preview is a LLM provided by OpenAI",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 10,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 30,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 5,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 15,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4-turbo-preview",
+                "version": "latest",
+                "commonName": "gpt-4-turbo-preview",
+                "provider": "OpenAI",
+                "description": "gpt-4-turbo-preview is a LLM provided by OpenAI",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 4096
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 10,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 30,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 5,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 15,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4-turbo-2024-04-09",
+                "version": "2024-04-09",
+                "commonName": "gpt-4-turbo",
+                "provider": "OpenAI",
+                "description": "gpt-4-turbo is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 4096
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 10,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 30,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 5,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 15,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4-1106-preview",
+                "version": "latest",
+                "commonName": "gpt-4-1106-preview",
+                "provider": "OpenAI",
+                "description": "gpt-4-1106-preview is a LLM provided by OpenAI",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 4096
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 10,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 30,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 5,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 15,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4-vision-preview",
+                "version": "latest",
+                "commonName": "gpt-4-vision-preview",
+                "provider": "OpenAI",
+                "description": "gpt-4-vision-preview is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 4096
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 10,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 30,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 5,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 15,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "o1-preview",
+                "version": "latest",
+                "commonName": "o1-preview",
+                "provider": "OpenAI",
+                "description": "o1-preview is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 32768
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 15,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 60,
+                        "unit": "MTokens"
+                    },
+                    "cached_input_text": {
+                        "price": 7.5,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 7.5,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 30,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "o1-preview-2024-09-12",
+                "version": "2024-09-12",
+                "commonName": "o1-preview",
+                "provider": "OpenAI",
+                "description": "o1-preview is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 15,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 60,
+                        "unit": "MTokens"
+                    },
+                    "cached_input_text": {
+                        "price": 7.5,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 7.5,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 30,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "o1-mini",
+                "version": "latest",
+                "commonName": "o1-mini",
+                "provider": "OpenAI",
+                "description": "o1-mini is a LLM provided by OpenAI",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 65536
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 1.1,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 4.4,
+                        "unit": "MTokens"
+                    },
+                    "cached_input_text": {
+                        "price": 0.55,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 0.55,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 2.2,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "o1-mini-2024-09-12",
+                "version": "2024-09-12",
+                "commonName": "o1-mini",
+                "provider": "OpenAI",
+                "description": "o1-mini is a LLM provided by OpenAI",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 65536
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 1.1,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 4.4,
+                        "unit": "MTokens"
+                    },
+                    "cached_input_text": {
+                        "price": 0.55,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 0.55,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 2.2,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-3.5-turbo",
+                "version": "latest",
+                "commonName": "gpt-3.5-turbo",
+                "provider": "OpenAI",
+                "description": "gpt-3.5-turbo is a LLM provided by OpenAI",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 16385,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 4096
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.5,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 1.5,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 0.25,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 0.75,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-3.5-turbo-0125",
+                "version": "latest",
+                "commonName": "gpt-3.5-turbo-0125",
+                "provider": "OpenAI",
+                "description": "gpt-3.5-turbo-0125 is a LLM provided by OpenAI",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 16385,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 4096
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.5,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 1.5,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 0.25,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 0.75,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-3.5-turbo-16k",
+                "version": "latest",
+                "commonName": "gpt-3.5-turbo-16k",
+                "provider": "OpenAI",
+                "description": "gpt-3.5-turbo-16k is a LLM provided by OpenAI",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 16385,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 4096
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 3,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 4,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 1.5,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 2,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-3.5-turbo-1106",
+                "version": "latest",
+                "commonName": "gpt-3.5-turbo-1106",
+                "provider": "OpenAI",
+                "description": "gpt-3.5-turbo-1106 is a LLM provided by OpenAI",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 16385,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 4096
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 1,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 2,
+                        "unit": "MTokens"
+                    },
+                    "batch_input_text": {
+                        "price": 0.5,
+                        "unit": "MTokens"
+                    },
+                    "batch_output_text": {
+                        "price": 1,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4o-mini-audio-preview",
+                "version": "latest",
+                "commonName": "gpt-4o-mini-audio-preview",
+                "provider": "OpenAI",
+                "description": "gpt-4o-mini-audio-preview is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text",
+                        "audio",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "audio",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.15,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 0.6,
+                        "unit": "MTokens"
+                    },
+                    "input_audio": {
+                        "price": 10,
+                        "unit": "MTokens"
+                    },
+                    "output_audio": {
+                        "price": 20,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4o-mini-audio-preview-2024-12-17",
+                "version": "2024-12-17",
+                "commonName": "gpt-4o-mini-audio-preview",
+                "provider": "OpenAI",
+                "description": "gpt-4o-mini-audio-preview is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text",
+                        "audio",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "audio",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.15,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 0.6,
+                        "unit": "MTokens"
+                    },
+                    "input_audio": {
+                        "price": 10,
+                        "unit": "MTokens"
+                    },
+                    "output_audio": {
+                        "price": 20,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4o-audio-preview",
+                "version": "latest",
+                "commonName": "gpt-4o-audio-preview",
+                "provider": "OpenAI",
+                "description": "gpt-4o-audio-preview is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text",
+                        "audio",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "audio",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 2.5,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 10,
+                        "unit": "MTokens"
+                    },
+                    "input_audio": {
+                        "price": 40,
+                        "unit": "MTokens"
+                    },
+                    "output_audio": {
+                        "price": 80,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4o-audio-preview-2024-10-01",
+                "version": "2024-10-01",
+                "commonName": "gpt-4o-audio-preview",
+                "provider": "OpenAI",
+                "description": "gpt-4o-audio-preview is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text",
+                        "audio",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "audio",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 2.5,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 10,
+                        "unit": "MTokens"
+                    },
+                    "input_audio": {
+                        "price": 100,
+                        "unit": "MTokens"
+                    },
+                    "output_audio": {
+                        "price": 200,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "gpt-4o-audio-preview-2024-12-17",
+                "version": "2024-12-17",
+                "commonName": "gpt-4o-audio-preview",
+                "provider": "OpenAI",
+                "description": "gpt-4o-audio-preview is a LLM provided by OpenAI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text",
+                        "audio",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "audio",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 2.5,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 10,
+                        "unit": "MTokens"
+                    },
+                    "input_audio": {
+                        "price": 40,
+                        "unit": "MTokens"
+                    },
+                    "output_audio": {
+                        "price": 80,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "USD",
+                    "exchangeRateToCoins": 250000
+                },
+                "platformRate": 1.1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "ark-deepseek-r1-250120",
+                "version": "250120",
+                "commonName": "ark-deepseek-r1",
+                "provider": "ByteDance ARK",
+                "description": "ark-deepseek-r1 is provided by ByteDance ARK",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 64000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.004,
+                        "unit": "KTokens"
+                    },
+                    "output_text": {
+                        "price": 0.016,
+                        "unit": "KTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "ark-deepseek-v3-241226",
+                "version": "241226",
+                "commonName": "ark-deepseek-v3",
+                "provider": "ByteDance ARK",
+                "description": "ark-deepseek-v3 is provided by ByteDance ARK",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 64000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.002,
+                        "unit": "KTokens"
+                    },
+                    "output_text": {
+                        "price": 0.008,
+                        "unit": "KTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "doubao-vision-lite-32k-241015",
+                "version": "241015",
+                "commonName": "doubao-vision-lite-32k",
+                "provider": "ByteDance ARK",
+                "description": "doubao-vision-lite-32k is provided by ByteDance ARK",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 32000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.0015,
+                        "unit": "KTokens"
+                    },
+                    "output_text": {
+                        "price": 0.0045,
+                        "unit": "KTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "doubao-vision-pro-32k-241028",
+                "version": "241028",
+                "commonName": "doubao-vision-pro-32k",
+                "provider": "ByteDance ARK",
+                "description": "doubao-vision-pro-32k is provided by ByteDance ARK",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 32000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.003,
+                        "unit": "KTokens"
+                    },
+                    "output_text": {
+                        "price": 0.009,
+                        "unit": "KTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "doubao-pro-256k-241115",
+                "version": "241115",
+                "commonName": "doubao-pro-256k",
+                "provider": "ByteDance ARK",
+                "description": "doubao-pro-256k is provided by ByteDance ARK",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 256000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.005,
+                        "unit": "KTokens"
+                    },
+                    "output_text": {
+                        "price": 0.009,
+                        "unit": "KTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "doubao-pro-32k-241215",
+                "version": "241215",
+                "commonName": "doubao-pro-32k",
+                "provider": "ByteDance ARK",
+                "description": "doubao-pro-32k is provided by ByteDance ARK",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 32000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.0008,
+                        "unit": "KTokens"
+                    },
+                    "output_text": {
+                        "price": 0.002,
+                        "unit": "KTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 0,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "doubao-pro-128k-240628",
+                "version": "240628",
+                "commonName": "doubao-pro-128k",
+                "provider": "ByteDance ARK",
+                "description": "doubao-pro-128k is provided by ByteDance ARK",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.005,
+                        "unit": "KTokens"
+                    },
+                    "output_text": {
+                        "price": 0.009,
+                        "unit": "KTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 0,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "doubao-pro-4k-240515",
+                "version": "240515",
+                "commonName": "doubao-pro-4k",
+                "provider": "ByteDance ARK",
+                "description": "doubao-pro-4k is provided by ByteDance ARK",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 4000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.0008,
+                        "unit": "KTokens"
+                    },
+                    "output_text": {
+                        "price": 0.002,
+                        "unit": "KTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 0,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "doubao-pro-4k-character-240728",
+                "version": "240728",
+                "commonName": "doubao-pro-4k-character",
+                "provider": "ByteDance ARK",
+                "description": "doubao-pro-4k-character is provided by ByteDance ARK",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 4000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.0008,
+                        "unit": "KTokens"
+                    },
+                    "output_text": {
+                        "price": 0.002,
+                        "unit": "KTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 0,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "doubao-lite-32k-240828",
+                "version": "240828",
+                "commonName": "doubao-lite-32k",
+                "provider": "ByteDance ARK",
+                "description": "doubao-lite-32k is provided by ByteDance ARK",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 32000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.0003,
+                        "unit": "KTokens"
+                    },
+                    "output_text": {
+                        "price": 0.0006,
+                        "unit": "KTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "doubao-lite-32k-character-241015",
+                "version": "241015",
+                "commonName": "doubao-lite-32k-character",
+                "provider": "ByteDance ARK",
+                "description": "doubao-lite-32k-character is provided by ByteDance ARK",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 32000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.0003,
+                        "unit": "KTokens"
+                    },
+                    "output_text": {
+                        "price": 0.0006,
+                        "unit": "KTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "doubao-lite-4k-240328",
+                "version": "240328",
+                "commonName": "doubao-lite-4k",
+                "provider": "ByteDance ARK",
+                "description": "doubao-lite-4k is provided by ByteDance ARK",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 4000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.0003,
+                        "unit": "KTokens"
+                    },
+                    "output_text": {
+                        "price": 0.0006,
+                        "unit": "KTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 0,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "doubao-lite-4k-character-240828",
+                "version": "240828",
+                "commonName": "doubao-lite-4k-character",
+                "provider": "ByteDance ARK",
+                "description": "doubao-lite-4k-character is provided by ByteDance ARK",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 4000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.0003,
+                        "unit": "KTokens"
+                    },
+                    "output_text": {
+                        "price": 0.0006,
+                        "unit": "KTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 0,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "doubao-lite-128k-240828",
+                "version": "240828",
+                "commonName": "doubao-lite-128k",
+                "provider": "ByteDance ARK",
+                "description": "doubao-lite-128k is provided by ByteDance ARK",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.0008,
+                        "unit": "KTokens"
+                    },
+                    "output_text": {
+                        "price": 0.001,
+                        "unit": "KTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "moonshot-v1-8k-v1",
+                "version": "latest",
+                "commonName": "moonshot-v1-8k-v1",
+                "provider": "ByteDance ARK",
+                "description": "moonshot-v1-8k-v1 is provided by ByteDance ARK",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 8000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.012,
+                        "unit": "KTokens"
+                    },
+                    "output_text": {
+                        "price": 0.012,
+                        "unit": "KTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "moonshot-v1-32k-v1",
+                "version": "latest",
+                "commonName": "moonshot-v1-32k-v1",
+                "provider": "ByteDance ARK",
+                "description": "moonshot-v1-32k-v1 is provided by ByteDance ARK",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 32000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.024,
+                        "unit": "KTokens"
+                    },
+                    "output_text": {
+                        "price": 0.024,
+                        "unit": "KTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "moonshot-v1-128k-v1",
+                "version": "latest",
+                "commonName": "moonshot-v1-128k-v1",
+                "provider": "ByteDance ARK",
+                "description": "moonshot-v1-128k-v1 is provided by ByteDance ARK",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 128000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16384
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.06,
+                        "unit": "KTokens"
+                    },
+                    "output_text": {
+                        "price": 0.06,
+                        "unit": "KTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "yi-lightning",
+                "version": "latest",
+                "commonName": "YI LIGHTNING",
+                "provider": "01AI",
+                "description": "YI LIGHTNING is provided by LingYI AI",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 16000,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16000
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 0.99,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 0.99,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "yi-vision-v2",
+                "version": "241226",
+                "commonName": "YI Vision V2",
+                "provider": "01AI",
+                "description": "YI Vision V2 is provided by LingYI AI",
+                "functionalType": "multimodal",
+                "ioCapabilities": {
+                    "contextWindow": 16000,
+                    "input": [
+                        "text",
+                        "image"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 16000
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 6,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 6,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "deepseek-chat",
+                "version": "latest",
+                "commonName": "deepseek-chat",
+                "provider": "01AI",
+                "description": "deepseek-chatis provided byDeepSeek",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 65536,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 8192
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 2,
+                        "unit": "MTokens"
+                    },
+                    "cached_input_text": {
+                        "price": 0.5,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 8,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "deepseek-reasoner",
+                "version": "latest",
+                "commonName": "deepseek-reasoner",
+                "provider": "01AI",
+                "description": "deepseek-reasoneris provided byDeepSeek",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 65536,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 8192
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 4,
+                        "unit": "MTokens"
+                    },
+                    "cached_input_text": {
+                        "price": 1,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 16,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            },
+            {
+                "modelName": "deepseek-coder",
+                "version": "latest",
+                "commonName": "deepseek-coder",
+                "provider": "01AI",
+                "description": "deepseek-coderis provided byDeepSeek",
+                "functionalType": "text-only",
+                "ioCapabilities": {
+                    "contextWindow": 65536,
+                    "input": [
+                        "text"
+                    ],
+                    "output": [
+                        "text",
+                        "json"
+                    ],
+                    "maxOutput": 8192
+                },
+                "pricing": {
+                    "input_text": {
+                        "price": 2,
+                        "unit": "MTokens"
+                    },
+                    "cached_input_text": {
+                        "price": 0.5,
+                        "unit": "MTokens"
+                    },
+                    "output_text": {
+                        "price": 8,
+                        "unit": "MTokens"
+                    }
+                },
+                "currency": {
+                    "code": "CNY",
+                    "exchangeRateToCoins": 34000
+                },
+                "platformRate": 1,
+                "tokenConversionBase": 1000000,
+                "effectiveSince": "2025-02-17T00:00:00.000Z"
+            }
+        ]
+    }
+}

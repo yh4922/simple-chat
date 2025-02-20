@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:simple_chat/theme/index_theme.dart';
 
 class Store {
+  // 全局上下文(慎用)
+  static late BuildContext context;
+  static late WidgetRef ref;
+
+  // 是否是桌面端
+  static bool isDesktop = false;
+
   // 缓存实例  初始化时设置 全局调用
   static late SharedPreferences prefs;
 

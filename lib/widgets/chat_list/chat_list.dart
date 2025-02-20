@@ -15,7 +15,6 @@ class ChatList extends StatelessWidget {
       color: Colors.red,
       child: Column(
         children: [
-          Text("ChatList : ${ref.watch(expandCollapseSidebar)}"),
           ElevatedButton.icon(
             onPressed: () {
               ref.read(expandCollapseSidebar.notifier).state = !ref.read(expandCollapseSidebar);
