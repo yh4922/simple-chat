@@ -18,15 +18,6 @@ void main() async {
   // 设置 Zone 错误为致命错误（可选）
   BindingBase.debugZoneErrorsAreFatal = true;
 
-  // 初始化数据库
-  final database = AppDatabase();
-  // 插入测试数据
-  await database
-      .into(database.todoItems)
-      .insert(TodoItemsCompanion.insert(title: 'todo: finish drift setup', content: 'We can now write queries and define our own tables.'));
-  List<TodoItem> allItems = await database.select(database.todoItems).get();
-  print('items in database: $allItems');
-
   // 确保在同一个 zone 中初始化
   runZonedGuarded(
     () async {
@@ -112,6 +103,7 @@ class MyApp extends ConsumerWidget {
     final appBrightness = BrightnessStore.value(ref);
 
     return MaterialApp.router(
+      title: 'Simple Chat',
       // 使用主题
       theme: appTheme.light,
       darkTheme: appTheme.dark,

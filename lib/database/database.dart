@@ -35,3 +35,13 @@ class AppDatabase extends _$AppDatabase {
     );
   }
 }
+
+// // init
+// final database = AppDatabase();
+// // insert
+// await database
+//     .into(database.todoItems)
+//     .insert(TodoItemsCompanion.insert(title: 'Title', content: 'Content'));
+// // select
+// List<TodoItem> allItems = await database.select(database.todoItems).get();
+// print('items in database: $allItems');

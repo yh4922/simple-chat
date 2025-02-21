@@ -1,11 +1,11 @@
 {
-    "name": "simple_chat",
-    "short_name": "simple_chat",
+    "name": "SimpleChat",
+    "short_name": "SimpleChat",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#F9E8EE",
     "theme_color": "#F9E8EE",
-    "description": "A new Flutter project.",
+    "description": "A simple chat application, supporting both desktop and web clients, developed using Flutter.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
