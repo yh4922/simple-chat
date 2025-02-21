@@ -18,7 +18,7 @@ class Assistant {
   final String profile = "";
 
   /// 聊天样式
-  final String chatStyle = "chat"; // chat 聊天模式，doc 代码模式  code 代码模式
+  final String chatStyle = "chat"; // chat聊天模式，doc代码模式  code代码模式
 
   /// 预输入
   final String preInput = "{{text}}";

@@ -15,7 +15,7 @@
         "build-ios:prod": "flutter build ios --dart-define=INIT_ENV=prod",
         "build-web:test": "flutter build web --dart-define=INIT_ENV=test",
         "build-web:pre": "flutter build web --dart-define=INIT_ENV=pre",
-        "build-web:prod": "flutter build web --dart-define=INIT_ENV=prod",
+        "build-web:prod": "flutter build web --dart-define=INIT_ENV=prod --dart-define=FLUTTER_WEB_CANVASKIT_URL=canvaskit/",
         "build-windows:test": "flutter build windows --dart-define=INIT_ENV=test",
         "build-windows:pre": "flutter build windows --dart-define=INIT_ENV=pre",
         "build-windows:prod": "flutter build windows --dart-define=INIT_ENV=prod",
@@ -25,8 +25,8 @@
         "i18n:dart": "flutter pub run intl_utils:generate",
         "icon": "node lib/widgets/iconfont/gen.js",
         "app:icon": "dart run flutter_launcher_icons",
-        "gen": "dart run build_runner build",
-        "gen:watch": "dart run build_runner watch"
+        "code": "dart run build_runner build",
+        "code:watch": "dart run build_runner watch"
     },
     "i18n": {
         "entry": "lib/i18n/locale/intl_zh.json",

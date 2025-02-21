@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:simple_chat/database/database.dart';
 import 'package:simple_chat/states/brightness/brightness.dart';
 import 'package:simple_chat/states/locale/locale.dart';
 import 'package:simple_chat/states/theme/theme.dart';
@@ -11,10 +12,20 @@ import 'package:window_manager/window_manager.dart';
 // import 'package:jh_debug/jh_debug.dart';
 import 'package:simple_chat/utils/store.dart';
 import 'router/router.dart';
+import 'package:path_provider/path_provider.dart';
 
 void main() async {
   // 设置 Zone 错误为致命错误（可选）
   BindingBase.debugZoneErrorsAreFatal = true;
+
+  // 初始化数据库
+  final database = AppDatabase();
+  // 插入测试数据
+  await database
+      .into(database.todoItems)
+      .insert(TodoItemsCompanion.insert(title: 'todo: finish drift setup', content: 'We can now write queries and define our own tables.'));
+  List<TodoItem> allItems = await database.select(database.todoItems).get();
+  print('items in database: $allItems');
 
   // 确保在同一个 zone 中初始化
   runZonedGuarded(
