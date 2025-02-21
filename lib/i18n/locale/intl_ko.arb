@@ -1,0 +1,17 @@
+{
+  "@@locale": "ko",
+  "appname": "간단한 채팅",
+  "chat": "대화",
+  "dark": "어두운 색",
+  "demo": "데모",
+  "github": "GitHub",
+  "language": "한국어",
+  "light": "밝은 색",
+  "message": "안녕하세요, {name}!",
+  "providers": "제공자",
+  "settings": "설정",
+  "system": "시스템",
+  "theme": "테마",
+  "title": "환영합니다",
+  "translation": "번역"
+}

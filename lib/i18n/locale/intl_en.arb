@@ -1,11 +1,17 @@
 {
   "@@locale": "en",
-  "title": "Welcome",
-  "message": "Hello, {name}!",
   "appname": "Simple Chat",
-  "chat": "Chat",
+  "chat": "Conversation",
+  "dark": "Dark Mode",
   "demo": "Demo",
   "github": "GitHub",
+  "language": "English",
+  "light": "Light Mode",
+  "message": "Hello, {name}!",
+  "providers": "Providers",
   "settings": "Settings",
-  "theme": "Theme"
+  "system": "System",
+  "theme": "Theme",
+  "title": "Welcome",
+  "translation": "Translation"
 }

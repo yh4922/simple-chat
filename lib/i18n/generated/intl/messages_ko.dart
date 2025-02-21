@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a ko locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,25 +18,25 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'ko';
 
-  static String m0(name) => "Hello, ${name}!";
+  static String m0(name) => "안녕하세요, ${name}!";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "appname": MessageLookupByLibrary.simpleMessage("Simple Chat"),
-    "chat": MessageLookupByLibrary.simpleMessage("Conversation"),
-    "dark": MessageLookupByLibrary.simpleMessage("Dark Mode"),
-    "demo": MessageLookupByLibrary.simpleMessage("Demo"),
+    "appname": MessageLookupByLibrary.simpleMessage("간단한 채팅"),
+    "chat": MessageLookupByLibrary.simpleMessage("대화"),
+    "dark": MessageLookupByLibrary.simpleMessage("어두운 색"),
+    "demo": MessageLookupByLibrary.simpleMessage("데모"),
     "github": MessageLookupByLibrary.simpleMessage("GitHub"),
-    "language": MessageLookupByLibrary.simpleMessage("English"),
-    "light": MessageLookupByLibrary.simpleMessage("Light Mode"),
+    "language": MessageLookupByLibrary.simpleMessage("한국어"),
+    "light": MessageLookupByLibrary.simpleMessage("밝은 색"),
     "message": m0,
-    "providers": MessageLookupByLibrary.simpleMessage("Providers"),
-    "settings": MessageLookupByLibrary.simpleMessage("Settings"),
-    "system": MessageLookupByLibrary.simpleMessage("System"),
-    "theme": MessageLookupByLibrary.simpleMessage("Theme"),
-    "title": MessageLookupByLibrary.simpleMessage("Welcome"),
-    "translation": MessageLookupByLibrary.simpleMessage("Translation"),
+    "providers": MessageLookupByLibrary.simpleMessage("제공자"),
+    "settings": MessageLookupByLibrary.simpleMessage("설정"),
+    "system": MessageLookupByLibrary.simpleMessage("시스템"),
+    "theme": MessageLookupByLibrary.simpleMessage("테마"),
+    "title": MessageLookupByLibrary.simpleMessage("환영합니다"),
+    "translation": MessageLookupByLibrary.simpleMessage("번역"),
   };
 }

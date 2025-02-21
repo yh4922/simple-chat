@@ -17,6 +17,14 @@ class AppRouter extends RootStackRouter {
   @override
   GlobalKey<NavigatorState> get navigatorKey => jhDebug.getNavigatorKey;
 
+  /// /chat/:chatid
+  /// /setting/common  通用设置  主题 亮色暗色  语言   字体大小?
+  /// /setting/assistant   内置助手设置 话题命名  消息翻译  总结压缩上下文  生成助理信息  知识库压缩？
+  /// /setting/provider  AI提供商管理   每个提供商启用 设置密钥等
+  /// /setting/voice  语音服务 ？？
+  /// /setting/default  默认助手
+  ///
+
   @override // 路由
   List<AutoRoute> get routes {
     return [

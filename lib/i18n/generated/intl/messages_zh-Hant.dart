@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a zh_Hant locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,25 +18,25 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'zh_Hant';
 
-  static String m0(name) => "Hello, ${name}!";
+  static String m0(name) => "你好, ${name}!";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "appname": MessageLookupByLibrary.simpleMessage("Simple Chat"),
-    "chat": MessageLookupByLibrary.simpleMessage("Conversation"),
-    "dark": MessageLookupByLibrary.simpleMessage("Dark Mode"),
-    "demo": MessageLookupByLibrary.simpleMessage("Demo"),
+    "appname": MessageLookupByLibrary.simpleMessage("簡單聊天"),
+    "chat": MessageLookupByLibrary.simpleMessage("對話"),
+    "dark": MessageLookupByLibrary.simpleMessage("暗色"),
+    "demo": MessageLookupByLibrary.simpleMessage("演示"),
     "github": MessageLookupByLibrary.simpleMessage("GitHub"),
-    "language": MessageLookupByLibrary.simpleMessage("English"),
-    "light": MessageLookupByLibrary.simpleMessage("Light Mode"),
+    "language": MessageLookupByLibrary.simpleMessage("繁體中文"),
+    "light": MessageLookupByLibrary.simpleMessage("亮色"),
     "message": m0,
-    "providers": MessageLookupByLibrary.simpleMessage("Providers"),
-    "settings": MessageLookupByLibrary.simpleMessage("Settings"),
-    "system": MessageLookupByLibrary.simpleMessage("System"),
-    "theme": MessageLookupByLibrary.simpleMessage("Theme"),
-    "title": MessageLookupByLibrary.simpleMessage("Welcome"),
-    "translation": MessageLookupByLibrary.simpleMessage("Translation"),
+    "providers": MessageLookupByLibrary.simpleMessage("提供商"),
+    "settings": MessageLookupByLibrary.simpleMessage("設定"),
+    "system": MessageLookupByLibrary.simpleMessage("系統"),
+    "theme": MessageLookupByLibrary.simpleMessage("主題"),
+    "title": MessageLookupByLibrary.simpleMessage("歡迎"),
+    "translation": MessageLookupByLibrary.simpleMessage("翻譯"),
   };
 }

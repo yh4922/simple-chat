@@ -1,0 +1,17 @@
+{
+  "@@locale": "ja",
+  "appname": "シンプルチャット",
+  "chat": "チャット",
+  "dark": "ダークモード",
+  "demo": "デモ",
+  "github": "GitHub",
+  "language": "日本語",
+  "light": "ライトモード",
+  "message": "こんにちは、{name}さん!",
+  "providers": "プロバイダー",
+  "settings": "設定",
+  "system": "システム",
+  "theme": "テーマ",
+  "title": "ようこそ",
+  "translation": "翻訳"
+}

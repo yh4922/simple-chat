@@ -132,10 +132,7 @@ class MyApp extends ConsumerWidget {
         // print('supportLocales:$supportedLocales');
         return null;
       },
-      supportedLocales: [
-        Locale('zh'), // Chinese
-        Locale('en'), // English
-      ],
+      supportedLocales: LocaleData.supportedLocales,
       debugShowCheckedModeBanner: false,
     );
   }

@@ -1,0 +1,17 @@
+{
+  "@@locale": "zh-Hant",
+  "appname": "簡單聊天",
+  "chat": "對話",
+  "dark": "暗色",
+  "demo": "演示",
+  "github": "GitHub",
+  "language": "繁體中文",
+  "light": "亮色",
+  "message": "你好, {name}!",
+  "providers": "提供商",
+  "settings": "設定",
+  "system": "系統",
+  "theme": "主題",
+  "title": "歡迎",
+  "translation": "翻譯"
+}

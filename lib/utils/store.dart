@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:simple_chat/states/locale/locale.dart';
 import 'package:simple_chat/theme/index_theme.dart';
 
 class Store {
@@ -32,7 +33,7 @@ class Store {
     prefs = await SharedPreferences.getInstance();
     // 获取语言标识
     localeName = prefs.getString("localeName") ?? "en";
-    locale = Locale(localeName);
+    locale = LocaleData.getLocale(localeName);
     // 获取主题标识
     ThemeDatas.themeList = themeList;
     themeName = prefs.getString("themeName") ?? "bluegrey";

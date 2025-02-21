@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a ja locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,25 +18,25 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'ja';
 
-  static String m0(name) => "Hello, ${name}!";
+  static String m0(name) => "こんにちは、${name}さん!";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "appname": MessageLookupByLibrary.simpleMessage("Simple Chat"),
-    "chat": MessageLookupByLibrary.simpleMessage("Conversation"),
-    "dark": MessageLookupByLibrary.simpleMessage("Dark Mode"),
-    "demo": MessageLookupByLibrary.simpleMessage("Demo"),
+    "appname": MessageLookupByLibrary.simpleMessage("シンプルチャット"),
+    "chat": MessageLookupByLibrary.simpleMessage("チャット"),
+    "dark": MessageLookupByLibrary.simpleMessage("ダークモード"),
+    "demo": MessageLookupByLibrary.simpleMessage("デモ"),
     "github": MessageLookupByLibrary.simpleMessage("GitHub"),
-    "language": MessageLookupByLibrary.simpleMessage("English"),
-    "light": MessageLookupByLibrary.simpleMessage("Light Mode"),
+    "language": MessageLookupByLibrary.simpleMessage("日本語"),
+    "light": MessageLookupByLibrary.simpleMessage("ライトモード"),
     "message": m0,
-    "providers": MessageLookupByLibrary.simpleMessage("Providers"),
-    "settings": MessageLookupByLibrary.simpleMessage("Settings"),
-    "system": MessageLookupByLibrary.simpleMessage("System"),
-    "theme": MessageLookupByLibrary.simpleMessage("Theme"),
-    "title": MessageLookupByLibrary.simpleMessage("Welcome"),
-    "translation": MessageLookupByLibrary.simpleMessage("Translation"),
+    "providers": MessageLookupByLibrary.simpleMessage("プロバイダー"),
+    "settings": MessageLookupByLibrary.simpleMessage("設定"),
+    "system": MessageLookupByLibrary.simpleMessage("システム"),
+    "theme": MessageLookupByLibrary.simpleMessage("テーマ"),
+    "title": MessageLookupByLibrary.simpleMessage("ようこそ"),
+    "translation": MessageLookupByLibrary.simpleMessage("翻訳"),
   };
 }

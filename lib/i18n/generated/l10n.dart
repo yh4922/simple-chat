@@ -55,29 +55,19 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Welcome`
-  String get title {
-    return Intl.message('Welcome', name: 'title', desc: '', args: []);
-  }
-
-  /// `Hello, {name}!`
-  String message(Object name) {
-    return Intl.message(
-      'Hello, $name!',
-      name: 'message',
-      desc: '',
-      args: [name],
-    );
-  }
-
   /// `Simple Chat`
   String get appname {
     return Intl.message('Simple Chat', name: 'appname', desc: '', args: []);
   }
 
-  /// `Chat`
+  /// `Conversation`
   String get chat {
-    return Intl.message('Chat', name: 'chat', desc: '', args: []);
+    return Intl.message('Conversation', name: 'chat', desc: '', args: []);
+  }
+
+  /// `Dark Mode`
+  String get dark {
+    return Intl.message('Dark Mode', name: 'dark', desc: '', args: []);
   }
 
   /// `Demo`
@@ -90,14 +80,54 @@ class S {
     return Intl.message('GitHub', name: 'github', desc: '', args: []);
   }
 
+  /// `English`
+  String get language {
+    return Intl.message('English', name: 'language', desc: '', args: []);
+  }
+
+  /// `Light Mode`
+  String get light {
+    return Intl.message('Light Mode', name: 'light', desc: '', args: []);
+  }
+
+  /// `Hello, {name}!`
+  String message(Object name) {
+    return Intl.message(
+      'Hello, $name!',
+      name: 'message',
+      desc: '',
+      args: [name],
+    );
+  }
+
+  /// `Providers`
+  String get providers {
+    return Intl.message('Providers', name: 'providers', desc: '', args: []);
+  }
+
   /// `Settings`
   String get settings {
     return Intl.message('Settings', name: 'settings', desc: '', args: []);
   }
 
+  /// `System`
+  String get system {
+    return Intl.message('System', name: 'system', desc: '', args: []);
+  }
+
   /// `Theme`
   String get theme {
     return Intl.message('Theme', name: 'theme', desc: '', args: []);
+  }
+
+  /// `Welcome`
+  String get title {
+    return Intl.message('Welcome', name: 'title', desc: '', args: []);
+  }
+
+  /// `Translation`
+  String get translation {
+    return Intl.message('Translation', name: 'translation', desc: '', args: []);
   }
 }
 
@@ -107,7 +137,11 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'ja'),
+      Locale.fromSubtags(languageCode: 'ko'),
       Locale.fromSubtags(languageCode: 'zh'),
+      Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans'),
+      Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant'),
     ];
   }
 

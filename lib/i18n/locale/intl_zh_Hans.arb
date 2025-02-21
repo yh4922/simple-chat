@@ -1,5 +1,5 @@
 {
-  "@@locale": "zh",
+  "@@locale": "zh-Hans",
   "appname": "简单聊天",
   "chat": "对话",
   "dark": "暗色",
@@ -7,7 +7,7 @@
   "github": "GitHub",
   "language": "简体中文",
   "light": "亮色",
-  "message": "你好, {name}!",
+  "message": "你好，{name}！",
   "providers": "提供商",
   "settings": "设置",
   "system": "系统",

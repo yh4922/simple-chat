@@ -21,9 +21,24 @@
         "build-windows:prod": "flutter build windows --dart-define=INIT_ENV=prod",
         "appkey": "keytool -printcert -jarfile ./build/app/outputs/apk/release/app-release.apk",
         "upsdk": "flutter upgrade",
-        "i18n": "flutter pub run intl_utils:generate",
-        "icon": "dart run flutter_launcher_icons",
+        "i18n": "node scripts/i18n.js",
+        "i18n:dart": "flutter pub run intl_utils:generate",
+        "icon": "node lib/widgets/iconfont/gen.js",
+        "app:icon": "dart run flutter_launcher_icons",
         "gen": "dart run build_runner build",
         "gen:watch": "dart run build_runner watch"
+    },
+    "i18n": {
+        "entry": "lib/i18n/locale/intl_zh.json",
+        "entryLocale": "intl_zh",
+        "output": "lib/i18n/locale",
+        "modelName": "gpt-4o-mini",
+        "outputLocales": [
+            "intl_zh_Hans",
+            "intl_zh_Hant",
+            "intl_en",
+            "intl_ja",
+            "intl_ko"
+        ]
     }
 }
