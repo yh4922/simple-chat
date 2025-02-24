@@ -1,6 +1,22 @@
 import 'package:flutter/material.dart';
 
 class Iconfont {
+  /// close
+  // ignore: non_constant_identifier_names
+  static IconData get close => const IconData(0xe64a, fontFamily: 'iconfont');
+
+  /// max
+  // ignore: non_constant_identifier_names
+  static IconData get max => const IconData(0xe65d, fontFamily: 'iconfont');
+
+  /// min
+  // ignore: non_constant_identifier_names
+  static IconData get min => const IconData(0xe650, fontFamily: 'iconfont');
+
+  /// unmax
+  // ignore: non_constant_identifier_names
+  static IconData get unmax => const IconData(0xe600, fontFamily: 'iconfont');
+
   /// auto_l
   // ignore: non_constant_identifier_names
   static IconData get auto_l => const IconData(0xe613, fontFamily: 'iconfont');

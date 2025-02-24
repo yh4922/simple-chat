@@ -1,0 +1,124 @@
+import 'package:flutter/material.dart';
+import 'package:simple_chat/utils/store.dart';
+import 'package:simple_chat/widgets/iconfont/iconfont.dart';
+import 'package:window_manager/window_manager.dart';
+
+class WindowButtons extends StatelessWidget {
+  const WindowButtons({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    var buttons = Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Store.isDesktop ? Expanded(child: DragToMoveArea(child: SizedBox(height: 32, width: double.infinity))) : SizedBox.shrink(),
+        WindowButtonIcon(
+          icon: Iconfont.min,
+          onTap: () async {
+            await windowManager.minimize();
+          },
+        ),
+        WindowButtonIcon(
+          icon: Iconfont.max,
+          onTap: () async {
+            var max = await windowManager.isMaximized();
+            if (max) {
+              await windowManager.unmaximize();
+            } else {
+              await windowManager.maximize();
+            }
+          },
+        ),
+        WindowButtonIcon(
+          close: true,
+          icon: Iconfont.close,
+          onTap: () async {
+            await windowManager.close();
+          },
+        ),
+      ],
+    );
+
+    return buttons;
+  }
+}
+
+class WindowButtonIcon extends StatefulWidget {
+  final IconData icon;
+  final Future<void> Function() onTap;
+  final bool close;
+  const WindowButtonIcon({
+    //
+    super.key,
+    required this.icon,
+    required this.onTap,
+    this.close = false,
+  });
+
+  @override
+  State<WindowButtonIcon> createState() => _WindowButtonIconState();
+}
+
+class _WindowButtonIconState extends State<WindowButtonIcon> {
+  bool hover = false;
+  int buttonKey = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    var hoverColor = widget.close ? Theme.of(context).colorScheme.error : Theme.of(context).colorScheme.onSurface.withAlpha(50);
+    return MouseRegion(
+      onEnter: (_) {
+        setState(() {
+          hover = true;
+        });
+      },
+      onExit: (_) {
+        setState(() {
+          hover = false;
+        });
+      },
+      child: Listener(
+        behavior: HitTestBehavior.opaque,
+        onPointerCancel: (_) {
+          setState(() {
+            buttonKey = 0;
+          });
+        },
+        onPointerDown: (e) {
+          setState(() {
+            buttonKey = e.buttons;
+          });
+        },
+        onPointerUp: (e) {
+          // 判断鼠标是否在组件范围内
+          final RenderBox box = context.findRenderObject() as RenderBox;
+          final Offset localPosition = box.globalToLocal(e.position);
+          final bool isInside = box.size.contains(localPosition);
+
+          if (isInside) {
+            if (Store.isDesktop && buttonKey != 1) {
+              return; // 只处理左键点击
+            }
+            widget.onTap.call();
+          }
+
+          setState(() {
+            buttonKey = e.buttons;
+          });
+        },
+        child: Container(
+          height: 32,
+          alignment: Alignment.center,
+          padding: EdgeInsets.symmetric(horizontal: 15),
+          color: hover ? hoverColor.withAlpha(200) : null,
+          child: Icon(
+            widget.icon,
+            size: 10,
+            // 关闭按钮颜色不一样
+            color: hover && widget.close ? Theme.of(context).colorScheme.onError : null,
+          ),
+        ),
+      ),
+    );
+  }
+}

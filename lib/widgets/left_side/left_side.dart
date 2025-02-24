@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_chat/router/router.dart';
 import 'package:simple_chat/states/brightness/brightness.dart';
+import 'package:simple_chat/utils/store.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:window_manager/window_manager.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -41,19 +42,14 @@ class NavItem extends StatelessWidget {
       child: GestureDetector(
         behavior: HitTestBehavior.opaque,
         onPanStart: (_) {},
-        onDoubleTap: () {},
-        child: ElTooltip(
-          content: Text("123123"),
-          position: ElTooltipPosition.rightCenter,
-          color: Theme.of(context).colorScheme.surfaceContainerLowest,
-          child: Material(
-            color: isActive ? Theme.of(context).colorScheme.primaryContainer.withAlpha(100) : Colors.transparent,
+        child: Material(
+          color: isActive ? Theme.of(context).colorScheme.primaryContainer.withAlpha(100) : Colors.transparent,
+          borderRadius: BorderRadius.circular(6),
+          child: InkWell(
+            onTap: onTap,
+            onDoubleTap: () {},
             borderRadius: BorderRadius.circular(6),
-            child: InkWell(
-              onTap: onTap,
-              borderRadius: BorderRadius.circular(6),
-              child: SizedBox(width: 34, height: 34, child: Icon(icon, size: 20, color: Theme.of(context).colorScheme.primary)),
-            ),
+            child: SizedBox(width: 34, height: 34, child: Icon(icon, size: 20, color: Theme.of(context).colorScheme.primary)),
           ),
         ),
       ),
@@ -186,7 +182,7 @@ class LeftSide extends ConsumerWidget {
         ],
       ),
     );
-    if (kIsWeb) {
+    if (!Store.isDesktop) {
       return liftSide;
     }
     return DragToMoveArea(child: liftSide);

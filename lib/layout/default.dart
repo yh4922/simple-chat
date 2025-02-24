@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:simple_chat/states/window/max.dart';
+import 'package:simple_chat/widgets/iconfont/iconfont.dart';
 import 'package:simple_chat/widgets/left_side/left_side.dart';
 import 'package:simple_chat/utils/store.dart';
+import 'package:simple_chat/widgets/window_buttons/window_buttons.dart';
 import 'package:window_manager/window_manager.dart';
 
 /// DefaultLayout 是应用程序的默认布局组件。
@@ -32,32 +34,30 @@ class DefaultLayout extends ConsumerWidget {
       showBorder = false;
     }
 
-    return Scaffold(
-      // backgroundColor: Theme.of(context).colorScheme.surface,
-      backgroundColor: Colors.transparent,
-      body: DragToResizeArea(
-        child: Stack(
-          children: [
-            BorderContainer(
-              showBorder: showBorder && !winMaxStatus,
-              child: Row(
+    var content = BorderContainer(
+      showBorder: showBorder && !winMaxStatus,
+      child: Row(
+        children: [
+          LeftSide(),
+          Expanded(
+            child: SizedBox(
+              child: Column(
                 children: [
-                  LeftSide(),
-                  Expanded(
-                    child: Container(
-                      // 内容 brightness
-                      // color: Theme.of(context).colorScheme.surface,
-                      child: AutoRouter(),
-                    ),
-                  ),
+                  // 内容区域
+                  WindowButtons(),
+                  Expanded(child: AutoRouter()),
                 ],
               ),
             ),
-            // 堆叠层 后续可以放一些其他组件 弹窗等
-            // Positioned(child: Container(child: Text('123'))),
-          ],
-        ),
+          ),
+        ],
       ),
+    );
+
+    return Scaffold(
+      // backgroundColor: Theme.of(context).colorScheme.surface,
+      backgroundColor: Colors.transparent,
+      body: winMaxStatus ? content : DragToResizeArea(child: content),
     );
   }
 }
@@ -69,15 +69,23 @@ class BorderContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      clipBehavior: Clip.antiAlias,
-      margin: showBorder ? EdgeInsets.all(4) : EdgeInsets.zero,
-      decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.surface,
-        boxShadow: showBorder ? [BoxShadow(color: Colors.black.withAlpha(150), blurRadius: 2, offset: Offset(0, 0))] : null,
-        borderRadius: showBorder ? BorderRadius.circular(4) : BorderRadius.zero,
-      ),
-      child: child,
+    return Stack(
+      children: [
+        Container(
+          clipBehavior: Clip.antiAlias,
+          margin: showBorder ? EdgeInsets.all(4) : EdgeInsets.zero,
+          decoration: BoxDecoration(
+            color: Theme.of(context).colorScheme.surface,
+            boxShadow: showBorder ? [BoxShadow(color: Colors.black.withAlpha(150), blurRadius: 2, offset: Offset(0, 0))] : null,
+            borderRadius: showBorder ? BorderRadius.circular(4) : BorderRadius.zero,
+          ),
+          child: child,
+        ),
+        // // 窗口控制按钮
+        // defaultTargetPlatform == TargetPlatform.windows || defaultTargetPlatform == TargetPlatform.linux
+        //     ? Positioned(top: 0, right: 0, child: WindowButtons())
+        //     : SizedBox.shrink(),
+      ],
     );
   }
 }
