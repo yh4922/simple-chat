@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:simple_chat/states/window/max.dart';
-import 'package:simple_chat/widgets/iconfont/iconfont.dart';
 import 'package:simple_chat/widgets/left_side/left_side.dart';
 import 'package:simple_chat/utils/store.dart';
 import 'package:simple_chat/widgets/window_buttons/window_buttons.dart';

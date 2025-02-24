@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_chat/router/router.dart';
 import 'package:simple_chat/states/brightness/brightness.dart';
@@ -10,7 +9,6 @@ import 'package:simple_chat/widgets/iconfont/iconfont.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:simple_chat/states/routes/routes.dart';
 import 'package:simple_chat/i18n/generated/l10n.dart';
-import 'package:el_tooltip/el_tooltip.dart';
 
 class NavItem extends StatelessWidget {
   /// 图标
