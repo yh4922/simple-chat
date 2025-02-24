@@ -14,17 +14,17 @@ jobs:
         include:
           - os: ubuntu-latest
             output_path: build/linux/x64/release/bundle
-            asset_name: chatmcp-linux-x64.tar.gz
+            asset_name: simple-chat-linux-x64.tar.gz
             build_target: linux
             apk_build: true
           - os: macos-latest
-            output_path: build/macos/Build/Products/Release/chatmcp.app
-            asset_name: chatmcp-macos-x64.dmg
+            output_path: build/macos/Build/Products/Release/SimpleChat.app
+            asset_name: simple-chat-macos-x64.dmg
             build_target: macos
             apk_build: false
           - os: windows-latest
             output_path: build/windows/x64/Runner/Release
-            asset_name: chatmcp-windows-x64.zip
+            asset_name: simple-chat-windows-x64.zip
             build_target: windows
             apk_build: false
     runs-on: ${{ matrix.os }}
@@ -80,12 +80,12 @@ jobs:
         run: |
           brew install create-dmg
           create-dmg \
-            --volname "ChatMcp" \
+            --volname "SimpleChat" \
             --window-pos 200 120 \
             --window-size 800 400 \
             --icon-size 100 \
-            --icon "chatmcp.app" 200 190 \
-            --hide-extension "chatmcp.app" \
+            --icon "SimpleChat.app" 200 190 \
+            --hide-extension "SimpleChat.app" \
             --app-drop-link 600 185 \
             "${{ matrix.asset_name }}" \
             "${{ matrix.output_path }}"
@@ -99,15 +99,15 @@ jobs:
       - name: Package Android APK
         if: matrix.apk_build
         run: |
-          cp build/app/outputs/flutter-apk/app-release.apk chatmcp-android.apk
+          cp build/app/outputs/flutter-apk/app-release.apk simple-chat-android.apk
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.apk_build && 'chatmcp-android' || matrix.build_target }}
+          name: ${{ matrix.apk_build && 'simple-chat-android' || matrix.build_target }}
           path: |
             ${{ matrix.asset_name }}
-            ${{ matrix.apk_build && 'chatmcp-android.apk' || '' }}
+            ${{ matrix.apk_build && 'simple-chat-android.apk' || '' }}
       
       - name: Create Release
         if: startsWith(github.ref, 'refs/tags/')
@@ -115,6 +115,6 @@ jobs:
         with:
           files: |
             ${{ matrix.asset_name }}
-            ${{ matrix.apk_build && 'chatmcp-android.apk' || '' }}
+            ${{ matrix.apk_build && 'simple-chat-android.apk' || '' }}
         env:
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
