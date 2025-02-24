@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:simple_chat/states/window/max.dart';
 import 'package:simple_chat/widgets/left_side/left_side.dart';
 import 'package:simple_chat/utils/store.dart';
 import 'package:window_manager/window_manager.dart';
@@ -17,6 +18,8 @@ class DefaultLayout extends ConsumerWidget {
     // 全局上下文绑定
     Store.context = context;
     Store.ref = ref;
+
+    final winMaxStatus = WinMaxStatus.value(ref);
 
     bool showBorder = true;
     if (kIsWeb) {
@@ -36,7 +39,7 @@ class DefaultLayout extends ConsumerWidget {
         child: Stack(
           children: [
             BorderContainer(
-              showBorder: showBorder,
+              showBorder: showBorder && !winMaxStatus,
               child: Row(
                 children: [
                   LeftSide(),

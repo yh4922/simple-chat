@@ -3,7 +3,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:simple_chat/database/database.dart';
 import 'package:simple_chat/states/brightness/brightness.dart';
 import 'package:simple_chat/states/locale/locale.dart';
 import 'package:simple_chat/states/theme/theme.dart';
@@ -12,7 +11,6 @@ import 'package:window_manager/window_manager.dart';
 // import 'package:jh_debug/jh_debug.dart';
 import 'package:simple_chat/utils/store.dart';
 import 'router/router.dart';
-import 'package:path_provider/path_provider.dart';
 
 void main() async {
   // 设置 Zone 错误为致命错误（可选）
@@ -29,7 +27,6 @@ void main() async {
           defaultTargetPlatform == TargetPlatform.macOS ||
           defaultTargetPlatform == TargetPlatform.linux;
 
-      // print('Store.isDesktop: ${Store.isDesktop}');
       // 桌面端初始化
       if (!kIsWeb && Store.isDesktop) {
         await windowManager.ensureInitialized();
