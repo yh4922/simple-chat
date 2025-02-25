@@ -115,8 +115,10 @@ jobs:
           flutter-version: '3.29.0'
       # 安装 flutter_distributor
       - name: Install flutter_distributor
-        shell: bash
-        run: dart pub global activate flutter_distributor
+        run: |
+          dart pub global activate flutter_distributor
+          # 设置环境变量
+
       # # 安装 InnoSetup
       # - name: Install InnoSetup
       #   uses: Minionguyjpro/Inno-Setup-Action@v1.2.5
@@ -125,11 +127,9 @@ jobs:
         run: flutter pub get
       # 编译 msix
       - name: Build Msix
-        shell: bash
         run: flutter_distributor package --platform windows --targets msix
       # 编译 exe
       - name: Build EXE
-        shell: bash
         run: flutter_distributor package --platform windows --targets exe
   # 编译macos x86
   build-macos-amd64:
