@@ -10,7 +10,18 @@ jobs:
   build:
     strategy:
       matrix:
+        # 编译运行环境
         os: [ubuntu-latest, macos-latest, windows-latest]
+        # 命名  simple_chat-v0.0.1.bate-{system}-{arch}.{extname}
+        # 示例  simple_chat-v0.0.1.bate-android-armeabi-v7a.apk
+        # 示例  simple_chat-v0.0.1.bate-linux-x86_64.app
+        # 编译文件位置
+        # 安卓APK平台
+        # build\app\outputs\flutter-apk\app-armeabi-v7a-release.apk
+        # build\app\outputs\flutter-apk\app-arm64-v8a-release.apk
+        # build\app\outputs\flutter-apk\app-x86_64-release.apk
+        # windos平台
+        # build\windows\x64\runner\Release\*
         include:
           - os: ubuntu-latest
             output_path: build/linux/x64/release/bundle
@@ -64,9 +75,9 @@ jobs:
       - name: Build ${{ matrix.build_target }}
         shell: bash
         run: |
-          flutter build ${{ matrix.build_target }} --release
+          flutter build ${{ matrix.build_target }} --release --dart-define=INIT_ENV=prod
           if [ "${{ matrix.apk_build }}" == "true" ]; then
-            flutter build apk --release
+            flutter build apk --release --dart-define=INIT_ENV=prod --dart-define=ANDROID_CHANNEL=flutter
           fi
       
       - name: Package Linux App
