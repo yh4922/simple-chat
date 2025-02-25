@@ -36,6 +36,11 @@ jobs:
         # build\app\outputs\flutter-apk\app-x86_64-release.apk
         # windos平台
         # build\windows\x64\runner\Release\*
+        # linux平台
+        # build/linux/x64/release/bundle/*
+        # macos
+        # build/macos/Build/Products/Release/SimpleChat.app
+        
         # , ubuntu-24.04-arm flutter 没有提供 linux arm的安装包
         # - os: ubuntu-24.04-arm
         #   arch: arm64
@@ -100,6 +105,23 @@ jobs:
       - name: Build ${{ matrix.build_target }}
         shell: bash
         run: flutter build ${{ matrix.build_target }} --release --dart-define=INIT_ENV=prod
+      # 编译安卓
+      - name: Build Apk
+        if: matrix.apk_build
+        shell: bash
+        run: flutter build apk --release --split-per-abi --dart-define=INIT_ENV=prod
+      # 编译web
+      - name: Build Web
+        if: matrix.build_target == 'windows'
+        shell: bash
+        run: flutter build web --release --dart-define=INIT_ENV=prod --dart-define=FLUTTER_WEB_CANVASKIT_URL=canvaskit/
+      # 编译IOS
+      - name: Build iOS
+        if: matrix.ios_build
+        shell: bash
+        run: flutter build ios --release --dart-define=INIT_ENV=prod
+
+
       # 打包linux
       # - name: Package Linux App
       #   if: matrix.build_target == 'linux'
