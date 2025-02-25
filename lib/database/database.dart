@@ -28,7 +28,7 @@ class AppDatabase extends _$AppDatabase {
         // By default, `driftDatabase` from `package:drift_flutter` stores the
         // database files in `getApplicationDocumentsDirectory()`.
         databaseDirectory: getApplicationSupportDirectory,
-        // // C:\Users\${user}\AppData\Roaming\com.yh4922.simplechat\simple_chat
+        // // C:\Users\${user}\AppData\Roaming\com.yh4922\simple_chat
       ),
       web: DriftWebOptions(sqlite3Wasm: Uri.parse('sqlite3.wasm'), driftWorker: Uri.parse('drift_worker.js')),
       // If you need web support, see https://drift.simonbinder.eu/platforms/web/
