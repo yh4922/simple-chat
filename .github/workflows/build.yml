@@ -7,84 +7,21 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    strategy:
-      matrix:
-        # 编译运行环境
-        # ubuntu-latest ubuntu-24.04-arm windows-latest macos-13 macos-latest
-        # ubuntu-latest 编译apk、aab 和 linux:x86  [appimage|deb]
-        # ubuntu-24.04-arm 编译linux:arm  [appimage|deb]
-        # windows-latest 编译 win 和 web  [.exe|.msix]
-        # macos-13 编译 macos x86   [.dmg]
-        # macos-latest 编译 macos arm  [.dmg]
-
-        # 命名  simple_chat-v0.0.1.bate-{system}-{arch}.{extname}
-        # 最终文件
-        # - simple_chat_{VERSION}_android_armeabi-v7a.apk
-        # - simple_chat_{VERSION}_android_arm64-v8a.apk
-        # - simple_chat_{VERSION}_android_amd64.apk
-        # - simple_chat_{VERSION}_linux_amd64.ded
-        # - simple_chat_{VERSION}_linux_amd64.tar.gz
-        # - simple_chat_{VERSION}_windows_amd64.exe
-        # - simple_chat_{VERSION}_windows_amd64.msix
-        # - simple_chat_{VERSION}_macos_amd64.dmg
-        # - simple_chat_{VERSION}_macos_arm64.dmg
-        # 编译文件位置
-        # 安卓APK平台
-        # build\app\outputs\flutter-apk\app-armeabi-v7a-release.apk
-        # build\app\outputs\flutter-apk\app-arm64-v8a-release.apk
-        # build\app\outputs\flutter-apk\app-x86_64-release.apk
-        # windos平台
-        # build\windows\x64\runner\Release\*
-        # linux平台
-        # build/linux/x64/release/bundle/*
-        # macos
-        # build/macos/Build/Products/Release/SimpleChat.app
-        
-        # , ubuntu-24.04-arm flutter 没有提供 linux arm的安装包
-        # - os: ubuntu-24.04-arm
-        #   arch: arm64
-        #   build_target: linux
-        #   apk_build: false
-        #   ios_build: false
-        os: [ubuntu-latest, windows-latest, macos-13, macos-latest]
-
-        include:
-          - os: ubuntu-latest
-            arch: amd64  # cpu架构
-            build_target: linux
-            apk_build: true
-            ios_build: false
-          - os: windows-latest
-            arch: amd64
-            build_target: windows
-            apk_build: false
-            ios_build: false
-          - os: macos-13
-            arch: amd64
-            build_target: macos
-            apk_build: false
-            ios_build: false
-          - os: macos-latest
-            arch: arm64
-            build_target: macos
-            apk_build: false
-            ios_build: true
-    runs-on: ${{ matrix.os }}
-    
+  # 编译安卓
+  build-apk:
+    name: Build apk
+    runs-on: ubuntu-latest
     steps:
+      # 拉取代码
       - uses: actions/checkout@v3
-      
       # 安装java 如果需要编译安卓
       - name: Setup Java
-        if: matrix.apk_build
         uses: actions/setup-java@v3
         with:
           distribution: 'zulu'
           java-version: '17'
       # 安装Android SDK 如果需要编译安卓
       - name: Setup Android SDK
-        if: matrix.apk_build
         uses: android-actions/setup-android@v3
       # 安装Flutter
       - name: Setup Flutter
@@ -94,81 +31,132 @@ jobs:
           flutter-version: '3.29.0'
       # 安装 linix 依赖
       - name: Install Linux Dependencies
-        if: matrix.build_target == 'linux'
         run: |
           sudo apt-get update
           sudo apt-get install -y ninja-build libgtk-3-dev
       # 安装flutter依赖
       - name: Install dependencies
         run: flutter pub get
-      # 编译 linux:amd64|linux:arm64|windows|macos:amd64|macos:arm64
-      - name: Build ${{ matrix.build_target }}
-        shell: bash
-        run: flutter build ${{ matrix.build_target }} --release --dart-define=INIT_ENV=prod
-      # 编译安卓
-      - name: Build Apk
-        if: matrix.apk_build
+      # 编译
+      - name: Build
         shell: bash
         run: flutter build apk --release --split-per-abi --dart-define=INIT_ENV=prod
-      # 编译web
-      - name: Build Web
-        if: matrix.build_target == 'windows'
+  # 编译linux
+  build-linux:
+    name: Build Linux Amd64
+    runs-on: ubuntu-latest
+    steps:
+      # 拉取代码
+      - uses: actions/checkout@v3
+      # 安装Flutter
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          flutter-version: '3.29.0'
+      # 安装 linix 依赖
+      - name: Install Linux Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ninja-build libgtk-3-dev
+      # 安装flutter依赖
+      - name: Install dependencies
+        run: flutter pub get
+      # 编译
+      - name: Build
+        shell: bash
+        run: flutter build linux --release --dart-define=INIT_ENV=prod
+  # 编译Web
+  build-web:
+    name: Build Web
+    runs-on: ubuntu-latest
+    steps:
+      # 拉取代码
+      - uses: actions/checkout@v3
+      # 安装Flutter
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          flutter-version: '3.29.0'
+      # 安装 linix 依赖
+      - name: Install Linux Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ninja-build libgtk-3-dev
+      # 安装flutter依赖
+      - name: Install dependencies
+        run: flutter pub get
+      # 编译
+      - name: Build
         shell: bash
         run: flutter build web --release --dart-define=INIT_ENV=prod --dart-define=FLUTTER_WEB_CANVASKIT_URL=canvaskit/
-      # 编译IOS  ?暂时禁止 没有签名
-      # - name: Build iOS
-      #   if: matrix.ios_build
-      #   shell: bash
-      #   run: flutter build ios --release --dart-define=INIT_ENV=prod
-
-
-      # 打包linux
-      # - name: Package Linux App
-      #   if: matrix.build_target == 'linux'
-      #   run: |
-      #     cd build/linux/x64/release/bundle
-      #     tar -czf "${GITHUB_WORKSPACE}/${{ matrix.asset_name }}" *
-      
-      # - name: Package macOS App
-      #   if: matrix.os == 'macos-latest'
-      #   run: |
-      #     brew install create-dmg
-      #     create-dmg \
-      #       --volname "SimpleChat" \
-      #       --window-pos 200 120 \
-      #       --window-size 800 400 \
-      #       --icon-size 100 \
-      #       --icon "SimpleChat.app" 200 190 \
-      #       --hide-extension "SimpleChat.app" \
-      #       --app-drop-link 600 185 \
-      #       "${{ matrix.asset_name }}" \
-      #       "${{ matrix.output_path }}"
-      
-      # - name: Package Windows App
-      #   if: matrix.os == 'windows-latest'
-      #   run: |
-      #     Copy-Item -Path "windows/sqlite3.dll" -Destination "${{ matrix.output_path }}" -Force
-      #     Compress-Archive -Path "${{ matrix.output_path }}/*" -DestinationPath "${{ matrix.asset_name }}" -Force
-
-      # - name: Package Android APK
-      #   if: matrix.apk_build
-      #   run: |
-      #     cp build/app/outputs/flutter-apk/app-release.apk simple-chat-android.apk
-
-      # - name: Upload Artifact
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: ${{ matrix.apk_build && 'simple-chat-android' || matrix.build_target }}
-      #     path: |
-      #       ${{ matrix.asset_name }}
-      #       ${{ matrix.apk_build && 'simple-chat-android.apk' || '' }}
-      
-      - name: Create Release
-        if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v1
+  # 编译Windows
+  build-windows:
+    name: Build Windows
+    runs-on: windows-latest
+    steps:
+      # 拉取代码
+      - uses: actions/checkout@v3
+      # 安装Flutter
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
         with:
-          files: |
-            ${{ matrix.asset_name }}
-            ${{ matrix.apk_build && 'simple-chat-android.apk' || '' }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+          channel: 'stable'
+          flutter-version: '3.29.0'
+      # 安装 linix 依赖
+      - name: Install Linux Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ninja-build libgtk-3-dev
+      # 安装flutter依赖
+      - name: Install dependencies
+        run: flutter pub get
+      # 编译
+      - name: Build
+        shell: bash
+        run: flutter build windows --release --dart-define=INIT_ENV=prod
+  # 编译macos x86
+  build-macos-amd64:
+    name: Build Macos Amd64
+    runs-on: macos-13
+    steps:
+      # 拉取代码
+      - uses: actions/checkout@v3
+      # 安装Flutter
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          flutter-version: '3.29.0'
+      # 安装flutter依赖
+      - name: Install dependencies
+        run: flutter pub get
+      # 编译
+      - name: Build
+        shell: bash
+        run: flutter build macos --release --dart-define=INIT_ENV=prod
+  # 编译macos arm64
+  build-macos-arm64:
+    name: Build Macos Arm64
+    runs-on: macos-latest
+    steps:
+      # 拉取代码
+      - uses: actions/checkout@v3
+      # 安装Flutter
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          flutter-version: '3.29.0'
+      # 安装flutter依赖
+      - name: Install dependencies
+        run: flutter pub get
+      # 编译
+      - name: Build
+        shell: bash
+        run: flutter build macos --release --dart-define=INIT_ENV=prod
+  release:
+    name: Release
+    needs: [build-apk, build-linux, build-web, build-windows, build-macos-amd64, build-macos-arm64]
+    runs-on: ubuntu-latest
