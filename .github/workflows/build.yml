@@ -151,7 +151,7 @@ jobs:
       - name: Build
         shell: bash
         run: flutter build macos --release --dart-define=INIT_ENV=prod
-  release:
-    name: Release
-    needs: [build-apk, build-linux, build-web, build-windows, build-macos-amd64, build-macos-arm64]
-    runs-on: ubuntu-latest
+  # release:
+  #   name: Release
+  #   needs: [build-apk, build-linux, build-web, build-windows, build-macos-amd64, build-macos-arm64]
+  #   runs-on: ubuntu-latest
