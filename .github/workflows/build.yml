@@ -47,9 +47,9 @@ jobs:
         include:
           - os: ubuntu-latest
             arch: amd64  # cpu架构
-            build_target: linux 编译标签
-            apk_build: true     是否编译APK
-            ios_build: false    是否编译ios
+            build_target: linux
+            apk_build: true
+            ios_build: false
           - os: windows-latest
             arch: amd64
             build_target: windows
