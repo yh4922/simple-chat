@@ -1,3 +1,4 @@
 display_name: SimpleChat
 publisher_display_name: Yohann
 logo_path: assets\images\logo_t.png
+install_certificate: false
