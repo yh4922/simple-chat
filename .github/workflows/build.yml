@@ -118,22 +118,23 @@ jobs:
         run: |
           dart pub global activate flutter_distributor
           # 设置环境变量
-
       # # 安装 InnoSetup
       # - name: Install InnoSetup
       #   uses: Minionguyjpro/Inno-Setup-Action@v1.2.5
       # 安装flutter依赖
       - name: Install dependencies
         run: flutter pub get
-      # 编译 msix
-      - name: Build Msix
-        run: flutter_distributor package --platform windows --targets msix
+      # # 编译 msix
+      # - name: Build Msix
+      #   run: flutter_distributor package --platform windows --targets msix
       # 编译 exe
       - name: Build EXE
         run: flutter_distributor package --platform windows --targets exe
       # 查看
       - name: Show Files
-        run: dir dist
+        run: |
+          dir dist/1.0.0+1
+          dir build\windows\x64\runner\Release
   # 编译macos x86
   build-macos-amd64:
     name: Build Macos Amd64
