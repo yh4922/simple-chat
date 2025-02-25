@@ -12,6 +12,10 @@ jobs:
     name: Build apk
     runs-on: ubuntu-latest
     steps:
+      # 检测node版本号
+      - run: |
+          node -v
+          npm -v
       # 拉取代码
       - uses: actions/checkout@main
       # 安装java 如果需要编译安卓
@@ -51,6 +55,10 @@ jobs:
     name: Build Linux Amd64
     runs-on: ubuntu-latest
     steps:
+      # 检测node版本号
+      - run: |
+          node -v
+          npm -v
       # 拉取代码
       - uses: actions/checkout@main
       # 安装Flutter
@@ -80,6 +88,10 @@ jobs:
     name: Build Web
     runs-on: ubuntu-latest
     steps:
+      # 检测node版本号
+      - run: |
+          node -v
+          npm -v
       # 拉取代码
       - uses: actions/checkout@main
       # 安装Flutter
@@ -105,6 +117,10 @@ jobs:
     name: Build Windows
     runs-on: windows-latest
     steps:
+      # 检测node版本号
+      - run: |
+          node -v
+          npm -v
       # 拉取代码
       - uses: actions/checkout@main
       # 安装Flutter
@@ -140,6 +156,10 @@ jobs:
     name: Build Macos Amd64
     runs-on: macos-13
     steps:
+      # 检测node版本号
+      - run: |
+          node -v
+          npm -v
       # 拉取代码
       - uses: actions/checkout@main
       # 安装Flutter
@@ -171,6 +191,10 @@ jobs:
     name: Build Macos Arm64
     runs-on: macos-latest
     steps:
+      # 检测node版本号
+      - run: |
+          node -v
+          npm -v
       # 拉取代码
       - uses: actions/checkout@main
       # 安装Flutter
