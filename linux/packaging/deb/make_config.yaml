@@ -1,0 +1,23 @@
+# flutter_distributor package --platform linux --targets deb
+display_name: SimpleChat
+package_name: simple-chat
+maintainer:
+  name: Yohann
+  email: 492238647@qq.com
+priority: optional
+section: x11
+installed_size: 6604
+essential: false
+icon: assets/images/logo_t.png
+
+keywords:
+  - Chat
+  - Ai
+  - Openai
+  - DeepSeek
+
+generic_name: AI Chat Application
+
+categories:
+  - Chat
+  - Ai
