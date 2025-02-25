@@ -1,0 +1,15 @@
+# flutter_distributor package --platform linux --targets appimage
+display_name: SimpleChat
+
+icon: assets/images/logo_t.png
+
+keywords:
+  - Chat
+  - Ai
+  - Openai
+  - DeepSeek
+
+generic_name: SimpleChat
+
+categories:
+  - Chat
