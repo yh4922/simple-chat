@@ -1,0 +1,8 @@
+app_id: 7B723960-6F45-4FF8-9780-B339E6B82D53
+publisher: Yohann
+publisher_url: https://github.com/yh4922/simple-chat
+display_name: SimpleChat
+create_desktop_icon: true
+locales:
+  - zh
+  - en

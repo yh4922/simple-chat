@@ -1,4 +1,9 @@
+# apt install -y locate wget
+# wget -O appimagetool "https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage"
+# chmod +x appimagetool
+# mv appimagetool /usr/local/bin/
 # flutter_distributor package --platform linux --targets appimage
+
 display_name: SimpleChat
 
 icon: assets/images/logo_t.png
