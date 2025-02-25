@@ -4,5 +4,4 @@ publisher_url: https://github.com/yh4922/simple-chat
 display_name: SimpleChat
 create_desktop_icon: true
 locales:
-  - zh
   - en

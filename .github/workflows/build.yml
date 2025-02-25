@@ -131,6 +131,9 @@ jobs:
       # 编译 exe
       - name: Build EXE
         run: flutter_distributor package --platform windows --targets exe
+      # 查看
+      - name: Show Files
+        run: dir dist
   # 编译macos x86
   build-macos-amd64:
     name: Build Macos Amd64
