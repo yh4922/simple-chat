@@ -115,11 +115,11 @@ jobs:
         if: matrix.build_target == 'windows'
         shell: bash
         run: flutter build web --release --dart-define=INIT_ENV=prod --dart-define=FLUTTER_WEB_CANVASKIT_URL=canvaskit/
-      # 编译IOS
-      - name: Build iOS
-        if: matrix.ios_build
-        shell: bash
-        run: flutter build ios --release --dart-define=INIT_ENV=prod
+      # 编译IOS  ?暂时禁止 没有签名
+      # - name: Build iOS
+      #   if: matrix.ios_build
+      #   shell: bash
+      #   run: flutter build ios --release --dart-define=INIT_ENV=prod
 
 
       # 打包linux
