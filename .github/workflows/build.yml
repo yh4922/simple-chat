@@ -197,6 +197,7 @@ jobs:
           mv build\windows\x64\runner\Release\ build\simple_chat\
           cd build
           7z a ..\dist\${{ env.APP_VERSION }}\simple_chat-${{ env.APP_VERSION }}-windows.zip "simple_chat/*"
+          cd ..
       # 上传文件
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
