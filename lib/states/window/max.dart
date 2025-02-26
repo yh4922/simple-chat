@@ -5,28 +5,11 @@ import 'package:window_manager/window_manager.dart';
 
 part 'max.g.dart';
 
-class WinMaxStatusListener with WindowListener {
-  WinMaxStatusListener() {
-    windowManager.addListener(this);
-  }
-
-  @override
-  void onWindowUnmaximize() {
-    WinMaxStatus.change(Store.ref, false);
-  }
-
-  @override
-  void onWindowMaximize() {
-    WinMaxStatus.change(Store.ref, true);
-  }
-}
-
 @riverpod
 class WinMaxStatus extends _$WinMaxStatus with WindowListener {
   @override
   bool build() {
     if (Store.isDesktop) {
-      WinMaxStatusListener();
       return false;
     } else {
       return true;

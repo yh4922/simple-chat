@@ -6,8 +6,8 @@ import 'package:simple_chat/theme/index_theme.dart';
 
 class Store {
   // 全局上下文(慎用)
-  static late BuildContext context;
-  static late WidgetRef ref;
+  // static late BuildContext context;
+  // static late WidgetRef ref;
 
   // 是否是桌面端
   static bool isDesktop = false;

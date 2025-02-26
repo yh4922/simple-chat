@@ -11,14 +11,39 @@ import 'package:window_manager/window_manager.dart';
 /// DefaultLayout 是应用程序的默认布局组件。
 /// 它使用 AutoRouter 来处理路由导航，作为应用程序的主要布局容器。
 @RoutePage()
-class DefaultLayout extends ConsumerWidget {
+class DefaultLayout extends ConsumerStatefulWidget {
   const DefaultLayout({super.key});
+  @override
+  ConsumerState<DefaultLayout> createState() => _DefaultLayoutState();
+}
+
+class _DefaultLayoutState extends ConsumerState<DefaultLayout> with WindowListener {
+  @override
+  void initState() {
+    super.initState();
+    windowManager.addListener(this);
+  }
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    // 全局上下文绑定
-    Store.context = context;
-    Store.ref = ref;
+  void onWindowUnmaximize() {
+    if (mounted) {
+      WinMaxStatus.change(ref, false);
+    }
+  }
+
+  @override
+  void onWindowMaximize() {
+    if (mounted) {
+      WinMaxStatus.change(ref, true);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    print("123123123123123");
+    // // 全局上下文绑定
+    // Store.context = context;
+    // Store.ref = ref;
 
     final winMaxStatus = WinMaxStatus.value(ref);
 
@@ -57,7 +82,7 @@ class DefaultLayout extends ConsumerWidget {
     return Scaffold(
       // backgroundColor: Theme.of(context).colorScheme.surface,
       backgroundColor: Colors.transparent,
-      body: winMaxStatus ? content : DragToResizeArea(child: content),
+      body: Material(type: MaterialType.transparency, child: winMaxStatus ? content : DragToResizeArea(child: content)),
     );
   }
 }
