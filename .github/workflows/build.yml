@@ -58,9 +58,8 @@ jobs:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: dist
+          name: dist # dist/0.0.5+1/simple_chat-0.0.5+1-android.apk
           path: dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-android.apk
-        # dist/0.0.5+1/simple_chat-0.0.5+1-android.apk
   # 编译linux
   build-linux:
     name: Build Linux Amd64
@@ -96,10 +95,21 @@ jobs:
       - name: Build ded
         shell: bash
         run: flutter_distributor package --platform linux --targets deb
-        # build/linux/x64/release/bundle/ -> simple_chat
-        # tar -czf {{name}}.tar.gz -C build/linux/x64/release simple_chat/
-        # dist/0.0.5+1/simple_chat-0.0.5+1-linux-amd64.tar.gz
-        # dist/0.0.5+1/simple_chat-0.0.5+1-linux.deb
+      # 打包文件
+      - name: Packageing Files
+        shell: bash
+        run: |
+          mv build/linux/x64/release/bundle/ build/linux/x64/release/simple_chat/
+          tar -czf dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-linux-amd64.tar.gz -C build/linux/x64/release simple_chat/
+          mv dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-linux.deb dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-linux-amd64.deb
+      # 上传文件
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist 
+          path: |
+            dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-linux-amd64.tar.gz
+            dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-linux-amd64.deb
   # 编译Web
   build-web:
     name: Build Web
@@ -131,7 +141,19 @@ jobs:
       - name: Build
         shell: bash
         run: flutter build web --release --dart-define=INIT_ENV=prod --dart-define=FLUTTER_WEB_CANVASKIT_URL=canvaskit/
-      # 处理文件 压缩 build/web
+      # 打包文件
+      - name: Packageing Files
+        shell: bash
+        run: |
+          mv build/web build/simple_chat
+          cd build && zip -r ../dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-web.zip simple_chat
+          cd ..
+      # 上传文件
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist 
+          path: dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-web.zip
   # 编译Windows
   build-windows:
     name: Build Windows
@@ -168,14 +190,21 @@ jobs:
       # 编译 exe
       - name: Build EXE
         run: flutter_distributor package --platform windows --targets exe
-      # 压缩文件 zip
-      # build\windows\x64\runner\Release\
-      # dist/0.0.5+1/simple_chat-0.0.5+1-windows-setup.exe
-      # 查看
-      - name: Show Files
+      # 打包文件
+      - name: Packageing Files
+        shell: bash
         run: |
-          dir dist/${{ env.APP_VERSION }}
-          dir build\windows\x64\runner\Release
+          mv build\windows\x64\runner\Release\ build\simple_chat\
+          cd build
+          7z a ..\dist\${{ env.APP_VERSION }}\simple_chat-${{ env.APP_VERSION }}-windows.zip "simple_chat/*"
+      # 上传文件
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist 
+          path: |
+            dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-windows.zip
+            dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-windows-setup.exe
   # 编译macos x86
   build-macos-amd64:
     name: Build Macos Amd64
@@ -214,6 +243,16 @@ jobs:
         shell: bash
         run: flutter_distributor package --platform macos --targets dmg
         # dist/0.0.5+1/simple_chat-0.0.5+1-macos.dmg
+      # 打包文件
+      - name: Packageing Files
+        shell: bash
+        run: mv dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-macos.dmg dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-macos-amd64.dmg
+      # 上传文件
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist 
+          path: dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-macos-amd64.dmg
   # 编译macos arm64
   build-macos-arm64:
     name: Build Macos Arm64
@@ -252,6 +291,16 @@ jobs:
         shell: bash
         run: flutter_distributor package --platform macos --targets dmg
         # dist/0.0.5+1/simple_chat-0.0.5+1-macos.dmg
+      # 打包文件
+      - name: Packageing Files
+        shell: bash
+        run: mv dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-macos.dmg dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-macos-arm64.dmg
+      # 上传文件
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist 
+          path: dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-macos-arm64.dmg
   # release:
   #   name: Release
   #   needs: [build-apk, build-linux, build-web, build-windows, build-macos-amd64, build-macos-arm64]
