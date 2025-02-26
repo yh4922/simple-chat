@@ -6,8 +6,6 @@ on:
       - 'v*'
   workflow_dispatch:
 
-# 0.0.5   dist/0.0.5/simple_chat-0.0.5+0.0.5-linux.deb
-
 jobs:
   # 编译安卓
   build-apk:
@@ -179,15 +177,9 @@ jobs:
         run: |
           dart pub global activate flutter_distributor
           # 设置环境变量
-      # # 安装 InnoSetup
-      # - name: Install InnoSetup
-      #   uses: Minionguyjpro/Inno-Setup-Action@v1.2.5
       # 安装flutter依赖
       - name: Install dependencies
         run: flutter pub get
-      # # 编译 msix
-      # - name: Build Msix
-      #   run: flutter_distributor package --platform windows --targets msix
       # 编译 exe
       - name: Build EXE
         run: flutter_distributor package --platform windows --targets exe
@@ -243,7 +235,6 @@ jobs:
       - name: Build
         shell: bash
         run: flutter_distributor package --platform macos --targets dmg
-        # dist/0.0.5+1/simple_chat-0.0.5+1-macos.dmg
       # 打包文件
       - name: Packageing Files
         shell: bash
@@ -291,7 +282,6 @@ jobs:
       - name: Build
         shell: bash
         run: flutter_distributor package --platform macos --targets dmg
-        # dist/0.0.5+1/simple_chat-0.0.5+1-macos.dmg
       # 打包文件
       - name: Packageing Files
         shell: bash
