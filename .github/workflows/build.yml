@@ -324,10 +324,14 @@ jobs:
       - name: Organize files
         run: |
           mkdir -p dist/${{ env.APP_VERSION }}
+          ls -l artifacts
           cp -r artifacts/* dist/${{ env.APP_VERSION }}/
+          ls -l dist
       # 发布release
       - name: Create Release
         uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
         with:
           name: v${{ env.APP_VERSION }}
           tag_name: v${{ env.APP_VERSION }}
