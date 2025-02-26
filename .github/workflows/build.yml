@@ -12,10 +12,6 @@ jobs:
     name: Build apk
     runs-on: ubuntu-latest
     steps:
-      # 检测node版本号
-      - run: |
-          node -v
-          npm -v
       # 拉取代码
       - uses: actions/checkout@main
       # 注入环境变量
@@ -61,12 +57,14 @@ jobs:
     name: Build Linux Amd64
     runs-on: ubuntu-latest
     steps:
-      # 检测node版本号
-      - run: |
-          node -v
-          npm -v
       # 拉取代码
       - uses: actions/checkout@main
+      # 注入环境变量
+      - run: node scripts/env
+      - name: apply custom env
+        run: cat .env >> $GITHUB_ENV
+      # 测试是否生效
+      - run: echo ${{ env.APP_VERSION }}
       # 安装Flutter
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
@@ -94,12 +92,14 @@ jobs:
     name: Build Web
     runs-on: ubuntu-latest
     steps:
-      # 检测node版本号
-      - run: |
-          node -v
-          npm -v
       # 拉取代码
       - uses: actions/checkout@main
+      # 注入环境变量
+      - run: node scripts/env
+      - name: apply custom env
+        run: cat .env >> $GITHUB_ENV
+      # 测试是否生效
+      - run: echo ${{ env.APP_VERSION }}
       # 安装Flutter
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
@@ -118,15 +118,12 @@ jobs:
       - name: Build
         shell: bash
         run: flutter build web --release --dart-define=INIT_ENV=prod --dart-define=FLUTTER_WEB_CANVASKIT_URL=canvaskit/
+      # 处理文件 压缩
   # 编译Windows
   build-windows:
     name: Build Windows
     runs-on: windows-latest
     steps:
-      # 检测node版本号
-      - run: |
-          node -v
-          npm -v
       # 拉取代码
       - uses: actions/checkout@main
       # 注入环境变量
@@ -158,20 +155,17 @@ jobs:
       # 编译 exe
       - name: Build EXE
         run: flutter_distributor package --platform windows --targets exe
+      # 压缩文件 zip
       # 查看
       - name: Show Files
         run: |
-          dir dist/1.0.0+1
+          dir dist/${{ env.APP_VERSION }}
           dir build\windows\x64\runner\Release
   # 编译macos x86
   build-macos-amd64:
     name: Build Macos Amd64
     runs-on: macos-13
     steps:
-      # 检测node版本号
-      - run: |
-          node -v
-          npm -v
       # 拉取代码
       - uses: actions/checkout@main
       # 注入环境变量
@@ -209,10 +203,6 @@ jobs:
     name: Build Macos Arm64
     runs-on: macos-latest
     steps:
-      # 检测node版本号
-      - run: |
-          node -v
-          npm -v
       # 拉取代码
       - uses: actions/checkout@main
       # 注入环境变量

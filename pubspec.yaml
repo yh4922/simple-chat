@@ -2,7 +2,9 @@ name: simple_chat
 description: "A simple chat application, supporting both desktop and web clients, developed using Flutter."
 publish_to: none
 homepage: https://github.com/yh4922/simple-chat
-version: 0.0.5
+version: 0.0.5+1
+
+# 
 
 environment:
   sdk: ^3.7.0
