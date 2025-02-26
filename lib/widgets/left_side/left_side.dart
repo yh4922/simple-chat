@@ -71,113 +71,116 @@ class LeftSide extends ConsumerWidget {
         color: Theme.of(context).colorScheme.surfaceContainerLowest.withAlpha(150),
         border: Border(right: BorderSide(color: Theme.of(context).colorScheme.outlineVariant)),
       ),
-      child: Column(
-        // 啊啥的
-        children: [
-          // 安全区域
-          SizedBox(height: MediaQuery.of(context).padding.top + 20),
-          // 头像
-          GestureDetector(
-            behavior: HitTestBehavior.opaque,
-            onPanStart: (_) {},
-            onDoubleTap: () {},
-            child: Container(
-              width: 40,
-              height: 40,
-              decoration: BoxDecoration(
-                // 圆角
-                borderRadius: BorderRadius.circular(6),
-                // 背景图片
-                image: DecorationImage(image: AssetImage('assets/images/logo.png'), fit: BoxFit.cover),
+      child: SafeArea(
+        child: Column(
+          // 啊啥的
+          children: [
+            // 安全区域
+            SizedBox(height: MediaQuery.of(context).padding.top + 20),
+            // 头像
+            GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onPanStart: (_) {},
+              onDoubleTap: () {},
+              child: Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  // 圆角
+                  borderRadius: BorderRadius.circular(6),
+                  // 背景图片
+                  image: DecorationImage(image: AssetImage('assets/images/logo.png'), fit: BoxFit.cover),
+                ),
               ),
+              onTap: () {
+                print('点击头像');
+                // 打开弹出菜单
+              },
             ),
-            onTap: () {
-              print('点击头像');
-              // 打开弹出菜单
-            },
-          ),
-          NavItem(
-            icon: Iconfont.xinxi,
-            title: loc.chat,
-            isActive: currentRoute.startsWith("Chat"),
-            onTap: () {
-              context.router.replaceAll([ChatRoute()]);
-            },
-          ),
-          NavItem(
-            icon: Iconfont.moxing,
-            title: loc.demo,
-            isActive: currentRoute.startsWith("Demo"),
-            onTap: () {
-              context.router.replaceAll([DemoRoute()]);
-            },
-          ),
-          NavItem(
-            icon: Iconfont.picture,
-            title: loc.demo,
-            isActive: false,
-            onTap: () {
-              // context.router.replaceAll([DemoRoute()]);
-            },
-          ),
-          NavItem(
-            icon: Iconfont.fanyi,
-            title: loc.demo,
-            isActive: false,
-            onTap: () {
-              // context.router.replaceAll([DemoRoute()]);
-            },
-          ),
-          NavItem(
-            icon: Iconfont.app,
-            title: loc.demo,
-            isActive: false,
-            onTap: () {
-              // context.router.replaceAll([DemoRoute()]);
-            },
-          ),
-          Expanded(child: SizedBox()),
-          // 明暗切换
-          NavItem(
-            icon:
-                brightness == ThemeMode.dark
-                    ? Iconfont.yueliang
-                    : brightness == ThemeMode.light
-                    ? Iconfont.taiyang
-                    : Iconfont.auto_l,
-            title: loc.theme,
-            isActive: false,
-            onTap: () {
-              // 获取当前系统明暗状态
-              var platformBrightness = MediaQuery.of(context).platformBrightness;
-              if (brightness == ThemeMode.system) {
-                BrightnessStore.change(ref, platformBrightness == Brightness.dark ? "light" : "dark");
-              } else {
-                BrightnessStore.toggle(ref);
-              }
-            },
-          ),
-          // 设置页面
-          NavItem(
-            icon: Iconfont.github,
-            title: loc.github,
-            isActive: false,
-            onTap: () {
-              launchUrl(Uri.parse("https://github.com/yh4922/simple-chat"));
-            },
-          ),
-          // // 设置页面
-          // NavItem(
-          //   icon: Iconfont.shezhi,
-          //   title: loc.settings,
-          //   isActive: false,
-          //   onTap: () {
-          //     // 跳转设置页面
-          //   },
-          // ),
-          // 安全区域
-          SizedBox(height: MediaQuery.of(context).padding.bottom + 10),
-        ],
+            NavItem(
+              icon: Iconfont.xinxi,
+              title: loc.chat,
+              isActive: currentRoute.startsWith("Chat"),
+              onTap: () {
+                context.router.replaceAll([ChatRoute()]);
+              },
+            ),
+            NavItem(
+              icon: Iconfont.moxing,
+              title: loc.demo,
+              isActive: currentRoute.startsWith("Demo"),
+              onTap: () {
+                // context.router.replaceAll([DemoRoute()]);
+                context.router.replaceAll([HomeRoute()]);
+              },
+            ),
+            NavItem(
+              icon: Iconfont.picture,
+              title: loc.demo,
+              isActive: false,
+              onTap: () {
+                // context.router.replaceAll([DemoRoute()]);
+              },
+            ),
+            NavItem(
+              icon: Iconfont.fanyi,
+              title: loc.demo,
+              isActive: false,
+              onTap: () {
+                // context.router.replaceAll([DemoRoute()]);
+              },
+            ),
+            NavItem(
+              icon: Iconfont.app,
+              title: loc.demo,
+              isActive: false,
+              onTap: () {
+                // context.router.replaceAll([DemoRoute()]);
+              },
+            ),
+            Expanded(child: SizedBox()),
+            // 明暗切换
+            NavItem(
+              icon:
+                  brightness == ThemeMode.dark
+                      ? Iconfont.yueliang
+                      : brightness == ThemeMode.light
+                      ? Iconfont.taiyang
+                      : Iconfont.auto_l,
+              title: loc.theme,
+              isActive: false,
+              onTap: () {
+                // 获取当前系统明暗状态
+                var platformBrightness = MediaQuery.of(context).platformBrightness;
+                if (brightness == ThemeMode.system) {
+                  BrightnessStore.change(ref, platformBrightness == Brightness.dark ? "light" : "dark");
+                } else {
+                  BrightnessStore.toggle(ref);
+                }
+              },
+            ),
+            // 设置页面
+            NavItem(
+              icon: Iconfont.github,
+              title: loc.github,
+              isActive: false,
+              onTap: () {
+                launchUrl(Uri.parse("https://github.com/yh4922/simple-chat"));
+              },
+            ),
+            // // 设置页面
+            // NavItem(
+            //   icon: Iconfont.shezhi,
+            //   title: loc.settings,
+            //   isActive: false,
+            //   onTap: () {
+            //     // 跳转设置页面
+            //   },
+            // ),
+            // 安全区域
+            SizedBox(height: MediaQuery.of(context).padding.bottom + 10),
+          ],
+        ),
       ),
     );
     if (!Store.isDesktop) {

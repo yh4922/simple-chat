@@ -26,6 +26,12 @@ void main() async {
           defaultTargetPlatform == TargetPlatform.windows ||
           defaultTargetPlatform == TargetPlatform.macOS ||
           defaultTargetPlatform == TargetPlatform.linux;
+      Store.isWin = defaultTargetPlatform == TargetPlatform.windows;
+      Store.isLinux = defaultTargetPlatform == TargetPlatform.linux;
+      Store.isMac = defaultTargetPlatform == TargetPlatform.macOS;
+      if (Store.isWin || Store.isLinux) {
+        Store.winBtnHeight = 32;
+      }
 
       // 桌面端初始化
       if (!kIsWeb && Store.isDesktop) {

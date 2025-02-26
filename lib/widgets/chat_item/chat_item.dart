@@ -12,7 +12,7 @@ class ChatList extends StatelessWidget {
   Widget build(BuildContext context) {
     final locale = S.of(context);
     return Container(
-      width: 220,
+      width: 220, // 在移动端 这个就要占满独占一页面 点击后 隐藏 展示聊天内容
       height: double.infinity,
       decoration: BoxDecoration(border: Border(right: BorderSide(color: Theme.of(context).colorScheme.outlineVariant, width: 1.0))),
       child: Column(
@@ -24,7 +24,6 @@ class ChatList extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
               border: Border(
-                //
                 // bottom: BorderSide(color: Theme.of(context).colorScheme.secondaryFixed, width: 1.0),
               ),
             ),

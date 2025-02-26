@@ -55,19 +55,19 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Simple Chat`
+  /// `SimpleChat`
   String get appname {
-    return Intl.message('Simple Chat', name: 'appname', desc: '', args: []);
+    return Intl.message('SimpleChat', name: 'appname', desc: '', args: []);
   }
 
-  /// `Conversation`
+  /// `Chat`
   String get chat {
-    return Intl.message('Conversation', name: 'chat', desc: '', args: []);
+    return Intl.message('Chat', name: 'chat', desc: '', args: []);
   }
 
-  /// `Dark Mode`
+  /// `Dark`
   String get dark {
-    return Intl.message('Dark Mode', name: 'dark', desc: '', args: []);
+    return Intl.message('Dark', name: 'dark', desc: '', args: []);
   }
 
   /// `Demo`
@@ -85,9 +85,9 @@ class S {
     return Intl.message('English', name: 'language', desc: '', args: []);
   }
 
-  /// `Light Mode`
+  /// `Light`
   String get light {
-    return Intl.message('Light Mode', name: 'light', desc: '', args: []);
+    return Intl.message('Light', name: 'light', desc: '', args: []);
   }
 
   /// `Hello, {name}!`

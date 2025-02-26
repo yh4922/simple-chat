@@ -20,13 +20,16 @@ class ChatPage extends ConsumerWidget {
       alignment: Alignment.center,
       child: Row(
         children: [
-          Text("${locale.language}: ${ref.watch(expandCollapseSidebar)}"),
-
           // 对话列表
           ChatList(ref: ref, expandCollapseSidebar: expandCollapseSidebar),
-          Text("${Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant', countryCode: 'TW')}"),
           // 对话详情
-          Expanded(child: AutoRouter()),
+          Expanded(
+            child: AutoRouter(
+              placeholder: (context) {
+                return Center(child: Icon(Icons.chat_bubble_outline, size: 48, color: Theme.of(context).colorScheme.outline));
+              },
+            ),
+          ),
           // 切换语言
           Column(
             children: [

@@ -11,7 +11,7 @@ class WindowButtons extends StatelessWidget {
     var buttons = Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        Store.isDesktop ? Expanded(child: DragToMoveArea(child: SizedBox(height: 32, width: double.infinity))) : SizedBox.shrink(),
+        Expanded(child: DragToMoveArea(child: SizedBox(height: Store.winBtnHeight, width: double.infinity))),
         WindowButtonIcon(
           icon: Iconfont.min,
           onTap: () async {
@@ -107,10 +107,10 @@ class _WindowButtonIconState extends State<WindowButtonIcon> {
           });
         },
         child: Container(
-          height: 32,
+          height: Store.winBtnHeight,
           alignment: Alignment.center,
           padding: EdgeInsets.symmetric(horizontal: 15),
-          color: hover ? hoverColor.withAlpha(200) : null,
+          color: hover ? hoverColor : null,
           child: Icon(
             widget.icon,
             size: 10,

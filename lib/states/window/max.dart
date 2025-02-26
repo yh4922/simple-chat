@@ -12,13 +12,11 @@ class WinMaxStatusListener with WindowListener {
 
   @override
   void onWindowUnmaximize() {
-    print("取消最大化");
     WinMaxStatus.change(Store.ref, false);
   }
 
   @override
   void onWindowMaximize() {
-    print("最大化");
     WinMaxStatus.change(Store.ref, true);
   }
 }

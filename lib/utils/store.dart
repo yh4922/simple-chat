@@ -11,6 +11,12 @@ class Store {
 
   // 是否是桌面端
   static bool isDesktop = false;
+  static bool isWin = false;
+  static bool isMac = false;
+  static bool isLinux = false;
+
+  // 窗口控制按钮高度  win和linux 才有
+  static double winBtnHeight = 0;
 
   // 缓存实例  初始化时设置 全局调用
   static late SharedPreferences prefs;

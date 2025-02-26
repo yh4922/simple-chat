@@ -23,7 +23,6 @@ class AppRouter extends RootStackRouter {
   /// /setting/provider  AI提供商管理   每个提供商启用 设置密钥等
   /// /setting/voice  语音服务 ？？
   /// /setting/default  默认助手
-  ///
 
   @override // 路由
   List<AutoRoute> get routes {
@@ -41,7 +40,8 @@ class AppRouter extends RootStackRouter {
             children: [AutoRoute(path: 'ChatDetail', page: ChatDetailRoute.page)],
           ),
           // DEMO页面
-          AutoRoute(path: 'Demo', page: DemoRoute.page),
+          // AutoRoute(path: 'Demo', page: DemoRoute.page),
+          AutoRoute(path: 'Demo', page: HomeRoute.page),
         ],
       ),
     ];

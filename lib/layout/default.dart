@@ -40,11 +40,12 @@ class DefaultLayout extends ConsumerWidget {
           LeftSide(),
           Expanded(
             child: SizedBox(
-              child: Column(
+              child: Stack(
                 children: [
                   // 内容区域
-                  WindowButtons(),
-                  Expanded(child: AutoRouter()),
+                  Column(children: [Expanded(child: AutoRouter())]),
+                  // 标题栏盖住内容
+                  Store.isWin || Store.isLinux ? WindowButtons() : SizedBox.shrink(),
                 ],
               ),
             ),
@@ -70,20 +71,18 @@ class BorderContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
-          clipBehavior: Clip.antiAlias,
-          margin: showBorder ? EdgeInsets.all(4) : EdgeInsets.zero,
-          decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.surface,
-            boxShadow: showBorder ? [BoxShadow(color: Colors.black.withAlpha(150), blurRadius: 2, offset: Offset(0, 0))] : null,
-            borderRadius: showBorder ? BorderRadius.circular(4) : BorderRadius.zero,
+        SafeArea(
+          child: Container(
+            clipBehavior: Clip.antiAlias,
+            margin: showBorder ? EdgeInsets.all(4) : EdgeInsets.zero,
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.surface,
+              boxShadow: showBorder ? [BoxShadow(color: Colors.black.withAlpha(150), blurRadius: 2, offset: Offset(0, 0))] : null,
+              borderRadius: showBorder ? BorderRadius.circular(4) : BorderRadius.zero,
+            ),
+            child: child,
           ),
-          child: child,
         ),
-        // // 窗口控制按钮
-        // defaultTargetPlatform == TargetPlatform.windows || defaultTargetPlatform == TargetPlatform.linux
-        //     ? Positioned(top: 0, right: 0, child: WindowButtons())
-        //     : SizedBox.shrink(),
       ],
     );
   }
