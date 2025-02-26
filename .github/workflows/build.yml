@@ -92,7 +92,7 @@ jobs:
       # 编译ded
       - name: Build ded
         shell: bash
-        run: flutter_distributor package --platform linux --targets deb
+        run: flutter_distributor package --platform linux --targets deb --flutter-build-args=dart-define=INIT_ENV=prod 
       # 打包文件
       - name: Packageing Files
         shell: bash
@@ -138,7 +138,7 @@ jobs:
       # 编译
       - name: Build
         shell: bash
-        run: flutter build web --release --dart-define=INIT_ENV=prod --dart-define=FLUTTER_WEB_CANVASKIT_URL=canvaskit/
+        run: flutter build web --release --dart-define=INIT_ENV=prod --dart-define=FLUTTER_WEB_CANVASKIT_URL=canvaskit --flutter-build-args=dart-define=INIT_ENV=prod 
       # 打包文件
       - name: Packageing Files
         shell: bash
@@ -182,7 +182,7 @@ jobs:
         run: flutter pub get
       # 编译 exe
       - name: Build EXE
-        run: flutter_distributor package --platform windows --targets exe
+        run: flutter_distributor package --platform windows --targets exe --flutter-build-args=dart-define=INIT_ENV=prod
       # 打包文件
       - name: Packageing Files
         shell: bash
@@ -234,7 +234,7 @@ jobs:
       # 编译
       - name: Build
         shell: bash
-        run: flutter_distributor package --platform macos --targets dmg
+        run: flutter_distributor package --platform macos --targets dmg --flutter-build-args=dart-define=INIT_ENV=prod 
       # 打包文件
       - name: Packageing Files
         shell: bash
@@ -281,7 +281,7 @@ jobs:
       # 编译
       - name: Build
         shell: bash
-        run: flutter_distributor package --platform macos --targets dmg
+        run: flutter_distributor package --platform macos --targets dmg --flutter-build-args=dart-define=INIT_ENV=prod 
       # 打包文件
       - name: Packageing Files
         shell: bash
@@ -314,9 +314,7 @@ jobs:
       - name: Organize files
         run: |
           mkdir -p dist/${{ env.APP_VERSION }}
-          ls -l artifacts
           cp -r artifacts/* dist/${{ env.APP_VERSION }}/
-          ls -l dist
       # 发布release
       - name: Create Release
         uses: softprops/action-gh-release@v1

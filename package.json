@@ -33,7 +33,8 @@
         "icon": "node lib/widgets/iconfont/gen.js",
         "app:icon": "dart run flutter_launcher_icons",
         "code": "dart run build_runner build",
-        "code:watch": "dart run build_runner watch"
+        "code:watch": "dart run build_runner watch",
+        "tag:demo": "git tag v0.0.5+5 && git push origin v0.0.5+5"
     },
     "i18n": {
         "entry": "lib/i18n/locale/intl_zh.json",
