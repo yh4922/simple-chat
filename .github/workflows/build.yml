@@ -145,9 +145,9 @@ jobs:
       - name: Packageing Files
         shell: bash
         run: |
-          mv build/web build/simple_chat
-          cd build && zip -r ../dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-web.zip simple_chat
-          cd ..
+          mv build/web simple_chat
+          zip -r dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-web.zip simple_chat
+          rm -rf simple_chat
       # 上传文件
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
@@ -194,10 +194,9 @@ jobs:
       - name: Packageing Files
         shell: bash
         run: |
-          mv build\windows\x64\runner\Release\ build\simple_chat\
-          cd build
-          7z a ..\dist\${{ env.APP_VERSION }}\simple_chat-${{ env.APP_VERSION }}-windows.zip "simple_chat/*"
-          cd ..
+          mv build/windows/x64/runner/Release simple_chat
+          7z a dist/${{ env.APP_VERSION }}/simple_chat-${{ env.APP_VERSION }}-windows.zip "simple_chat/*"
+          rm -rf simple_chat
       # 上传文件
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
