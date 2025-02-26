@@ -20,8 +20,10 @@ jobs:
       - uses: actions/checkout@main
       # 注入环境变量
       - run: node scripts/env
+      - name: apply custom env
+        run: cat .env >> $GITHUB_ENV
       # 测试是否生效
-      - run: echo $APP_VERSION
+      - run: echo ${{ APP_VERSION }}
       # 安装java 如果需要编译安卓
       - name: Setup Java
         uses: actions/setup-java@v3
@@ -129,8 +131,10 @@ jobs:
       - uses: actions/checkout@main
       # 注入环境变量
       - run: node scripts/env
+      - name: apply custom env
+        run: type .env >> $env:GITHUB_ENV
       # 测试是否生效
-      - run: echo %APP_VERSION%
+      - run: echo ${{ APP_VERSION }}
       # 安装Flutter
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
@@ -172,8 +176,10 @@ jobs:
       - uses: actions/checkout@main
       # 注入环境变量
       - run: node scripts/env
+      - name: apply custom env
+        run: cat .env >> $GITHUB_ENV
       # 测试是否生效
-      - run: echo $APP_VERSION
+      - run: echo ${{ APP_VERSION }}
       # 安装Flutter
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
@@ -211,8 +217,10 @@ jobs:
       - uses: actions/checkout@main
       # 注入环境变量
       - run: node scripts/env
+      - name: apply custom env
+        run: cat .env >> $GITHUB_ENV
       # 测试是否生效
-      - run: echo $APP_VERSION
+      - run: echo ${{ APP_VERSION }}
       # 安装Flutter
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
