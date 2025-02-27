@@ -6,7 +6,7 @@ import 'package:window_manager/window_manager.dart';
 part 'max.g.dart';
 
 @riverpod
-class WinMaxStatus extends _$WinMaxStatus with WindowListener {
+class WinMaxStatus extends _$WinMaxStatus {
   @override
   bool build() {
     if (Store.isDesktop) {
@@ -29,17 +29,5 @@ class WinMaxStatus extends _$WinMaxStatus with WindowListener {
   /// 设置值
   static void change(WidgetRef ref, bool status) {
     ref.read(winMaxStatusProvider.notifier).update(status);
-  }
-
-  @override
-  void onWindowUnmaximize() {
-    // do something
-    print("取消最大化");
-  }
-
-  @override
-  void onWindowMaximize() {
-    // do something
-    print("最大化");
   }
 }

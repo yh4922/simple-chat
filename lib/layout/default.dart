@@ -40,11 +40,6 @@ class _DefaultLayoutState extends ConsumerState<DefaultLayout> with WindowListen
 
   @override
   Widget build(BuildContext context) {
-    print("123123123123123");
-    // // 全局上下文绑定
-    // Store.context = context;
-    // Store.ref = ref;
-
     final winMaxStatus = WinMaxStatus.value(ref);
 
     bool showBorder = true;
@@ -80,9 +75,15 @@ class _DefaultLayoutState extends ConsumerState<DefaultLayout> with WindowListen
     );
 
     return Scaffold(
-      // backgroundColor: Theme.of(context).colorScheme.surface,
       backgroundColor: Colors.transparent,
-      body: Material(type: MaterialType.transparency, child: winMaxStatus ? content : DragToResizeArea(child: content)),
+      body: Material(
+        type: MaterialType.transparency,
+        child: DragToResizeArea(
+          // 最大化时禁用调整大小
+          resizeEdgeSize: winMaxStatus ? 0 : 8,
+          child: content,
+        ),
+      ),
     );
   }
 }
