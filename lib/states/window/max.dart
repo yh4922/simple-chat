@@ -1,7 +1,6 @@
 import 'package:flutter_riverpod/src/consumer.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:simple_chat/utils/store.dart';
-import 'package:window_manager/window_manager.dart';
 
 part 'max.g.dart';
 

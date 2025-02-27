@@ -11,6 +11,7 @@ import 'package:window_manager/window_manager.dart';
 // import 'package:jh_debug/jh_debug.dart';
 import 'package:simple_chat/utils/store.dart';
 import 'router/router.dart';
+import 'package:bot_toast/bot_toast.dart';
 
 void main() async {
   // 设置 Zone 错误为致命错误（可选）
@@ -29,12 +30,13 @@ void main() async {
       Store.isWin = defaultTargetPlatform == TargetPlatform.windows;
       Store.isLinux = defaultTargetPlatform == TargetPlatform.linux;
       Store.isMac = defaultTargetPlatform == TargetPlatform.macOS;
-      if (Store.isWin || Store.isLinux) {
-        Store.winBtnHeight = 32;
-      }
 
       // 桌面端初始化
       if (!kIsWeb && Store.isDesktop) {
+        if (Store.isWin || Store.isLinux) {
+          Store.winBtnHeight = 32;
+        }
+
         await windowManager.ensureInitialized();
         windowManager.hide();
 
@@ -112,7 +114,11 @@ class MyApp extends ConsumerWidget {
       darkTheme: appTheme.dark,
       themeMode: appBrightness,
       // 使用路由
-      routerConfig: rootRouter.config(),
+      routerConfig: rootRouter.config(
+        navigatorObservers: () {
+          return [BotToastNavigatorObserver()];
+        },
+      ),
       // 导入国际化
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
@@ -140,6 +146,7 @@ class MyApp extends ConsumerWidget {
       },
       supportedLocales: LocaleData.supportedLocales,
       debugShowCheckedModeBanner: false,
+      builder: BotToastInit(),
     );
   }
 }

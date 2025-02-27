@@ -65,7 +65,7 @@ class _DefaultLayoutState extends ConsumerState<DefaultLayout> with WindowListen
                   // 内容区域
                   Column(children: [Expanded(child: AutoRouter())]),
                   // 标题栏盖住内容
-                  Store.isWin || Store.isLinux ? WindowButtons() : SizedBox.shrink(),
+                  !kIsWeb && Store.isWinOrLinux ? WindowButtons() : SizedBox.shrink(),
                 ],
               ),
             ),

@@ -1,3 +1,4 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_chat/router/router.dart';
 import 'package:simple_chat/states/brightness/brightness.dart';
@@ -9,8 +10,9 @@ import 'package:simple_chat/widgets/iconfont/iconfont.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:simple_chat/states/routes/routes.dart';
 import 'package:simple_chat/i18n/generated/l10n.dart';
+import 'dart:async';
 
-class NavItem extends StatelessWidget {
+class NavItem extends StatefulWidget {
   /// 图标
   final IconData icon;
 
@@ -23,31 +25,80 @@ class NavItem extends StatelessWidget {
   /// 点击事件
   final VoidCallback onTap;
   final double top;
-  const NavItem({
-    //
-    super.key,
-    required this.icon,
-    required this.title,
-    required this.isActive,
-    required this.onTap,
-    this.top = 14,
-  });
+  const NavItem({super.key, required this.icon, required this.title, required this.isActive, required this.onTap, this.top = 14});
+
+  @override
+  State<NavItem> createState() => _NavItemState();
+}
+
+class _NavItemState extends State<NavItem> {
+  Timer? _timer;
+  Function()? cancel;
+
+  void showTips() {
+    if (mounted) {
+      setState(() {
+        cancel = BotToast.showAttachedWidget(
+          targetContext: context,
+          preferDirection: PreferDirection.rightCenter,
+          attachedBuilder: (_) {
+            return Container(
+              margin: EdgeInsets.only(top: widget.top, left: 12),
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.inverseSurface,
+                borderRadius: BorderRadius.circular(6), //
+              ),
+              child: Text(
+                widget.title,
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.onInverseSurface, //
+                  fontSize: 14,
+                  height: 2.2,
+                ),
+              ),
+            );
+          },
+        );
+      });
+    }
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    if (cancel != null) {
+      cancel!();
+    }
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
+    var color = Theme.of(context).colorScheme;
+
     return Padding(
-      padding: EdgeInsets.only(top: top),
-      child: GestureDetector(
-        behavior: HitTestBehavior.opaque,
-        onPanStart: (_) {},
-        child: Material(
-          color: isActive ? Theme.of(context).colorScheme.primaryContainer.withAlpha(100) : Colors.transparent,
-          borderRadius: BorderRadius.circular(6),
+      padding: EdgeInsets.only(top: widget.top),
+      child: Material(
+        color: widget.isActive ? color.primaryContainer.withAlpha(100) : color.surfaceContainerLowest,
+        borderRadius: BorderRadius.circular(6),
+        child: MouseRegion(
+          onEnter: (e) {
+            _timer = Timer(Duration(milliseconds: 300), showTips);
+          },
+          onExit: (e) {
+            _timer?.cancel();
+            if (cancel != null) {
+              cancel!();
+            }
+            setState(() {
+              cancel = null;
+            });
+          },
           child: InkWell(
-            onTap: onTap,
-            onDoubleTap: () {},
+            onTap: widget.onTap,
             borderRadius: BorderRadius.circular(6),
-            child: SizedBox(width: 34, height: 34, child: Icon(icon, size: 20, color: Theme.of(context).colorScheme.primary)),
+            child: SizedBox(width: 34, height: 34, child: Icon(widget.icon, size: 20, color: Theme.of(context).colorScheme.primary)),
           ),
         ),
       ),
@@ -68,124 +119,148 @@ class LeftSide extends ConsumerWidget {
     var liftSide = Container(
       width: 62,
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.surfaceContainerLowest.withAlpha(150),
+        color: Theme.of(context).colorScheme.surfaceContainerLowest,
         border: Border(right: BorderSide(color: Theme.of(context).colorScheme.outlineVariant)),
       ),
-      child: SafeArea(
-        child: Column(
-          // 啊啥的
-          children: [
-            // 安全区域
-            SizedBox(height: MediaQuery.of(context).padding.top + 20),
-            // 头像
-            GestureDetector(
-              behavior: HitTestBehavior.opaque,
-              onPanStart: (_) {},
-              onDoubleTap: () {},
-              child: Container(
-                width: 40,
-                height: 40,
-                decoration: BoxDecoration(
-                  // 圆角
-                  borderRadius: BorderRadius.circular(6),
-                  // 背景图片
-                  image: DecorationImage(image: AssetImage('assets/images/logo.png'), fit: BoxFit.cover),
-                ),
+      child: Stack(
+        children: [
+          Store.isDesktop ? DragToMoveArea(child: SizedBox.expand()) : SizedBox.expand(),
+          SafeArea(
+            child: SizedBox.expand(
+              child: Column(
+                // 啊啥的
+                children: [
+                  // 安全区域
+                  SizedBox(height: MediaQuery.of(context).padding.top + 20),
+                  // 头像
+                  Listener(
+                    behavior: HitTestBehavior.opaque,
+                    child: Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).colorScheme.primaryContainer,
+                        borderRadius: BorderRadius.circular(6),
+                        image: DecorationImage(image: AssetImage('assets/images/logo.png'), fit: BoxFit.cover),
+                      ),
+                    ),
+                    onPointerUp: (e) {
+                      // 判断鼠标是否在组件范围内
+                      final RenderBox box = context.findRenderObject() as RenderBox;
+                      final Offset localPosition = box.globalToLocal(e.position);
+                      final bool isInside = box.size.contains(localPosition);
+                      if (isInside) {
+                        print("点击头像打开菜单");
+                        // // 头像 名称
+                        // 应用设置
+                        // 导入配置
+                        // 更新日志
+                        // 多语言切换
+                      }
+                    },
+                  ),
+                  SizedBox(height: 10),
+                  NavItem(
+                    icon: Iconfont.xinxi,
+                    title: loc.chat,
+                    isActive: currentRoute.startsWith("Chat"),
+                    onTap: () {
+                      context.router.replaceAll([ChatRoute()]);
+                    },
+                  ),
+                  NavItem(
+                    icon: Iconfont.moxing,
+                    title: loc.demo,
+                    isActive: currentRoute.startsWith("Demo"),
+                    onTap: () {
+                      // context.router.replaceAll([DemoRoute()]);
+                      context.router.replaceAll([HomeRoute()]);
+                    },
+                  ),
+                  NavItem(
+                    icon: Iconfont.picture,
+                    title: loc.demo,
+                    isActive: false,
+                    onTap: () {
+                      // context.router.replaceAll([DemoRoute()]);
+                      BotToast.showAnimationWidget(
+                        animationDuration: Duration(seconds: 1),
+                        toastBuilder:
+                            (_) => Card(
+                              child: Padding(padding: const EdgeInsets.all(8.0), child: Icon(Icons.favorite, color: Colors.redAccent)),
+                            ),
+                      );
+
+                      Future.delayed(Duration(seconds: 1), () {
+                        context.router.back();
+                      });
+                    },
+                  ),
+                  NavItem(
+                    icon: Iconfont.fanyi,
+                    title: loc.demo,
+                    isActive: false,
+                    onTap: () {
+                      // context.router.replaceAll([DemoRoute()]);
+                    },
+                  ),
+                  NavItem(
+                    icon: Iconfont.app,
+                    title: loc.demo,
+                    isActive: false,
+                    onTap: () {
+                      // context.router.replaceAll([DemoRoute()]);
+                    },
+                  ),
+                  Expanded(child: SizedBox()),
+                  // 明暗切换
+                  NavItem(
+                    icon:
+                        brightness == ThemeMode.dark
+                            ? Iconfont.yueliang
+                            : brightness == ThemeMode.light
+                            ? Iconfont.taiyang
+                            : Iconfont.auto_l,
+                    title: loc.theme,
+                    isActive: false,
+                    onTap: () {
+                      // 获取当前系统明暗状态
+                      var platformBrightness = MediaQuery.of(context).platformBrightness;
+                      if (brightness == ThemeMode.system) {
+                        BrightnessStore.change(ref, platformBrightness == Brightness.dark ? "light" : "dark");
+                      } else {
+                        BrightnessStore.toggle(ref);
+                      }
+                    },
+                  ),
+                  // 设置页面
+                  NavItem(
+                    icon: Iconfont.github,
+                    title: loc.github,
+                    isActive: false,
+                    onTap: () {
+                      launchUrl(Uri.parse("https://github.com/yh4922/simple-chat"));
+                    },
+                  ),
+                  // // 设置页面
+                  // NavItem(
+                  //   icon: Iconfont.shezhi,
+                  //   title: loc.settings,
+                  //   isActive: false,
+                  //   onTap: () {
+                  //     // 跳转设置页面
+                  //   },
+                  // ),
+                  // 安全区域
+                  SizedBox(height: MediaQuery.of(context).padding.bottom + 10),
+                ],
               ),
-              onTap: () {
-                print('点击头像');
-                // 打开弹出菜单
-              },
             ),
-            NavItem(
-              icon: Iconfont.xinxi,
-              title: loc.chat,
-              isActive: currentRoute.startsWith("Chat"),
-              onTap: () {
-                context.router.replaceAll([ChatRoute()]);
-              },
-            ),
-            NavItem(
-              icon: Iconfont.moxing,
-              title: loc.demo,
-              isActive: currentRoute.startsWith("Demo"),
-              onTap: () {
-                // context.router.replaceAll([DemoRoute()]);
-                context.router.replaceAll([HomeRoute()]);
-              },
-            ),
-            NavItem(
-              icon: Iconfont.picture,
-              title: loc.demo,
-              isActive: false,
-              onTap: () {
-                // context.router.replaceAll([DemoRoute()]);
-              },
-            ),
-            NavItem(
-              icon: Iconfont.fanyi,
-              title: loc.demo,
-              isActive: false,
-              onTap: () {
-                // context.router.replaceAll([DemoRoute()]);
-              },
-            ),
-            NavItem(
-              icon: Iconfont.app,
-              title: loc.demo,
-              isActive: false,
-              onTap: () {
-                // context.router.replaceAll([DemoRoute()]);
-              },
-            ),
-            Expanded(child: SizedBox()),
-            // 明暗切换
-            NavItem(
-              icon:
-                  brightness == ThemeMode.dark
-                      ? Iconfont.yueliang
-                      : brightness == ThemeMode.light
-                      ? Iconfont.taiyang
-                      : Iconfont.auto_l,
-              title: loc.theme,
-              isActive: false,
-              onTap: () {
-                // 获取当前系统明暗状态
-                var platformBrightness = MediaQuery.of(context).platformBrightness;
-                if (brightness == ThemeMode.system) {
-                  BrightnessStore.change(ref, platformBrightness == Brightness.dark ? "light" : "dark");
-                } else {
-                  BrightnessStore.toggle(ref);
-                }
-              },
-            ),
-            // 设置页面
-            NavItem(
-              icon: Iconfont.github,
-              title: loc.github,
-              isActive: false,
-              onTap: () {
-                launchUrl(Uri.parse("https://github.com/yh4922/simple-chat"));
-              },
-            ),
-            // // 设置页面
-            // NavItem(
-            //   icon: Iconfont.shezhi,
-            //   title: loc.settings,
-            //   isActive: false,
-            //   onTap: () {
-            //     // 跳转设置页面
-            //   },
-            // ),
-            // 安全区域
-            SizedBox(height: MediaQuery.of(context).padding.bottom + 10),
-          ],
-        ),
+          ),
+        ],
       ),
     );
-    if (!Store.isDesktop) {
-      return liftSide;
-    }
-    return DragToMoveArea(child: liftSide);
+
+    return liftSide;
   }
 }
