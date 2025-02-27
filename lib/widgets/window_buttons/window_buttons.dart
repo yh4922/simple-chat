@@ -1,17 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:simple_chat/states/locale/locale.dart';
 import 'package:simple_chat/utils/store.dart';
 import 'package:simple_chat/widgets/iconfont/iconfont.dart';
 import 'package:window_manager/window_manager.dart';
+import 'package:simple_chat/i18n/generated/l10n.dart';
 
-class WindowButtons extends StatelessWidget {
+class WindowButtons extends ConsumerWidget {
   const WindowButtons({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     var buttons = Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Expanded(child: DragToMoveArea(child: SizedBox(height: Store.winBtnHeight, width: double.infinity))),
+        // 支持的语言列表
+        PopupMenuButton<String>(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(mainAxisSize: MainAxisSize.min, children: [Text(S.of(context).language), Icon(Icons.arrow_drop_down)]),
+          ),
+          itemBuilder:
+              (context) =>
+                  LocaleData.supportedLocales
+                      .map(
+                        (locale) => PopupMenuItem<String>(
+                          value: locale.toString(),
+                          child: Localizations.override(
+                            context: context,
+                            locale: locale,
+                            child: Builder(builder: (context) => Text(Localizations.of(context, S).language)),
+                          ),
+                        ),
+                      )
+                      .toList(),
+          onSelected: (locale) => LocaleData.change(ref, locale),
+        ),
         WindowButtonIcon(
           icon: Iconfont.min,
           onTap: () async {

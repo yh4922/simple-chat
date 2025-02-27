@@ -4,6 +4,7 @@ import 'package:jh_debug/jh_debug.dart';
 import 'package:simple_chat/router/router.gr.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:simple_chat/states/routes/routes.dart';
+import 'package:simple_chat/views/chat/chat_detail_page.dart';
 
 export 'router.gr.dart';
 
@@ -37,7 +38,20 @@ class AppRouter extends RootStackRouter {
             path: 'Chat',
             initial: true,
             page: ChatRoute.page,
-            children: [AutoRoute(path: 'ChatDetail', page: ChatDetailRoute.page)],
+            children: [
+              // 对话详情
+              NamedRouteDef(
+                name: 'ChatDetail',
+                path: 'ChatDetail/:id',
+                // page: ChatDetailRoute.page,
+                builder: (context, data) {
+                  return ChatDetailPage(id: data.params.getInt('id'));
+                },
+                // customRouteBuilder: (context, child, page) {
+                //   return PageRouteBuilder(
+                // },
+              ),
+            ],
           ),
           // DEMO页面
           // AutoRoute(path: 'Demo', page: DemoRoute.page),
@@ -52,7 +66,7 @@ class AppRouter extends RootStackRouter {
     AutoRouteGuard.simple((resolver, router) {
       // 设置同步
       try {
-        var name = resolver.route.path;
+        var name = resolver.route.fullPath;
         if (name == "/") {
           name = "Chat";
         }

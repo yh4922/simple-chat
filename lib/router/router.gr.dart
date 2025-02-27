@@ -19,18 +19,39 @@ import 'package:simple_chat/views/home/home_page.dart' as _i5;
 
 /// generated route for
 /// [_i1.ChatDetailPage]
-class ChatDetailRoute extends _i6.PageRouteInfo<void> {
-  const ChatDetailRoute({List<_i6.PageRouteInfo>? children})
-    : super(ChatDetailRoute.name, initialChildren: children);
+class ChatDetailRoute extends _i6.PageRouteInfo<ChatDetailRouteArgs> {
+  ChatDetailRoute({
+    _i7.Key? key,
+    required int id,
+    List<_i6.PageRouteInfo>? children,
+  }) : super(
+         ChatDetailRoute.name,
+         args: ChatDetailRouteArgs(key: key, id: id),
+         initialChildren: children,
+       );
 
   static const String name = 'ChatDetailRoute';
 
   static _i6.PageInfo page = _i6.PageInfo(
     name,
     builder: (data) {
-      return const _i1.ChatDetailPage();
+      final args = data.argsAs<ChatDetailRouteArgs>();
+      return _i1.ChatDetailPage(key: args.key, id: args.id);
     },
   );
+}
+
+class ChatDetailRouteArgs {
+  const ChatDetailRouteArgs({this.key, required this.id});
+
+  final _i7.Key? key;
+
+  final int id;
+
+  @override
+  String toString() {
+    return 'ChatDetailRouteArgs{key: $key, id: $id}';
+  }
 }
 
 /// generated route for

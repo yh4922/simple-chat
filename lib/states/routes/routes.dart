@@ -1,5 +1,6 @@
 import 'package:flutter_riverpod/src/consumer.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:simple_chat/utils/store.dart';
 
 part 'routes.g.dart';
 
@@ -7,6 +8,10 @@ part 'routes.g.dart';
 class RoutesData extends _$RoutesData {
   @override
   String build() {
+    var path = Store.getGlobal("CURRENT_ROUTER_PATH");
+    if (path != null) {
+      return path as String;
+    }
     return "Chat";
   }
 
@@ -22,6 +27,7 @@ class RoutesData extends _$RoutesData {
 
   /// 设置值
   static void change(WidgetRef ref, String newRoute) {
+    Store.setGlobal("CURRENT_ROUTER_PATH", newRoute);
     ref.read(routesDataProvider.notifier).update(newRoute);
   }
 }

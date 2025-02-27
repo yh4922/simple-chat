@@ -107,6 +107,9 @@ class MyApp extends ConsumerWidget {
     final appTheme = ThemeStore.value(ref);
     final appBrightness = BrightnessStore.value(ref);
 
+    // 窗口大小
+    // WinSizeData.value(ref);
+
     return MaterialApp.router(
       title: 'Simple Chat',
       // 使用主题

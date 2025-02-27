@@ -8,6 +8,12 @@ part 'max.g.dart';
 class WinMaxStatus extends _$WinMaxStatus {
   @override
   bool build() {
+    // 缓存中存在则使用缓存
+    var isMac = Store.getGlobal("WinMaxStatus");
+    if (isMac != null) {
+      return isMac as bool;
+    }
+
     if (Store.isDesktop) {
       return false;
     } else {
@@ -27,6 +33,7 @@ class WinMaxStatus extends _$WinMaxStatus {
 
   /// 设置值
   static void change(WidgetRef ref, bool status) {
+    Store.setGlobal("WinMaxStatus", status);
     ref.read(winMaxStatusProvider.notifier).update(status);
   }
 }

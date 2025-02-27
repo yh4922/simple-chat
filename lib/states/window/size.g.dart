@@ -1,27 +1,27 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'max.dart';
+part of 'size.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$winMaxStatusHash() => r'e94821820c61f3c815b7bc09da25db7bdf2f6b07';
+String _$winSizeDataHash() => r'6aa4bd92d68315eb79ad4050c5b7f327e3e9ea5d';
 
-/// See also [WinMaxStatus].
-@ProviderFor(WinMaxStatus)
-final winMaxStatusProvider =
-    AutoDisposeNotifierProvider<WinMaxStatus, bool>.internal(
-      WinMaxStatus.new,
-      name: r'winMaxStatusProvider',
+/// See also [WinSizeData].
+@ProviderFor(WinSizeData)
+final winSizeDataProvider =
+    AutoDisposeNotifierProvider<WinSizeData, Size>.internal(
+      WinSizeData.new,
+      name: r'winSizeDataProvider',
       debugGetCreateSourceHash:
           const bool.fromEnvironment('dart.vm.product')
               ? null
-              : _$winMaxStatusHash,
+              : _$winSizeDataHash,
       dependencies: null,
       allTransitiveDependencies: null,
     );
 
-typedef _$WinMaxStatus = AutoDisposeNotifier<bool>;
+typedef _$WinSizeData = AutoDisposeNotifier<Size>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

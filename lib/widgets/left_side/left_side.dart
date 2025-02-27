@@ -150,7 +150,7 @@ class LeftSide extends ConsumerWidget {
                       final Offset localPosition = box.globalToLocal(e.position);
                       final bool isInside = box.size.contains(localPosition);
                       if (isInside) {
-                        print("点击头像打开菜单");
+                        // print("点击头像打开菜单");
                         // // 头像 名称
                         // 应用设置
                         // 导入配置
@@ -165,7 +165,9 @@ class LeftSide extends ConsumerWidget {
                     title: loc.chat,
                     isActive: currentRoute.startsWith("Chat"),
                     onTap: () {
-                      context.router.replaceAll([ChatRoute()]);
+                      if (currentRoute != "Chat") {
+                        context.router.replaceAll([ChatRoute()]);
+                      }
                     },
                   ),
                   NavItem(
@@ -173,8 +175,9 @@ class LeftSide extends ConsumerWidget {
                     title: loc.demo,
                     isActive: currentRoute.startsWith("Demo"),
                     onTap: () {
-                      // context.router.replaceAll([DemoRoute()]);
-                      context.router.replaceAll([HomeRoute()]);
+                      if (currentRoute != "Demo") {
+                        context.router.replaceAll([HomeRoute()]);
+                      }
                     },
                   ),
                   NavItem(
@@ -182,18 +185,7 @@ class LeftSide extends ConsumerWidget {
                     title: loc.demo,
                     isActive: false,
                     onTap: () {
-                      // context.router.replaceAll([DemoRoute()]);
-                      BotToast.showAnimationWidget(
-                        animationDuration: Duration(seconds: 1),
-                        toastBuilder:
-                            (_) => Card(
-                              child: Padding(padding: const EdgeInsets.all(8.0), child: Icon(Icons.favorite, color: Colors.redAccent)),
-                            ),
-                      );
-
-                      Future.delayed(Duration(seconds: 1), () {
-                        context.router.back();
-                      });
+                      // asdas
                     },
                   ),
                   NavItem(
