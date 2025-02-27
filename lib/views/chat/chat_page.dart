@@ -14,7 +14,7 @@ class ChatPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final locale = S.of(context);
+    // final locale = S.of(context);
 
     return Container(
       alignment: Alignment.center,

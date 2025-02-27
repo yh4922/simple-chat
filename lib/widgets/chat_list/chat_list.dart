@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:simple_chat/i18n/generated/l10n.dart';
+// import 'package:simple_chat/i18n/generated/l10n.dart';
 import 'package:simple_chat/utils/store.dart';
-import 'package:simple_chat/widgets/iconfont/iconfont.dart';
+// import 'package:simple_chat/widgets/iconfont/iconfont.dart';
 import 'package:window_manager/window_manager.dart';
 
 class ChatList extends StatelessWidget {
@@ -12,7 +12,7 @@ class ChatList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final locale = S.of(context);
+    // final locale = S.of(context);
 
     var top = MediaQuery.of(context).padding.top;
 
@@ -56,7 +56,7 @@ class ChatList extends StatelessWidget {
                           ),
                           style: TextStyle(fontSize: 14),
                           onSubmitted: (text) {
-                            print("触发搜索 $text");
+                            // print("触发搜索 $text");
                           },
                         ),
                       ),
@@ -68,7 +68,7 @@ class ChatList extends StatelessWidget {
                       child: InkWell(
                         borderRadius: BorderRadius.circular(6),
                         onTap: () {
-                          print("打开创建助手弹窗");
+                          // print("打开创建助手弹窗");
                         },
                         child: SizedBox(
                           width: 34,

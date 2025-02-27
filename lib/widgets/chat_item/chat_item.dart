@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:simple_chat/i18n/generated/l10n.dart';
-import 'package:simple_chat/utils/store.dart';
+// import 'package:simple_chat/utils/store.dart';
 
 class ChatList extends StatelessWidget {
   final WidgetRef ref;
