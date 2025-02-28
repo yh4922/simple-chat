@@ -1,566 +1,251 @@
-# 初始化 flutter 项⽬
+# Simple Chat - Cross-Platform AI Assistant Dialogue Tool
 
-## 创建项⽬
+[![Flutter Version](https://img.shields.io/badge/Flutter-^3.7.0-blue.svg)](https://flutter.dev/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/Version-0.0.5-orange.svg)](https://github.com/yh4922/simple-chat)
 
-```bash
-flutter create {项⽬名称} --org {包名} --platforms {平台} -a {java和kotlin}
-```
+A concise and efficient AI assistant dialogue tool developed with Flutter, supporting various large language models and available on desktop and web clients. Simple Chat enables you to easily converse with various advanced AI models, customize dialogue parameters, and use multiple interaction modes.
 
-## 初步整理⽬录
+![Application Preview](assets/images/preview.png)
 
-```bash
-📂 i18n            国际化
-📂 layout          应用框架
-📂 models          数据模型
-📂 router          路由管理
-📂 states          状态管理
-📂 theme           主题管理
-📂 utils           通用工具
-📂 views           视图页面
-📂 widgets         通用组件
--  📄main.dart     入口文件
-```
+## Features
 
-## 路由封装
+- Cross-Platform Support: Compatible with Windows, macOS, Linux desktop clients, and web browsers
+- Instant Messaging: Based on modern messaging mechanisms
+- AI Dialogue Assistant: Interact with various large language models
+   - Support for multiple AI model providers including OpenAI, Anthropic, Google Gemini, Volcano Engine, and DeepSeek
+   - Default integration with high-quality models like GPT-4o-mini
+   - Customizable dialogue parameters (temperature, creativity, thought openness, etc.)
+   - Multiple conversation modes: chat mode, document mode, code mode
+   - Intelligent topic management: automatically creates new topics and provides context summaries
+- Advanced AI Dialogue Features:
+   - Custom role settings and pre-input templates
+   - Adjustable reasoning intensity and response style
+   - Automatic conversation history management and summarization
+- Theme Customization: Support for dark/light mode switching
+- Multilingual Support: Built-in internationalization framework
+- Local Data Storage: Secure local storage of chat records using drift (moor) database
 
-1. 安装依赖
+## Quick Start
 
-```bash
-flutter pub add auto_route
-flutter pub add --dev auto_route_generator
-```
+### Prerequisites
 
-2. 创建默认 layout 模板 `lib\layout\default.dart`
+- Flutter SDK >= 3.29.0
+- Dart SDK >= 3.0.0
+- Node.js (for running commands in package.json)
+- Development IDE (VS Code or Android Studio recommended)
 
-```dart
-import 'package:flutter/material.dart';
-import 'package:auto_route/auto_route.dart';
+### Installation Steps
 
-/// DefaultLayout 是应用程序的默认布局组件。
-/// 它使用 AutoRouter 来处理路由导航，作为应用程序的主要布局容器。
-class DefaultLayout extends StatefulWidget {
-  const DefaultLayout({super.key});
-
-  @override
-  State<DefaultLayout> createState() => _DefaultLayoutState();
-}
-
-class _DefaultLayoutState extends State<DefaultLayout> {
-  @override
-  Widget build(BuildContext context) {
-    return const AutoRouter();
-  }
-}
-```
-
-3. 创建首页视图 `lib\views\home\home_page.dart`
-
-```dart
-import 'package:flutter/material.dart';
-import 'package:auto_route/auto_route.dart';
-
-@RoutePage()
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      // 主轴居中对齐
-      body: Center(child: Text('Home Page')),
-    );
-  }
-}
-```
-
-4. 生成路由代码
-
-- 使用 [watch] 标志来监视文件系统的编辑并根据需要重建
+1. Clone the repository
 
 ```bash
-dart run build_runner watch
+git clone https://github.com/yh4922/simple-chat.git
+cd simple_chat
 ```
 
-- 如果你希望生成器运行一次然后退出，请使用
+2. Install dependencies
 
 ```bash
-dart run build_runner build
+flutter pub get
 ```
 
-5. 连接 MaterialApp
-
-```dart
-class MyApp extends StatelessWidget {
-  MyApp({super.key});
-
-  // 导入路由
-  final rootRouter = AppRouter();
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp.router(
-      // 使用路由
-      routerConfig: rootRouter.config(),
-    );
-  }
-}
-```
-
-## 状态管理封装
-
-1. 安装依赖
+3. Run the application
 
 ```bash
-flutter pub add flutter_riverpod
-flutter pub add riverpod_annotation
-flutter pub add dev:riverpod_generator
-flutter pub add dev:build_runner
-flutter pub add dev:custom_lint
-flutter pub add dev:riverpod_lint
+# Run in development environment
+npm run dev
+
+# Run in web browser
+npm run dev:web
 ```
 
-2. 运行代码生成器
+### Building the Application
+
+This project uses [flutter_distributor](https://pub.dev/packages/flutter_distributor) for building and packaging.
+
+#### Install flutter_distributor
 
 ```bash
-dart run build_runner watch
+# Global installation of flutter_distributor
+dart pub global activate flutter_distributor
 ```
 
-3. 启用 riverpod_lint `analysis_options.yaml`
-
-```yaml
-analyzer:
-  plugins:
-    - custom_lint
-```
-
-- 手动检查报错
+#### Manual Building
 
 ```bash
-dart run custom_lint
+# Build Android APK
+flutter_distributor package --platform android --targets apk --flutter-build-args=dart-define=INIT_ENV=prod --flutter-build-args=release
+
+# Build Windows application (EXE installer)
+flutter_distributor package --platform windows --targets exe --flutter-build-args=dart-define=INIT_ENV=prod
+
+# Build Linux application (DEB package)
+flutter_distributor package --platform linux --targets deb --flutter-build-args=dart-define=INIT_ENV=prod
+
+# Build macOS application (DMG image)
+flutter_distributor package --platform macos --targets dmg --flutter-build-args=dart-define=INIT_ENV=prod
+
+# Build Web application
+flutter build web --release --dart-define=INIT_ENV=prod --dart-define=FLUTTER_WEB_CANVASKIT_URL=canvaskit
 ```
 
-4. 集成 flutter_riverpod
+#### Using Predefined npm Scripts
+
+The project also defines some shortcut commands for building in package.json:
 
 ```bash
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+# Build Android APK
+npm run build-apk
 
-void main() {
-  runApp(
-    // 使用ProviderScope包裹MyApp
-    ProviderScope(
-      child: MyApp(),
-    ),
-  );
-}
+# Build iOS application
+npm run build-ios
+
+# Build Web application
+npm run build-web
+
+# Build Windows application
+npm run build-windows
+
+# Build Linux application
+npm run build-linux
+
+# Build macOS application
+npm run build-macos
 ```
 
-5. 创建示例状态
+#### Automated Building and Publishing
 
-```dart
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_annotation/riverpod_annotation.dart';
-
-part 'example.g.dart';
-
-@riverpod
-class ExampleDataRef extends _$ExampleDataRef {
-  @override
-  String build() {
-    return 'Hello world';
-  }
-
-  void update(String newData) {
-    state = newData;
-  }
-}
-```
-
-- 执行自动生成
+The project uses GitHub Actions for automated building and release processes. When a new version tag (e.g., `v0.0.5+5`) is pushed to the repository, it automatically triggers multi-platform builds and creates release packages.
 
 ```bash
-dart run build_runner build
+# Create and push a new version tag to trigger the build
+npm run tag:demo  # or custom tag: git tag v[version_number] && git push origin v[version_number]
 ```
 
-6. 使用状态
-
-- 原生使用
-
-```dart
-import 'package:flutter/material.dart';
-import 'package:auto_route/auto_route.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:simple_chat/states/example/example.dart';
-
-/// 继承 ConsumerWidget
-@RoutePage()
-class HomePage extends ConsumerWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    /// 通过ref.watch获取exampleDataRefProvider的值
-    /// *exampleDataRefProvider是自动生成的
-    final String exampleData = ref.watch(exampleDataRefProvider);
-
-    return Scaffold(
-      body: Center(
-        child: Column(
-          children: [
-            // 使用exampleData
-            Text(exampleData),
-          ],
-        ),
-      ),
-    );
-  }
-}
-```
-
-- 自定义封装
-- - ExampleDataRef 类添加 value 实现
-
-```dart
-@riverpod
-class ExampleDataRef extends _$ExampleDataRef {
-  /// ...code
-
-  /// 获取值
-  static String value(WidgetRef ref) {
-    return ref.watch(exampleDataRefProvider);
-  }
-}
-```
-
-- - 使用
-
-```dart
-/// 继承 ConsumerWidget
-@RoutePage()
-class HomePage extends ConsumerWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    /// 通过ExampleDataRef.value获取值
-    final String exampleData = ExampleDataRef.value(ref);
-  }
-}
-```
-
-7. 修改状态
-
-```dart
-ref.read(exampleDataRefProvider.notifier).update("Hello Riverpod");
-```
-
-- 封装修改状态
-
-```dart
-@riverpod   
-class ExampleDataRef extends _$ExampleDataRef {
-  /// code
-
-  /// 封装设置值函数
-  static void setValue(WidgetRef ref, String newData) {
-    ref.read(exampleDataRefProvider.notifier).update(newData);
-  }
-}
-```
-
-```dart
-onPressed: () {
-  // ref.read(exampleDataRefProvider.notifier).update("Hello Riverpod");
-  ExampleDataRef.setValue(ref, "Hello Riverpod");
-}
-```
-
-## 国际化配置
-
-1. 安装依赖
+## Development Tools
 
 ```bash
-flutter pub add flutter_localizations --sdk=flutter
-flutter pub add intl:any
-flutter pub add dev:intl_utils
+# Generate internationalization files
+npm run i18n
+npm run i18n:dart
+
+# Generate App icons
+npm run app:icon
+
+# Generate code
+npm run code
+
+# Watch for code changes and auto-generate
+npm run code:watch
 ```
 
-2. 配置生成器
+## Project Structure
 
-```yaml
-# 在 pubspec.yaml 中添加：
-# 生成本地化代码 flutter pub run intl_utils:generate
-flutter_intl:
-  enabled: true
-  arb_dir: lib/i18n/locale
-  output_dir: lib/i18n/generated
+```
+lib/
+├── consts/         # Constants definition
+├── database/       # Database configuration and operations
+├── i18n/           # Internationalization resources
+├── layout/         # Layout components
+├── models/         # Data models
+├── router/         # Routing management
+├── states/         # State management (using Riverpod)
+├── theme/          # Theme configuration
+├── utils/          # Utility functions
+├── views/          # Page views
+│   ├── chat/       # Chat-related pages
+│   ├── demo/       # Example pages
+│   └── home/       # Homepage
+├── widgets/        # Reusable components
+└── main.dart       # Application entry point
 ```
 
-- 执行生成后文件格式
-  ![1739770607651](image/README/1739770607651.png)
+## Technology Stack
 
-3. 创建 Locale 状态管理
+- **Framework**: Flutter
+- **State Management**: Flutter Riverpod
+- **Routing**: auto_route
+- **Database**: drift (SQLite ORM)
+- **Internationalization**: intl
+- **Desktop Support**: window_manager
+- **UI Notifications**: bot_toast
 
-```dart
-// lib\states\locale\locale.dart
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/src/consumer.dart';
-import 'package:riverpod_annotation/riverpod_annotation.dart';
+## Configuration and Customization
 
-part 'locale.g.dart';
+### Theme Customization
 
-@riverpod
-class LocaleData extends _$LocaleData {
-  @override
-  Locale build() {
-    return Locale('en');
-  }
+Modify theme-related configurations in the `lib/theme/` directory.
 
-  /// 更新状态
-  void update(Locale newLocale) {
-    state = newLocale;
-  }
+### Multilingual Support
 
-  /// 获取值
-  static Locale value(WidgetRef ref) {
-    return ref.watch(localeDataProvider);
-  }
+The application supports internationalization. You can add or modify multilingual resources in the `lib/i18n/` directory.
 
-  /// 设置值
-  static void change(WidgetRef ref, Locale newLocale) {
-    ref.read(localeDataProvider.notifier).update(newLocale);
-  }
-}
-```
-
-4. 引入 flutter_localizations 库
+Generate language files:
 
 ```bash
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:simple_chat/states/locale/locale.dart';
-import 'package:simple_chat/i18n/generated/l10n.dart';
+flutter pub run intl_utils:generate
 ```
+
+### AI Model Configuration
+
+Simple Chat supports multiple AI model providers and configuration options that you can customize according to your needs:
+
+#### Supported AI Model Providers
+
+- OpenAI (default)
+- Anthropic
+- Google Gemini
+- Volcano Engine
+- DeepSeek
+
+#### Custom Assistant Parameters
+
+You can customize various AI assistant parameters in the application, including:
+
+- **Temperature**: Controls the creativity and rigor of responses (between 0-2)
+- **Top P**: Controls how many possibilities the model considers (between 0-1)
+- **Presence Penalty**: Controls the degree of concept repetition avoidance (between -2 and 2)
+- **Frequency Penalty**: Controls vocabulary richness (between -2 and 2)
+- **Max Tokens**: Controls the maximum number of tokens per interaction
+- **Reasoning Effort**: Options include low, medium, and high
+
+#### Topic Management Settings
+
+- **Auto Create Topic**: Automatically creates a new topic when exceeding the specified conversation history count
+- **Max Topic History**: Sets the threshold for triggering new topic creation
+- **Auto Summary**: When enabled, the model summarizes historical messages to maintain context coherence
+
+#### Example Configuration
+
+You can set assistant configurations in code, for example:
 
 ```dart
-class MyApp extends ConsumerWidget {
-  MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    // 语言
-    final appLocale = LocaleData.value(ref);
-
-    return MaterialApp.router(
-      // 导入国际化
-      localizationsDelegates: [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        AppLocalizationDelegate(), // 引入自定义语言
-      ],
-      // 解析语言回调
-      localeResolutionCallback: (Locale? locale, Iterable<Locale> supportedLocales) {
-        // 获取系统语言 并从支持的语言中查找 存在则返回
-        var result = supportedLocales.where((element) => element.languageCode == locale?.languageCode);
-        if (result.isNotEmpty) {
-          return locale;
-        }
-
-        // 不存在则返回默认语言
-        return Locale('en');
-      },
-      locale: appLocale,
-      // 系统语言切换回调
-      localeListResolutionCallback: (List<Locale>? locales, Iterable<Locale> supportedLocales) {
-        // print('locales:$locales');
-        // print('supportLocales:$supportedLocales');
-      },
-      supportedLocales: [
-        Locale('zh'), // Chinese
-        Locale('en'), // English
-      ],
-    );
-  }
-}
+Assistant assistant = Assistant(
+  id: 1,
+  name: "ChatGPT Assistant",
+)
 ```
 
-5. 使用语言
+## Contribution Guidelines
 
-```dart
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:simple_chat/states/locale/locale.dart';
-import 'package:simple_chat/i18n/generated/l10n.dart';
+1. Fork the project
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Create a Pull Request
 
-class HomePage extends ConsumerWidget {
-  const HomePage({super.key});
+## License
 
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    // 获取国际化
-    final loc = S.of(context);
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              // 使用
-              child: Text(loc.message("Yohann")),
-              onPressed: () {
-                // 通过状态管理切换语言
-                LocaleData.change(ref, Locale("zh"));
-              },
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-```
+## Contact
 
-## 主题管理
+For any questions or suggestions, please contact us through:
 
-1. 创建主题文件
+- GitHub Issues: [https://github.com/yh4922/simple-chat/issues](https://github.com/yh4922/simple-chat/issues)
+- Email: [your-email@example.com](mailto:your-email@example.com)
 
-```dart
-// lib\theme\index_theme.dart
-import 'package:flutter/material.dart';
-// 以下你配置的全局主题颜色参数
-part 'theme_bluegrey.dart';
-part 'theme_lightblue.dart';
-part 'theme_pink.dart';
+---
 
-Map<String, ThemeData> ThemeMaps = {
-  // 蓝色主题
-  "bluegrey": themeBlueGrey,
-  // 浅蓝色主题
-  "lightblue": themeLightBlue,
-  // 粉色主题
-  "pink": themePink,
-};
-```
-
-```dart
-// lib\theme\theme_bluegrey.dart
-part of 'index_theme.dart';
-
-final ThemeData themeBlueGrey = ThemeData(
-  /// ...
-);
-```
-
-2. 创建主题状态
-
-```dart
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/src/consumer.dart';
-import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:simple_chat/theme/index_theme.dart';
-
-part 'theme.g.dart';
-
-@riverpod
-class ThemeStore extends _$ThemeStore {
-  @override
-  ThemeData build() {
-    /// TODO: 后续可能需要从本地缓存获取历史值
-    return themeBlueGrey;
-  }
-
-  /// 更新状态
-  void update(ThemeData newTheme) {
-    state = newTheme;
-  }
-
-  /// 获取值
-  static ThemeData value(WidgetRef ref) {
-    return ref.watch(themeStoreProvider);
-  }
-
-  /// 设置值
-  static void change(WidgetRef ref, ThemeData newTheme) {
-    ref.read(themeStoreProvider.notifier).update(newTheme);
-  }
-}
-```
-
-3. 使用主题
-
-```dart
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter/material.dart';
-import 'package:simple_chat/states/theme/theme.dart';
-
-class MyApp extends ConsumerWidget {
-  MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final appTheme = ThemeStore.value(ref);
-
-    return MaterialApp.router(
-      // 使用主题
-      theme: appTheme,
-    );
-  }
-}
-```
-
-## 本地存储
-
-1. 下载依赖
-
-```bash
-flutter pub add shared_preferences
-```
-
-2. 封装
-
-```dart
-import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:simple_chat/theme/index_theme.dart';
-
-class Store {
-  // 缓存实例  初始化时设置 全局调用
-  static late SharedPreferences prefs;
-
-  // 语言标识
-  static String localeName = "en";
-  static Locale locale = Locale('en');
-
-  // 主题标识
-  static String themeName = "bluegrey";
-  static ThemeData theme = ThemeMaps["bluegrey"]!;
-
-  // 初始化
-  static Future<void> init() async {
-    // 创建实例
-    prefs = await SharedPreferences.getInstance();
-    // 获取语言标识
-    localeName = prefs.getString("localeName") ?? "en";
-    locale = Locale(localeName);
-    // 获取主题标识
-    themeName = prefs.getString("themeName") ?? "bluegrey";
-    theme = ThemeMaps[themeName] ?? ThemeMaps["bluegrey"]!;
-  }
-
-  // 是否提前读取主题缓存
-  static bool preRead = false;
-}
-```
-
-3. 初始化
-
-```dart
-
-import 'package:simple_chat/utils/store.dart';
-
-void main() async {
-  // 初始缓存
-  await Store.init();
-}
-```
+**Simple Chat** - Making chat simple again 2025
