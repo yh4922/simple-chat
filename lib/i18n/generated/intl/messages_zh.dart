@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "chat": MessageLookupByLibrary.simpleMessage("对话"),
     "dark": MessageLookupByLibrary.simpleMessage("暗色"),
     "demo": MessageLookupByLibrary.simpleMessage("演示"),
+    "exit": MessageLookupByLibrary.simpleMessage("退出"),
     "github": MessageLookupByLibrary.simpleMessage("GitHub"),
     "language": MessageLookupByLibrary.simpleMessage("简体中文"),
     "light": MessageLookupByLibrary.simpleMessage("亮色"),

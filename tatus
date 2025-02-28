@@ -1,0 +1,296 @@
+warning: in the working copy of 'lib/i18n/generated/intl/messages_all.dart', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/i18n/generated/intl/messages_en.dart', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/i18n/generated/intl/messages_ja.dart', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/i18n/generated/intl/messages_ko.dart', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/i18n/generated/intl/messages_zh-Hans.dart', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/i18n/generated/intl/messages_zh-Hant.dart', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/i18n/generated/intl/messages_zh.dart', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/i18n/generated/l10n.dart', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/i18n/locale/intl_en.arb', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/i18n/locale/intl_ja.arb', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/i18n/locale/intl_ko.arb', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/i18n/locale/intl_zh.arb', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/i18n/locale/intl_zh_Hans.arb', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/i18n/locale/intl_zh_Hant.arb', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'linux/flutter/generated_plugin_registrant.cc', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'linux/flutter/generated_plugin_registrant.h', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'linux/flutter/generated_plugins.cmake', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'macos/Flutter/GeneratedPluginRegistrant.swift', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pubspec.lock', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pubspec.yaml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'windows/flutter/generated_plugin_registrant.cc', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'windows/flutter/generated_plugin_registrant.h', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'windows/flutter/generated_plugins.cmake', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/lib/i18n/generated/intl/messages_en.dart b/lib/i18n/generated/intl/messages_en.dart[m
+[1mindex a35ef7a..14f4584 100644[m
+[1m--- a/lib/i18n/generated/intl/messages_en.dart[m
+[1m+++ b/lib/i18n/generated/intl/messages_en.dart[m
+[36m@@ -28,6 +28,7 @@[m [mclass MessageLookup extends MessageLookupByLibrary {[m
+     "chat": MessageLookupByLibrary.simpleMessage("Chat"),[m
+     "dark": MessageLookupByLibrary.simpleMessage("Dark"),[m
+     "demo": MessageLookupByLibrary.simpleMessage("Demo"),[m
+[32m+[m[32m    "exit": MessageLookupByLibrary.simpleMessage("Exit"),[m
+     "github": MessageLookupByLibrary.simpleMessage("GitHub"),[m
+     "language": MessageLookupByLibrary.simpleMessage("English"),[m
+     "light": MessageLookupByLibrary.simpleMessage("Light"),[m
+[1mdiff --git a/lib/i18n/generated/intl/messages_ja.dart b/lib/i18n/generated/intl/messages_ja.dart[m
+[1mindex 56fb9b3..587a0f7 100644[m
+[1m--- a/lib/i18n/generated/intl/messages_ja.dart[m
+[1m+++ b/lib/i18n/generated/intl/messages_ja.dart[m
+[36m@@ -20,7 +20,7 @@[m [mtypedef String MessageIfAbsent(String messageStr, List<dynamic> args);[m
+ class MessageLookup extends MessageLookupByLibrary {[m
+   String get localeName => 'ja';[m
+ [m
+[31m-  static String m0(name) => "こんにちは、${name}さん！";[m
+[32m+[m[32m  static String m0(name) => "こんにちは、${name}さん!";[m
+ [m
+   final messages = _notInlinedMessages(_notInlinedMessages);[m
+   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{[m
+[36m@@ -28,6 +28,7 @@[m [mclass MessageLookup extends MessageLookupByLibrary {[m
+     "chat": MessageLookupByLibrary.simpleMessage("チャット"),[m
+     "dark": MessageLookupByLibrary.simpleMessage("ダークモード"),[m
+     "demo": MessageLookupByLibrary.simpleMessage("デモ"),[m
+[32m+[m[32m    "exit": MessageLookupByLibrary.simpleMessage("退出"),[m
+     "github": MessageLookupByLibrary.simpleMessage("GitHub"),[m
+     "language": MessageLookupByLibrary.simpleMessage("日本語"),[m
+     "light": MessageLookupByLibrary.simpleMessage("ライトモード"),[m
+[1mdiff --git a/lib/i18n/generated/intl/messages_ko.dart b/lib/i18n/generated/intl/messages_ko.dart[m
+[1mindex 06b84c3..4194c85 100644[m
+[1m--- a/lib/i18n/generated/intl/messages_ko.dart[m
+[1m+++ b/lib/i18n/generated/intl/messages_ko.dart[m
+[36m@@ -28,6 +28,7 @@[m [mclass MessageLookup extends MessageLookupByLibrary {[m
+     "chat": MessageLookupByLibrary.simpleMessage("대화"),[m
+     "dark": MessageLookupByLibrary.simpleMessage("어두운 색"),[m
+     "demo": MessageLookupByLibrary.simpleMessage("데모"),[m
+[32m+[m[32m    "exit": MessageLookupByLibrary.simpleMessage("종료"),[m
+     "github": MessageLookupByLibrary.simpleMessage("GitHub"),[m
+     "language": MessageLookupByLibrary.simpleMessage("한국어"),[m
+     "light": MessageLookupByLibrary.simpleMessage("밝은 색"),[m
+[1mdiff --git a/lib/i18n/generated/intl/messages_zh-Hans.dart b/lib/i18n/generated/intl/messages_zh-Hans.dart[m
+[1mindex cdd1fb7..f33cf3a 100644[m
+[1m--- a/lib/i18n/generated/intl/messages_zh-Hans.dart[m
+[1m+++ b/lib/i18n/generated/intl/messages_zh-Hans.dart[m
+[36m@@ -20,19 +20,20 @@[m [mtypedef String MessageIfAbsent(String messageStr, List<dynamic> args);[m
+ class MessageLookup extends MessageLookupByLibrary {[m
+   String get localeName => 'zh_Hans';[m
+ [m
+[31m-  static String m0(name) => "你好，${name}！";[m
+[32m+[m[32m  static String m0(name) => "你好, ${name}!";[m
+ [m
+   final messages = _notInlinedMessages(_notInlinedMessages);[m
+   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{[m
+[31m-    "appname": MessageLookupByLibrary.simpleMessage("简单聊天"),[m
+[31m-    "chat": MessageLookupByLibrary.simpleMessage("聊天"),[m
+[31m-    "dark": MessageLookupByLibrary.simpleMessage("深色"),[m
+[32m+[m[32m    "appname": MessageLookupByLibrary.simpleMessage("SimpleChat"),[m
+[32m+[m[32m    "chat": MessageLookupByLibrary.simpleMessage("对话"),[m
+[32m+[m[32m    "dark": MessageLookupByLibrary.simpleMessage("暗色"),[m
+     "demo": MessageLookupByLibrary.simpleMessage("演示"),[m
+[32m+[m[32m    "exit": MessageLookupByLibrary.simpleMessage("退出"),[m
+     "github": MessageLookupByLibrary.simpleMessage("GitHub"),[m
+     "language": MessageLookupByLibrary.simpleMessage("简体中文"),[m
+[31m-    "light": MessageLookupByLibrary.simpleMessage("浅色"),[m
+[32m+[m[32m    "light": MessageLookupByLibrary.simpleMessage("亮色"),[m
+     "message": m0,[m
+[31m-    "providers": MessageLookupByLibrary.simpleMessage("服务提供商"),[m
+[32m+[m[32m    "providers": MessageLookupByLibrary.simpleMessage("提供商"),[m
+     "settings": MessageLookupByLibrary.simpleMessage("设置"),[m
+     "system": MessageLookupByLibrary.simpleMessage("系统"),[m
+     "theme": MessageLookupByLibrary.simpleMessage("主题"),[m
+[1mdiff --git a/lib/i18n/generated/intl/messages_zh-Hant.dart b/lib/i18n/generated/intl/messages_zh-Hant.dart[m
+[1mindex 112b8d4..a17de1f 100644[m
+[1m--- a/lib/i18n/generated/intl/messages_zh-Hant.dart[m
+[1m+++ b/lib/i18n/generated/intl/messages_zh-Hant.dart[m
+[36m@@ -28,6 +28,7 @@[m [mclass MessageLookup extends MessageLookupByLibrary {[m
+     "chat": MessageLookupByLibrary.simpleMessage("對話"),[m
+     "dark": MessageLookupByLibrary.simpleMessage("暗色"),[m
+     "demo": MessageLookupByLibrary.simpleMessage("演示"),[m
+[32m+[m[32m    "exit": MessageLookupByLibrary.simpleMessage("退出"),[m
+     "github": MessageLookupByLibrary.simpleMessage("GitHub"),[m
+     "language": MessageLookupByLibrary.simpleMessage("繁體中文"),[m
+     "light": MessageLookupByLibrary.simpleMessage("亮色"),[m
+[1mdiff --git a/lib/i18n/generated/intl/messages_zh.dart b/lib/i18n/generated/intl/messages_zh.dart[m
+[1mindex f47b27c..b7ae46d 100644[m
+[1m--- a/lib/i18n/generated/intl/messages_zh.dart[m
+[1m+++ b/lib/i18n/generated/intl/messages_zh.dart[m
+[36m@@ -28,6 +28,7 @@[m [mclass MessageLookup extends MessageLookupByLibrary {[m
+     "chat": MessageLookupByLibrary.simpleMessage("对话"),[m
+     "dark": MessageLookupByLibrary.simpleMessage("暗色"),[m
+     "demo": MessageLookupByLibrary.simpleMessage("演示"),[m
+[32m+[m[32m    "exit": MessageLookupByLibrary.simpleMessage("退出"),[m
+     "github": MessageLookupByLibrary.simpleMessage("GitHub"),[m
+     "language": MessageLookupByLibrary.simpleMessage("简体中文"),[m
+     "light": MessageLookupByLibrary.simpleMessage("亮色"),[m
+[1mdiff --git a/lib/i18n/generated/l10n.dart b/lib/i18n/generated/l10n.dart[m
+[1mindex bef2f1a..37b98e6 100644[m
+[1m--- a/lib/i18n/generated/l10n.dart[m
+[1m+++ b/lib/i18n/generated/l10n.dart[m
+[36m@@ -75,6 +75,11 @@[m [mclass S {[m
+     return Intl.message('Demo', name: 'demo', desc: '', args: []);[m
+   }[m
+ [m
+[32m+[m[32m  /// `Exit`[m
+[32m+[m[32m  String get exit {[m
+[32m+[m[32m    return Intl.message('Exit', name: 'exit', desc: '', args: []);[m
+[32m+[m[32m  }[m
+[32m+[m
+   /// `GitHub`[m
+   String get github {[m
+     return Intl.message('GitHub', name: 'github', desc: '', args: []);[m
+[1mdiff --git a/lib/i18n/locale/intl_en.arb b/lib/i18n/locale/intl_en.arb[m
+[1mindex 7533c6a..f5d4c0a 100644[m
+[1m--- a/lib/i18n/locale/intl_en.arb[m
+[1m+++ b/lib/i18n/locale/intl_en.arb[m
+[36m@@ -4,6 +4,7 @@[m
+   "chat": "Chat",[m
+   "dark": "Dark",[m
+   "demo": "Demo",[m
+[32m+[m[32m  "exit": "Exit",[m
+   "github": "GitHub",[m
+   "language": "English",[m
+   "light": "Light",[m
+[1mdiff --git a/lib/i18n/locale/intl_ja.arb b/lib/i18n/locale/intl_ja.arb[m
+[1mindex 3a2e71f..b2d886c 100644[m
+[1m--- a/lib/i18n/locale/intl_ja.arb[m
+[1m+++ b/lib/i18n/locale/intl_ja.arb[m
+[36m@@ -4,10 +4,11 @@[m
+   "chat": "チャット",[m
+   "dark": "ダークモード",[m
+   "demo": "デモ",[m
+[32m+[m[32m  "exit": "退出",[m
+   "github": "GitHub",[m
+   "language": "日本語",[m
+   "light": "ライトモード",[m
+[31m-  "message": "こんにちは、{name}さん！",[m
+[32m+[m[32m  "message": "こんにちは、{name}さん!",[m
+   "providers": "プロバイダー",[m
+   "settings": "設定",[m
+   "system": "システム",[m
+[1mdiff --git a/lib/i18n/locale/intl_ko.arb b/lib/i18n/locale/intl_ko.arb[m
+[1mindex 7fa3251..ac59faf 100644[m
+[1m--- a/lib/i18n/locale/intl_ko.arb[m
+[1m+++ b/lib/i18n/locale/intl_ko.arb[m
+[36m@@ -4,6 +4,7 @@[m
+   "chat": "대화",[m
+   "dark": "어두운 색",[m
+   "demo": "데모",[m
+[32m+[m[32m  "exit": "종료",[m
+   "github": "GitHub",[m
+   "language": "한국어",[m
+   "light": "밝은 색",[m
+[1mdiff --git a/lib/i18n/locale/intl_zh.arb b/lib/i18n/locale/intl_zh.arb[m
+[1mindex f9da99d..6473d59 100644[m
+[1m--- a/lib/i18n/locale/intl_zh.arb[m
+[1m+++ b/lib/i18n/locale/intl_zh.arb[m
+[36m@@ -13,5 +13,6 @@[m
+   "system": "系统",[m
+   "theme": "主题",[m
+   "title": "欢迎",[m
+[31m-  "translation": "翻译"[m
+[32m+[m[32m  "translation": "翻译",[m
+[32m+[m[32m  "exit": "退出"[m
+ }[m
+[1mdiff --git a/lib/i18n/locale/intl_zh_Hans.arb b/lib/i18n/locale/intl_zh_Hans.arb[m
+[1mindex 6f88edf..83f1740 100644[m
+[1m--- a/lib/i18n/locale/intl_zh_Hans.arb[m
+[1m+++ b/lib/i18n/locale/intl_zh_Hans.arb[m
+[36m@@ -1,14 +1,15 @@[m
+ {[m
+   "@@locale": "zh-Hans",[m
+[31m-  "appname": "简单聊天",[m
+[31m-  "chat": "聊天",[m
+[31m-  "dark": "深色",[m
+[32m+[m[32m  "appname": "SimpleChat",[m
+[32m+[m[32m  "chat": "对话",[m
+[32m+[m[32m  "dark": "暗色",[m
+   "demo": "演示",[m
+[32m+[m[32m  "exit": "退出",[m
+   "github": "GitHub",[m
+   "language": "简体中文",[m
+[31m-  "light": "浅色",[m
+[31m-  "message": "你好，{name}！",[m
+[31m-  "providers": "服务提供商",[m
+[32m+[m[32m  "light": "亮色",[m
+[32m+[m[32m  "message": "你好, {name}!",[m
+[32m+[m[32m  "providers": "提供商",[m
+   "settings": "设置",[m
+   "system": "系统",[m
+   "theme": "主题",[m
+[1mdiff --git a/lib/i18n/locale/intl_zh_Hant.arb b/lib/i18n/locale/intl_zh_Hant.arb[m
+[1mindex 52dc9b0..d3cb54e 100644[m
+[1m--- a/lib/i18n/locale/intl_zh_Hant.arb[m
+[1m+++ b/lib/i18n/locale/intl_zh_Hant.arb[m
+[36m@@ -4,6 +4,7 @@[m
+   "chat": "對話",[m
+   "dark": "暗色",[m
+   "demo": "演示",[m
+[32m+[m[32m  "exit": "退出",[m
+   "github": "GitHub",[m
+   "language": "繁體中文",[m
+   "light": "亮色",[m
+[1mdiff --git a/lib/widgets/left_side/left_side.dart b/lib/widgets/left_side/left_side.dart[m
+[1mindex a0d88c9..6af8964 100644[m
+[1m--- a/lib/widgets/left_side/left_side.dart[m
+[1m+++ b/lib/widgets/left_side/left_side.dart[m
+[36m@@ -11,6 +11,7 @@[m [mimport 'package:auto_route/auto_route.dart';[m
+ import 'package:simple_chat/states/routes/routes.dart';[m
+ import 'package:simple_chat/i18n/generated/l10n.dart';[m
+ import 'dart:async';[m
+[32m+[m[32mimport 'package:flutter/services.dart';[m
+ [m
+ class NavItem extends StatefulWidget {[m
+   /// 图标[m
+[36m@@ -234,15 +235,19 @@[m [mclass LeftSide extends ConsumerWidget {[m
+                       launchUrl(Uri.parse("https://github.com/yh4922/simple-chat"));[m
+                     },[m
+                   ),[m
+[31m-                  // // 设置页面[m
+[31m-                  // NavItem([m
+[31m-                  //   icon: Iconfont.shezhi,[m
+[31m-                  //   title: loc.settings,[m
+[31m-                  //   isActive: false,[m
+[31m-                  //   onTap: () {[m
+[31m-                  //     // 跳转设置页面[m
+[31m-                  //   },[m
+[31m-                  // ),[m
+[32m+[m[32m                  // 退出按钮[m
+[32m+[m[32m                  NavItem([m
+[32m+[m[32m                    icon: Icons.exit_to_app,[m
+[32m+[m[32m                    title: loc.exit,[m
+[32m+[m[32m                    isActive: false,[m
+[32m+[m[32m                    onTap: () async {[m
+[32m+[m[32m                      if (Store.isDesktop) {[m
+[32m+[m[32m                        await windowManager.close();[m
+[32m+[m[32m                      } else {[m
+[32m+[m[32m                        SystemNavigator.pop();[m
+[32m+[m[32m                      }[m
+[32m+[m[32m                    },[m
+[32m+[m[32m                  ),[m
+                   // 安全区域[m
+                   SizedBox(height: MediaQuery.of(context).padding.bottom + 10),[m
+                 ],[m
+[1mdiff --git a/package.json b/package.json[m
+[1mindex f656bde..0fa7d66 100644[m
+[1m--- a/package.json[m
+[1m+++ b/package.json[m
+[36m@@ -28,7 +28,7 @@[m
+         "build-macos": "flutter build macos --release --dart-define=INIT_ENV=prod",[m
+         "appkey": "keytool -printcert -jarfile ./build/app/outputs/apk/release/app-release.apk",[m
+         "upsdk": "flutter upgrade",[m
+[31m-        "i18n": "node scripts/i18n.js",[m
+[32m+[m[32m        "i18n": "node scripts/i18n.js && npm run i18n:dart",[m
+         "i18n:dart": "flutter pub run intl_utils:generate",[m
+         "icon": "node lib/widgets/iconfont/gen.js",[m
+         "app:icon": "dart run flutter_launcher_icons",[m
+[1mdiff --git a/scripts/i18n.js b/scripts/i18n.js[m
+[1mindex 9baac4c..a925f5d 100644[m
+[1m--- a/scripts/i18n.js[m
+[1m+++ b/scripts/i18n.js[m
+[36m@@ -22,5 +22,5 @@[m [mfor (let name of files) {[m
+     }[m
+ }[m
+ [m
+[31m-// 执行 flutter pub run intl_utils:generate[m
+[31m-child_process.execSync("flutter pub run intl_utils:generate", { stdio: "inherit" })[m
+[32m+[m[32m// // 执行 flutter pub run intl_utils:generate[m
+[32m+[m[32m// child_process.execSync("flutter pub run intl_utils:generate", { stdio: "inherit" })[m

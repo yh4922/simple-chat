@@ -20,7 +20,7 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ja';
 
-  static String m0(name) => "こんにちは、${name}さん！";
+  static String m0(name) => "こんにちは、${name}さん!";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "chat": MessageLookupByLibrary.simpleMessage("チャット"),
     "dark": MessageLookupByLibrary.simpleMessage("ダークモード"),
     "demo": MessageLookupByLibrary.simpleMessage("デモ"),
+    "exit": MessageLookupByLibrary.simpleMessage("退出"),
     "github": MessageLookupByLibrary.simpleMessage("GitHub"),
     "language": MessageLookupByLibrary.simpleMessage("日本語"),
     "light": MessageLookupByLibrary.simpleMessage("ライトモード"),

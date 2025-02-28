@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "chat": MessageLookupByLibrary.simpleMessage("대화"),
     "dark": MessageLookupByLibrary.simpleMessage("어두운 색"),
     "demo": MessageLookupByLibrary.simpleMessage("데모"),
+    "exit": MessageLookupByLibrary.simpleMessage("종료"),
     "github": MessageLookupByLibrary.simpleMessage("GitHub"),
     "language": MessageLookupByLibrary.simpleMessage("한국어"),
     "light": MessageLookupByLibrary.simpleMessage("밝은 색"),

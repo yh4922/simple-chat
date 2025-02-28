@@ -22,5 +22,5 @@ for (let name of files) {
     }
 }
 
-// 执行 flutter pub run intl_utils:generate
-child_process.execSync("flutter pub run intl_utils:generate", { stdio: "inherit" })
+// // 执行 flutter pub run intl_utils:generate
+// child_process.execSync("flutter pub run intl_utils:generate", { stdio: "inherit" })

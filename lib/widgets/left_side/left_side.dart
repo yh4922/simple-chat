@@ -11,6 +11,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:simple_chat/states/routes/routes.dart';
 import 'package:simple_chat/i18n/generated/l10n.dart';
 import 'dart:async';
+import 'package:flutter/services.dart';
 
 class NavItem extends StatefulWidget {
   /// 图标
@@ -234,15 +235,19 @@ class LeftSide extends ConsumerWidget {
                       launchUrl(Uri.parse("https://github.com/yh4922/simple-chat"));
                     },
                   ),
-                  // // 设置页面
-                  // NavItem(
-                  //   icon: Iconfont.shezhi,
-                  //   title: loc.settings,
-                  //   isActive: false,
-                  //   onTap: () {
-                  //     // 跳转设置页面
-                  //   },
-                  // ),
+                  // 退出按钮
+                  NavItem(
+                    icon: Icons.exit_to_app,
+                    title: loc.exit,
+                    isActive: false,
+                    onTap: () async {
+                      if (Store.isDesktop) {
+                        await windowManager.close();
+                      } else {
+                        SystemNavigator.pop();
+                      }
+                    },
+                  ),
                   // 安全区域
                   SizedBox(height: MediaQuery.of(context).padding.bottom + 10),
                 ],

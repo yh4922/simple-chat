@@ -28,7 +28,7 @@
         "build-macos": "flutter build macos --release --dart-define=INIT_ENV=prod",
         "appkey": "keytool -printcert -jarfile ./build/app/outputs/apk/release/app-release.apk",
         "upsdk": "flutter upgrade",
-        "i18n": "node scripts/i18n.js",
+        "i18n": "node scripts/i18n.js && npm run i18n:dart",
         "i18n:dart": "flutter pub run intl_utils:generate",
         "icon": "node lib/widgets/iconfont/gen.js",
         "app:icon": "dart run flutter_launcher_icons",

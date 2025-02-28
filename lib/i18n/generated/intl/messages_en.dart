@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "chat": MessageLookupByLibrary.simpleMessage("Chat"),
     "dark": MessageLookupByLibrary.simpleMessage("Dark"),
     "demo": MessageLookupByLibrary.simpleMessage("Demo"),
+    "exit": MessageLookupByLibrary.simpleMessage("Exit"),
     "github": MessageLookupByLibrary.simpleMessage("GitHub"),
     "language": MessageLookupByLibrary.simpleMessage("English"),
     "light": MessageLookupByLibrary.simpleMessage("Light"),

@@ -75,6 +75,11 @@ class S {
     return Intl.message('Demo', name: 'demo', desc: '', args: []);
   }
 
+  /// `Exit`
+  String get exit {
+    return Intl.message('Exit', name: 'exit', desc: '', args: []);
+  }
+
   /// `GitHub`
   String get github {
     return Intl.message('GitHub', name: 'github', desc: '', args: []);
