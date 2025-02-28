@@ -1,5 +1,7 @@
 # Simple Chat - Cross-Platform AI Assistant Dialogue Tool
 
+[English](README.md) | [简体中文](README_ZH.md)
+
 [![Flutter Version](https://img.shields.io/badge/Flutter-^3.7.0-blue.svg)](https://flutter.dev/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/Version-0.0.5-orange.svg)](https://github.com/yh4922/simple-chat)

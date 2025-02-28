@@ -1,5 +1,7 @@
 # Simple Chat - 跨平台AI助手对话工具
 
+[English](README.md) | [简体中文](README_ZH.md)
+
 [![Flutter Version](https://img.shields.io/badge/Flutter-^3.7.0-blue.svg)](https://flutter.dev/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/Version-0.0.5-orange.svg)](https://github.com/yh4922/simple-chat)
@@ -10,21 +12,21 @@
 
 ## 功能特性
 
-- 🌈 跨平台支持：同时支持Windows、macOS、Linux桌面端和Web浏览器
-- 💬 即时聊天：基于现代化的消息传递机制
-- 🤖 AI对话助手：支持与多种大语言模型交互
+- 跨平台支持：同时支持Windows、macOS、Linux桌面端和Web浏览器
+- 即时聊天：基于现代化的消息传递机制
+- AI对话助手：支持与多种大语言模型交互
    - 支持OpenAI、Anthropic、Google Gemini、火山引擎和DeepSeek等多种AI模型供应商
    - 默认集成GPT-4o-mini等高质量模型
    - 支持自定义对话参数（温度、创意度、思维开放度等）
    - 提供多种对话模式：聊天模式、文档模式、代码模式
    - 智能话题管理：自动创建新话题并提供上下文总结功能
-- 🌟 高级AI对话特性：
+- 高级AI对话特性：
    - 自定义角色设定与预输入模板
    - 可调节的推理强度与响应风格
    - 自动历史对话管理与总结
-- 🎨 主题定制：支持深色/浅色模式切换
-- 🌍 多语言支持：内置国际化框架
-- 🔐 数据本地存储：使用drift (moor)数据库确保聊天记录本地安全存储
+- 主题定制：支持深色/浅色模式切换
+- 多语言支持：内置国际化框架
+- 数据本地存储：使用drift (moor)数据库确保聊天记录本地安全存储
 
 ## 快速开始
 
@@ -248,4 +250,4 @@ Assistant assistant = Assistant(
 
 ---
 
-**Simple Chat** - 让聊天回归简单 © 2025
+**Simple Chat** - 让聊天回归简单 2025
