@@ -237,7 +237,7 @@ class LeftSide extends ConsumerWidget {
                   ),
                   // 退出按钮
                   NavItem(
-                    icon: Icons.exit_to_app,
+                    icon: Iconfont.exit,
                     title: loc.exit,
                     isActive: false,
                     onTap: () async {

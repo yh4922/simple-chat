@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Iconfont {
+  /// exit
+  // ignore: non_constant_identifier_names
+  static IconData get exit => const IconData(0xe7cb, fontFamily: 'iconfont');
+
   /// close
   // ignore: non_constant_identifier_names
   static IconData get close => const IconData(0xe64a, fontFamily: 'iconfont');
