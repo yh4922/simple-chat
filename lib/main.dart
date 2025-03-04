@@ -39,12 +39,12 @@ void main() async {
 
         await windowManager.ensureInitialized();
         windowManager.hide();
-
+        // 创建窗口
         WindowOptions windowOptions = WindowOptions(
           size: Size(1200, 700),
           center: true,
-          backgroundColor: Colors.transparent,
           skipTaskbar: false,
+          backgroundColor: Colors.transparent,
           titleBarStyle: TitleBarStyle.hidden,
           windowButtonVisibility: true,
         );

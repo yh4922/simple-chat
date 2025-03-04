@@ -47,13 +47,23 @@ class AdaptivePage extends ConsumerWidget {
         children: [
           // 占位
           Positioned.fill(child: SizedBox.expand()),
-          Padding(
-            padding: EdgeInsets.only(left: WinSizeData.isOnePage(size) ? 0 : 250),
-            //
-            child: body,
+          Container(
+            // color: Theme.of(context).colorScheme.surfaceContainerLowest,
+            child: Padding(
+              padding: EdgeInsets.only(
+                left: WinSizeData.isOnePage(size) ? 0 : 250,
+              ),
+              child: body,
+            ),
           ),
           showSidebar(size, path)
-              ? SizedBox(width: WinSizeData.isOnePage(size) ? double.infinity : 250, child: sidebar)
+              ? SizedBox(
+                width: WinSizeData.isOnePage(size) ? double.infinity : 250,
+                child: Container(
+                  // color: Theme.of(context).colorScheme.surfaceContainerLowest,
+                  child: sidebar,
+                ),
+              )
               : SizedBox.shrink(),
         ],
       ),

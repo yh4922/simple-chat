@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:simple_chat/states/locale/locale.dart';
@@ -49,6 +51,31 @@ class Store {
   static delGlobal(String name) {
     globalData.remove(name);
   }
+
+  /// 从缓存获取 JSON 对象
+  static Map<String, dynamic>? getJSON(String name) {
+    // 获取字符串
+    var jsonText = prefs.getString(name);
+    if (jsonText == null) return null;
+
+    // 转换为 Map
+    return json.decode(jsonText);
+  }
+
+  /// 设置 JSON 对象
+  static void setJSON(String name, Map<String, dynamic> value) {
+    // 转换为字符串
+    var jsonText = json.encode(value);
+    // 设置值
+    prefs.setString(name, jsonText);
+  }
+
+  /// 删除 JSON 对象
+  static void delJSON(String name) {
+    // 删除值
+    prefs.remove(name);
+  }
+  
 
   // 初始化
   static Future<void> init() async {

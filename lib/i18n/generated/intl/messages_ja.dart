@@ -20,13 +20,14 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ja';
 
-  static String m0(name) => "こんにちは、${name}さん!";
+  static String m0(name) => "こんにちは、${name}さん！";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "appname": MessageLookupByLibrary.simpleMessage("SimpleChat"),
+    "appname": MessageLookupByLibrary.simpleMessage("シンプルチャット"),
     "chat": MessageLookupByLibrary.simpleMessage("チャット"),
     "dark": MessageLookupByLibrary.simpleMessage("ダークモード"),
+    "default_assistant": MessageLookupByLibrary.simpleMessage("気軽にお話ししましょう"),
     "demo": MessageLookupByLibrary.simpleMessage("デモ"),
     "exit": MessageLookupByLibrary.simpleMessage("退出"),
     "github": MessageLookupByLibrary.simpleMessage("GitHub"),
@@ -34,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "light": MessageLookupByLibrary.simpleMessage("ライトモード"),
     "message": m0,
     "providers": MessageLookupByLibrary.simpleMessage("プロバイダー"),
+    "search": MessageLookupByLibrary.simpleMessage("トピックを検索"),
     "settings": MessageLookupByLibrary.simpleMessage("設定"),
     "system": MessageLookupByLibrary.simpleMessage("システム"),
     "theme": MessageLookupByLibrary.simpleMessage("テーマ"),

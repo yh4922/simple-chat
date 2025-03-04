@@ -15,7 +15,7 @@ class ChatPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return AdaptivePage(
       name: "Chat",
-      sidebarWidth: 250,
+      sidebarWidth: 260,
       sidebar: ChatList(ref: ref, expandCollapseSidebar: expandCollapseSidebar),
       body: AutoRouter(
         placeholder: (context) {

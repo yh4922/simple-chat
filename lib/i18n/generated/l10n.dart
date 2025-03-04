@@ -70,6 +70,16 @@ class S {
     return Intl.message('Dark', name: 'dark', desc: '', args: []);
   }
 
+  /// `Just Chatting`
+  String get default_assistant {
+    return Intl.message(
+      'Just Chatting',
+      name: 'default_assistant',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Demo`
   String get demo {
     return Intl.message('Demo', name: 'demo', desc: '', args: []);
@@ -108,6 +118,11 @@ class S {
   /// `Providers`
   String get providers {
     return Intl.message('Providers', name: 'providers', desc: '', args: []);
+  }
+
+  /// `Search Topics`
+  String get search {
+    return Intl.message('Search Topics', name: 'search', desc: '', args: []);
   }
 
   /// `Settings`
