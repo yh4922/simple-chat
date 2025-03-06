@@ -38,8 +38,7 @@
     },
     "i18n": {
         "entry": "lib/i18n/locale/intl_zh.json",
-        "entryLocale": "intl_zh",
-        "output": "lib/i18n/locale",
+        "entryLocale": "intl_zh_Hans",
         "modelName": "gpt-4o-mini",
         "outputLocales": [
             "intl_zh_Hans",
@@ -48,5 +47,9 @@
             "intl_ja",
             "intl_ko"
         ]
+    },
+    "dependencies": {
+        "fs-extra": "^11.3.0",
+        "openai": "^4.86.2"
     }
 }
