@@ -29,6 +29,7 @@ class ThemeDatas {
           seedColor: mainColor,
           // 明暗模式
           brightness: Brightness.light,
+          dynamicSchemeVariant: DynamicSchemeVariant.vibrant, // rainbow  vibrant
         ),
       ),
       dark: ThemeData(

@@ -13,6 +13,7 @@ class WindowButtons extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     var buttons = Row(
       mainAxisAlignment: MainAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Expanded(child: DragToMoveArea(child: SizedBox(height: Store.winBtnHeight, width: double.infinity))),
         // 支持的语言列表

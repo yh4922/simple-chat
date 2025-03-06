@@ -85,12 +85,18 @@ class _DefaultLayoutState extends ConsumerState<DefaultLayout> with WindowListen
 
     return Scaffold(
       backgroundColor: Colors.transparent,
-      body: Material(
-        type: MaterialType.transparency,
-        child: DragToResizeArea(
-          // 最大化时禁用调整大小
-          resizeEdgeSize: winMaxStatus ? 0 : 8,
-          child: content,
+      body: PopScope(
+        canPop: false,
+        onPopInvokedWithResult: (didPop, result) {
+          print('拦截返回 ${didPop} ${result}');
+        },
+        child: Material(
+          type: MaterialType.transparency,
+          child: DragToResizeArea(
+            // 最大化时禁用调整大小
+            resizeEdgeSize: winMaxStatus ? 0 : 8,
+            child: content,
+          ),
         ),
       ),
     );
@@ -113,7 +119,7 @@ class BorderContainer extends StatelessWidget {
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.surface,
               boxShadow: showBorder ? [BoxShadow(color: Colors.black.withAlpha(150), blurRadius: 2, offset: Offset(0, 0))] : null,
-              borderRadius: showBorder ? BorderRadius.circular(4) : BorderRadius.zero,
+              borderRadius: showBorder ? BorderRadius.circular(10) : BorderRadius.zero,
             ),
             child: child,
           ),

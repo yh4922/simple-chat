@@ -11,7 +11,7 @@ class Assistant {
   String description = "";
 
   /// 助手头像
-  String avatar = "";
+  String avatar = "🤖";
 
   /// 助手创建时间
   DateTime createdAt = DateTime.now();
@@ -99,10 +99,10 @@ class Assistant {
     chatStyle = json["chatStyle"] ?? "";
     preInput = json["preInput"] ?? "";
     autoCreateTopic = json["autoCreateTopic"] ?? true;
-    maxTopicHistory = json["maxTopicHistory"] ?? 10;  
+    maxTopicHistory = json["maxTopicHistory"] ?? 10;
     autoSummary = json["autoSummary"] ?? true;
     modelProvider = json["modelProvider"] ?? "openai";
-    model = json["model"] ?? "gpt-4o-mini"; 
+    model = json["model"] ?? "gpt-4o-mini";
     temperature = json["temperature"] ?? 1.0;
     topP = json["topP"] ?? 1.0;
     presencePenalty = json["presencePenalty"] ?? 0;

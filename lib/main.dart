@@ -10,8 +10,8 @@ import 'package:simple_chat/i18n/generated/l10n.dart';
 import 'package:window_manager/window_manager.dart';
 // import 'package:jh_debug/jh_debug.dart';
 import 'package:simple_chat/utils/store.dart';
-import 'router/router.dart';
 import 'package:bot_toast/bot_toast.dart';
+import 'router/router.dart';
 
 void main() async {
   // 设置 Zone 错误为致命错误（可选）
@@ -41,7 +41,7 @@ void main() async {
         windowManager.hide();
         // 创建窗口
         WindowOptions windowOptions = WindowOptions(
-          size: Size(1200, 700),
+          size: Size(1400, 900),
           center: true,
           skipTaskbar: false,
           backgroundColor: Colors.transparent,
@@ -110,12 +110,22 @@ class MyApp extends ConsumerWidget {
     // 窗口大小
     // WinSizeData.value(ref);
 
+    // return MaterialApp(
+    //   title: 'Simple Chat',
+    //   theme: appTheme.light,
+    //   darkTheme: appTheme.dark,
+    //   themeMode: appBrightness,
+    // );
+
     return MaterialApp.router(
       title: 'Simple Chat',
       // 使用主题
       theme: appTheme.light,
       darkTheme: appTheme.dark,
       themeMode: appBrightness,
+      // 弹窗
+      // builder: FlutterSmartDialog.init(),
+      builder: BotToastInit(),
       // 使用路由
       routerConfig: rootRouter.config(
         navigatorObservers: () {
@@ -149,7 +159,6 @@ class MyApp extends ConsumerWidget {
       },
       supportedLocales: LocaleData.supportedLocales,
       debugShowCheckedModeBanner: false,
-      builder: BotToastInit(),
     );
   }
 }

@@ -1,4 +1,4 @@
-import 'package:bot_toast/bot_toast.dart';
+// import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_chat/router/router.dart';
 import 'package:simple_chat/states/brightness/brightness.dart';
@@ -12,6 +12,7 @@ import 'package:simple_chat/states/routes/routes.dart';
 import 'package:simple_chat/i18n/generated/l10n.dart';
 import 'dart:async';
 import 'package:flutter/services.dart';
+import 'package:bot_toast/bot_toast.dart';
 
 class NavItem extends StatefulWidget {
   /// 图标
