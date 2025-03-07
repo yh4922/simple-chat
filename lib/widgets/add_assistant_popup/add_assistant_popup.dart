@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_chat/i18n/generated/l10n.dart';
 import 'package:simple_chat/models/assistant.dart';
-import 'package:simple_chat/utils/store.dart';
+// import 'package:simple_chat/utils/store.dart';
 import 'package:simple_chat/widgets/avatar_popup/avatar_popup.dart';
 import 'package:simple_chat/widgets/common_avatar/common_avatar.dart';
 import 'package:simple_chat/widgets/common_button/common_button.dart';

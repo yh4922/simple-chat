@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:simple_chat/i18n/generated/l10n.dart';
-import 'package:simple_chat/widgets/common_avatar/common_avatar.dart';
+// import 'package:simple_chat/i18n/generated/l10n.dart';
+// import 'package:simple_chat/widgets/common_avatar/common_avatar.dart';
 import 'emoji_data.dart';
 
 class AvatarPopup extends StatefulWidget {
@@ -25,7 +25,6 @@ class _AvatarPopupState extends State<AvatarPopup> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     avatar = widget.avatar;
   }
