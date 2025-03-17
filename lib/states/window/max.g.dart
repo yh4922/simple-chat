@@ -6,7 +6,7 @@ part of 'max.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$winMaxStatusHash() => r'e94821820c61f3c815b7bc09da25db7bdf2f6b07';
+String _$winMaxStatusHash() => r'357c8d938888e69b5a632488526e1df339165099';
 
 /// See also [WinMaxStatus].
 @ProviderFor(WinMaxStatus)

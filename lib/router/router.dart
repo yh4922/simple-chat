@@ -56,6 +56,8 @@ class AppRouter extends RootStackRouter {
           // DEMO页面
           // AutoRoute(path: 'Demo', page: DemoRoute.page),
           AutoRoute(path: 'Demo', page: HomeRoute.page),
+          // 提供商页面
+          AutoRoute(path: 'Provider', page: ProviderRoute.page),
         ],
       ),
     ];

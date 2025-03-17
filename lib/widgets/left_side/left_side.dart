@@ -183,6 +183,16 @@ class LeftSide extends ConsumerWidget {
                     },
                   ),
                   NavItem(
+                    icon: Iconfont.moxing,
+                    title: loc.demo,
+                    isActive: currentRoute.startsWith("Provider"),
+                    onTap: () {
+                      if (currentRoute != "Provider") {
+                        context.router.replaceAll([ProviderRoute()]);
+                      }
+                    },
+                  ),
+                  NavItem(
                     icon: Iconfont.picture,
                     title: loc.demo,
                     isActive: false,

@@ -6,7 +6,7 @@ part of 'size.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$winSizeDataHash() => r'6aa4bd92d68315eb79ad4050c5b7f327e3e9ea5d';
+String _$winSizeDataHash() => r'5f381207a49f95c8517eda4717b57ba0deba434d';
 
 /// See also [WinSizeData].
 @ProviderFor(WinSizeData)

@@ -9,21 +9,22 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i6;
-import 'package:flutter/material.dart' as _i7;
+import 'package:auto_route/auto_route.dart' as _i7;
+import 'package:flutter/material.dart' as _i8;
 import 'package:simple_chat/layout/default.dart' as _i3;
 import 'package:simple_chat/views/chat/chat_detail_page.dart' as _i1;
 import 'package:simple_chat/views/chat/chat_page.dart' as _i2;
 import 'package:simple_chat/views/demo/demo_page.dart' as _i4;
 import 'package:simple_chat/views/home/home_page.dart' as _i5;
+import 'package:simple_chat/views/provider/provider_page.dart' as _i6;
 
 /// generated route for
 /// [_i1.ChatDetailPage]
-class ChatDetailRoute extends _i6.PageRouteInfo<ChatDetailRouteArgs> {
+class ChatDetailRoute extends _i7.PageRouteInfo<ChatDetailRouteArgs> {
   ChatDetailRoute({
-    _i7.Key? key,
+    _i8.Key? key,
     required int id,
-    List<_i6.PageRouteInfo>? children,
+    List<_i7.PageRouteInfo>? children,
   }) : super(
          ChatDetailRoute.name,
          args: ChatDetailRouteArgs(key: key, id: id),
@@ -32,7 +33,7 @@ class ChatDetailRoute extends _i6.PageRouteInfo<ChatDetailRouteArgs> {
 
   static const String name = 'ChatDetailRoute';
 
-  static _i6.PageInfo page = _i6.PageInfo(
+  static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
       final args = data.argsAs<ChatDetailRouteArgs>();
@@ -44,7 +45,7 @@ class ChatDetailRoute extends _i6.PageRouteInfo<ChatDetailRouteArgs> {
 class ChatDetailRouteArgs {
   const ChatDetailRouteArgs({this.key, required this.id});
 
-  final _i7.Key? key;
+  final _i8.Key? key;
 
   final int id;
 
@@ -56,8 +57,8 @@ class ChatDetailRouteArgs {
 
 /// generated route for
 /// [_i2.ChatPage]
-class ChatRoute extends _i6.PageRouteInfo<ChatRouteArgs> {
-  ChatRoute({_i7.Key? key, List<_i6.PageRouteInfo>? children})
+class ChatRoute extends _i7.PageRouteInfo<ChatRouteArgs> {
+  ChatRoute({_i8.Key? key, List<_i7.PageRouteInfo>? children})
     : super(
         ChatRoute.name,
         args: ChatRouteArgs(key: key),
@@ -66,7 +67,7 @@ class ChatRoute extends _i6.PageRouteInfo<ChatRouteArgs> {
 
   static const String name = 'ChatRoute';
 
-  static _i6.PageInfo page = _i6.PageInfo(
+  static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
       final args = data.argsAs<ChatRouteArgs>(
@@ -80,7 +81,7 @@ class ChatRoute extends _i6.PageRouteInfo<ChatRouteArgs> {
 class ChatRouteArgs {
   const ChatRouteArgs({this.key});
 
-  final _i7.Key? key;
+  final _i8.Key? key;
 
   @override
   String toString() {
@@ -90,13 +91,13 @@ class ChatRouteArgs {
 
 /// generated route for
 /// [_i3.DefaultLayout]
-class DefaultLayout extends _i6.PageRouteInfo<void> {
-  const DefaultLayout({List<_i6.PageRouteInfo>? children})
+class DefaultLayout extends _i7.PageRouteInfo<void> {
+  const DefaultLayout({List<_i7.PageRouteInfo>? children})
     : super(DefaultLayout.name, initialChildren: children);
 
   static const String name = 'DefaultLayout';
 
-  static _i6.PageInfo page = _i6.PageInfo(
+  static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
       return const _i3.DefaultLayout();
@@ -106,13 +107,13 @@ class DefaultLayout extends _i6.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i4.DemoPage]
-class DemoRoute extends _i6.PageRouteInfo<void> {
-  const DemoRoute({List<_i6.PageRouteInfo>? children})
+class DemoRoute extends _i7.PageRouteInfo<void> {
+  const DemoRoute({List<_i7.PageRouteInfo>? children})
     : super(DemoRoute.name, initialChildren: children);
 
   static const String name = 'DemoRoute';
 
-  static _i6.PageInfo page = _i6.PageInfo(
+  static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
       return const _i4.DemoPage();
@@ -122,16 +123,32 @@ class DemoRoute extends _i6.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i5.HomePage]
-class HomeRoute extends _i6.PageRouteInfo<void> {
-  const HomeRoute({List<_i6.PageRouteInfo>? children})
+class HomeRoute extends _i7.PageRouteInfo<void> {
+  const HomeRoute({List<_i7.PageRouteInfo>? children})
     : super(HomeRoute.name, initialChildren: children);
 
   static const String name = 'HomeRoute';
 
-  static _i6.PageInfo page = _i6.PageInfo(
+  static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
       return const _i5.HomePage();
+    },
+  );
+}
+
+/// generated route for
+/// [_i6.ProviderPage]
+class ProviderRoute extends _i7.PageRouteInfo<void> {
+  const ProviderRoute({List<_i7.PageRouteInfo>? children})
+    : super(ProviderRoute.name, initialChildren: children);
+
+  static const String name = 'ProviderRoute';
+
+  static _i7.PageInfo page = _i7.PageInfo(
+    name,
+    builder: (data) {
+      return const _i6.ProviderPage();
     },
   );
 }
